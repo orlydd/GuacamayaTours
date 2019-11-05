@@ -46,9 +46,11 @@ a{
 a:hover{
     font-weight: bold;
     margin-left:10px;
+    cursor: pointer;
 }
 li {
     list-style-type: none;
+    color:white;
 }
 .textUppercase {
     font-family: "Montserrat", sans-serif;

@@ -16,7 +16,7 @@ export class NavBarComponent implements OnInit {
     this.isCollapse = foo === false ? true : false;
   }
 
-  constructor(private r: Router ) { }
+  constructor(private r: Router) { }
 
   ngOnInit() {
   }
