@@ -1,13 +1,16 @@
 {
-  "database": {
-    "rules": "database.rules.json"
-  },
   "hosting": {
-    "public": "dist/GuacamayaTours",
+    "public": "dist\\GuacamayaTours",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   }
 }
