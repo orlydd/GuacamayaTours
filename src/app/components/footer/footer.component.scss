@@ -1,0 +1,69 @@
+footer{
+    z-index: -1;
+    width:100%;
+    max-width: 3000px;
+    bottom: 0;
+    background:#2EBFC4;
+    overflow: hidden;
+}
+
+#logo{
+    position: relative;
+    top:15%;
+    left: 15%;
+    transform: translate (-50%, -50%);
+    height:10vw;
+    width:10vw;
+}
+
+.icons{
+    height:30px;
+    margin:10px;
+    width: 30px;
+}
+.my-line{
+    margin: 0px;
+    background: white;
+    border: 1px solid white;
+    height: 1px;
+    width:100%;
+}
+.copyright{
+    background:#2EBFC4;
+    width: 100%;
+    height:25px;
+}
+.linksNav{
+font-family: "Montserrat", sans-serif;
+padding: 0;
+}
+a{
+    text-decoration: none;
+    color:white;
+    font-size: 13px;
+    line-height: 20px;
+}
+a:hover{
+    font-weight: bold;
+    margin-left:10px;
+}
+li {
+    list-style-type: none;
+}
+.textUppercase {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-align: left;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.info{
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 13px;
+    line-height: 15px;
+}
+#copy{
+    text-align: center;
+}

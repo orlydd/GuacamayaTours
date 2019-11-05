@@ -1,0 +1,40 @@
+<!--Navigation Bar-->
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <!--Isotipe-->
+    <a href="#" class="navbar-brand">
+            <img src=".\assets\Images\logotipo.jpg" width="30" height="30" class="d-inline-block align-top" alt="logo">
+            GUACAMAYA TOURS
+    </a>
+    <button class="navbar-toggler collapsed" type="button" (click)="toggleState()">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--Links-->
+    <div class="navbar-collapse" [ngClass]="{ 'collapse': isCollapse }">
+            <ul class="navbar-nav ml-auto">
+                    <li class="nav-items ">
+                            <a (click)="Home()" class="nav-link">HOME<span class="sr-only">(current)</span></a>
+                    </li> 
+                    <li class="nav-items">
+                            <a href="#" class="nav-link">SOBRE NOSOTROS</a>
+                    </li>
+                    <li class="nav-items">
+                            <a href="#" class="nav-link">DESTINOS</a>
+                    </li>
+                    <li class="nav-items">
+                            <a href="#" class="nav-link">HOTELES</a>
+                    </li>
+                    <li class="nav-items">
+                            <a href="#" class="nav-link">MI ITINERARIO</a>
+                    </li>
+                    <li class="nav-items">
+                            <a href="#" class="nav-link">PLANEA TU VIAJE</a>
+                    </li>
+                    <li class="nav-items">
+                            <a (click)="Contacts()" class="nav-link">CONTÁCTANOS</a>
+                    </li>
+            </ul>
+    </div>
+    
+          
+</nav>
+

@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="row marg">
+            <div class="col-8 form-container">
+                    <div class="card-header">
+                            <h1 class="form-title">Ponte en contacto con nosotros</h1>
+                        </div>
+                        <!--Contact Form-->
+                        <form (ngSubmit)="Submit()">
+                                <!--Name-->
+                                
+                                <div class="input-box">
+                                    <h2 class="subtitles"> Nombre Completo</h2>
+                                    <input type="text" name="name" class="input-box"  [(ngModel)]="name" required minlength="3" #nameInput="ngModel">
+                                    <div class="help is-error" *ngIf="nameInput.invalid && nameInput.dirty">
+                                        Es necesario que introduzca un nombre y este debe tener mínimo 3 carateres
+                                        </div>
+                                </div>
+                                <!--Email-->
+                                
+                                <div class="input-box">
+                                    <h2 class= "subtitles"> Email</h2>
+                                    <input type="email" name="email" class="input-box" [(ngModel)]="email" required email #emailInput="ngModel">
+                                    <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
+                                        Introduzca un email válido.
+                                        </div>
+                                </div>
+                                <!--Message-->
+                                
+                                <div class="input-box">
+                                    <h2 class="subtitles"> Mensaje</h2>
+                                    <textarea class="input-box" name="message" [(ngModel)]="message" required #messageInput="ngModel"></textarea>
+                                    
+                                    <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
+                                        Introduzca un Mensaje
+                                        </div>
+                                </div>
+                                <!--Send Button-->
+                                <div class="button">
+                                        <button type="submit" class="send-button">Enviar</button>
+                                        
+                                </div>
+                                
+                            </form>
+                     
+            </div>
+            <div class="col col-3 align-self-center">
+                <div class="email-container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 text-align:center">
+                                    <p class="text">¿TIENES ALGUNA PREGUNTA? ESCRIBENOS UN MENSAJE</p>
+                            </div>
+                            <div class="col">
+                                    <img style="width: 12rem; height: auto;" src="https://www.lifewire.com/thmb/Oss6yGDtKDccpVIjhRHUNPTbapk=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/gmail-logo-5806b2d35f9b5805c2886021.png" alt="IMAGEN">
+                            </div>
+                        </div>
+                    </div>
+                   
+                    
+                    
+                    
+                </div>
+            </div>
+    </div>
+    
+</div>
+
+
+
+
+
+    
