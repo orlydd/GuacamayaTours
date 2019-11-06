@@ -18,6 +18,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { DestinyCrudComponent } from './admin/destiny-crud/destiny-crud.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     ContactFormComponent,
     ContactUsComponent,
     HomeComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    DestinyCrudComponent
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
