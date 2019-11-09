@@ -1,0 +1,60 @@
+.header{
+    position: relative;
+    margin-bottom: 100px;
+    z-index: 1;
+    top: 0;
+    margin:0;
+	padding:0;
+    width:100%;
+    height: auto;
+    max-width: 3000px;
+}
+
+.row{
+    margin:0;
+}
+
+.col{
+    padding: 0;
+}
+
+.hero-image{
+    margin-left:0;
+    margin: 0;
+    padding: 0;
+	width:100%;
+}
+
+.image{
+    max-height: 40vh;
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    margin: 0;
+    left: 0;
+    top:0;
+    padding: 0;
+}
+
+.title{
+    position: absolute;
+    text-align: center;
+    top:100%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:350px;
+    border: 1px solid black;
+    background: white;
+    line-height: 1vh;
+}
+
+#main-title{
+    font-family: "Bodoni MT";
+    font-size: 40px;
+    line-height: 45px;
+}
+
+#description{
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+}

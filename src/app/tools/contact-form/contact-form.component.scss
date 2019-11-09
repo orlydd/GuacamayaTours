@@ -1,0 +1,111 @@
+
+.form-container{
+    position: relative;
+    display: inline-block;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    margin-top: 100px;
+    margin-bottom:50px;
+    margin-left:40px;
+    align-content: center;
+}
+
+.marg{
+    margin-left: 60px;
+}
+
+img{
+    margin-left: 60px;
+}
+
+.text{
+    text-align: center;
+    margin-left: 60px;
+}
+
+.card-header{
+    background-color:#33b5e5;
+}
+.form-title{
+    display: block;
+    color: white;
+    font-size: 125%;
+    font-weight: bold;
+    font: Arial;
+    text-align: center;
+}
+.subtitles{
+    display: block;
+    color: rgba(34, 33, 33, 0.822);
+    font-size: 100%;
+    font-weight: bold;
+    font: Arial;
+    text-align: start;
+}
+.input-box{
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    align-items: center;
+    border-radius: .25rem;
+    font: Arial;
+}
+.send-button{
+    align-items: center;
+    border: 2px solid #33b5e5;
+    background-color: transparent;
+    color: #33b5e5;
+    border-radius: 10em;
+    size: 50%;
+    font: Arial;
+}
+.button :hover{
+    align-items: center;
+    border: 2px solid #33b5e5;
+    background-color: #1291be ;
+    color: #33b5e5;
+    border-radius: 10em;
+    size: 50%;
+    font: Arial;
+}
+.button{
+    display: inline-block;
+    margin: 4px;
+    padding: 2px;
+}
+
+.email-container{
+    margin-left:30px;
+    padding: 0px;
+    margin:0px;
+    align-content: center;
+    font-weight: lighter;
+
+}
+.email-container .p{
+    
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+
+.container{
+    padding: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    width:100%;
+}
+.row{
+    width: 100%;
+}
