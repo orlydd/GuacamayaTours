@@ -5,14 +5,14 @@
 export const environment = {
   production: false,
   firebase:{
-    apiKey: "AIzaSyBmol8Sqc2MWsQJNANlNf7Vu-QPI6fG1fQ",
-    authDomain: "guacamayatours-cbc79.firebaseapp.com",
-    databaseURL: "https://guacamayatours-cbc79.firebaseio.com",
-    projectId: "guacamayatours-cbc79",
-    storageBucket: "guacamayatours-cbc79.appspot.com",
-    messagingSenderId: "1010087553466",
-    appId: "1:1010087553466:web:03f5ce2248c6e9bb045583",
-    measurementId: "G-H0VTVY6E6S"
+    apiKey: "AIzaSyDsfuVG5lbJ4AkRMmH2AUE-W3rQs_ZRs0E",
+  authDomain: "proyecto-guacamaya-tours.firebaseapp.com",
+  databaseURL: "https://proyecto-guacamaya-tours.firebaseio.com",
+  projectId: "proyecto-guacamaya-tours",
+  storageBucket: "proyecto-guacamaya-tours.appspot.com",
+  messagingSenderId: "359326020497",
+  appId: "1:359326020497:web:96bd2a15b23e3d2221a030",
+  measurementId: "G-337D5CHWKJ"
   }
 };
 
