@@ -19,6 +19,9 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { DestinyCrudComponent } from './admin/destiny-crud/destiny-crud.component';
+import { DestinylistComponent } from './tools/destinylist/destinylist.component';
+import { DestinyFormComponent } from './tools/destiny-form/destiny-form.component';
+import { DestinyService } from './services/destiny/destiny.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { DestinyCrudComponent } from './admin/destiny-crud/destiny-crud.componen
     ContactUsComponent,
     HomeComponent,
     AboutUsComponent,
-    DestinyCrudComponent
+    DestinyCrudComponent,
+    DestinylistComponent,
+    DestinyFormComponent
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
@@ -44,7 +49,7 @@ import { DestinyCrudComponent } from './admin/destiny-crud/destiny-crud.componen
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [],
+  providers: [DestinyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
