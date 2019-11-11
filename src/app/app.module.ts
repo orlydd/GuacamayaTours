@@ -21,7 +21,6 @@ import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { DestinyCrudComponent } from './admin/destiny-crud/destiny-crud.component';
 import { CreateDestinyComponent } from './tools/destiny/create-destiny/create-destiny.component';
-import { DestinyDetailsComponent } from './tools/destiny/destiny-details/destiny-details.component';
 import { DestinyListComponent } from './tools/destiny/destiny-list/destiny-list.component';
 
 @NgModule({
@@ -36,7 +35,6 @@ import { DestinyListComponent } from './tools/destiny/destiny-list/destiny-list.
     AboutUsComponent,
     DestinyCrudComponent,
     CreateDestinyComponent,
-    DestinyDetailsComponent,
     DestinyListComponent
   ],
   imports: [

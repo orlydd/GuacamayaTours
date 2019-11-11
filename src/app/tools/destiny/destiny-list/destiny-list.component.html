@@ -1,5 +1,27 @@
-<h1>Destinos</h1>
-<div *ngFor= 'let destiny of destiny'>
-    <app-destiny-details [destiny]='destiny'></app-destiny-details>
-</div>
+<h4>Lista de Destinos</h4>
+<table class="table table-hover">
+    <thead>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Categoría</th>
+        <th>Estado</th>
+        <th>Ciudad</th>
+        <th></th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let destiny of destiny">
+            <td> {{destiny.destinyId}} </td>
+            <td>{{destiny.name}}</td>
+            <td>{{destiny.category}}</td>   
+            <td>{{destiny.state}}</td>     
+            <td>{{destiny.city}}</td> 
+            <td><a class="btn btn-success btn-sm" role="button">Editar</a></td>  
+            <td><a class="btn btn-danger btn-sm" role="button" (click)='deleteDestiny()'>Eliminar</a></td> 
+            
+             
+        </tr>
+    </tbody>
+
+</table>
 

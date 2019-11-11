@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {DestinyService} from 'src/app/services/destiny/destiny.service';
 import { map } from 'rxjs/operators';
 
@@ -8,6 +8,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./destiny-list.component.scss']
 })
 export class DestinyListComponent implements OnInit {
+ 
   
   destiny: any;
 
@@ -15,6 +16,13 @@ export class DestinyListComponent implements OnInit {
 
   ngOnInit() {
     this.getDestinyList();
+  }
+  updateActive(isActive : boolean){
+    this.destinyService.updateDestiny(this.destiny.key, {active: isActive}).catch(err => console.log(err));
+  }
+
+  deleteDestiny(){
+    this.destinyService.deleteDestiny(this.destiny.key).catch(err => console.log(err));
   }
   getDestinyList(){
     this.destinyService.getDestinyList().snapshotChanges().pipe(
@@ -27,8 +35,6 @@ export class DestinyListComponent implements OnInit {
     })
   }
 
-  deleteDestiny(){
-    this.destinyService.deleteAll();
-  }
+ 
 
 }
