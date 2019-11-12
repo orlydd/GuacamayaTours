@@ -8,40 +8,18 @@ import {Destiny} from 'src/app/models/destiny.model';
 })
 export class DestinyService {
 
-  private dbPath = '/Destiny';
-  destinyRef: AngularFirestoreCollection<Destiny>= null;
+  destinyData: Destiny;
+  /* private dbPath = '/Destiny';
+  destinyRef: AngularFirestoreCollection<Destiny>= null; */
 
-  constructor(private db: AngularFirestore) {
-    this.destinyRef = db.collection(this.dbPath);
-   }
 
-   createDestiny(destiny: Destiny): void{
-     this.destinyRef.add({...destiny});
+  constructor(private firestore: AngularFirestore) {
+    
    }
 
-   updateDestiny(key: string, value: any): Promise<void>{
-     return this.destinyRef.doc(key).update(value);
+   getDestinies(){
+     return this.firestore.collection('Destiny').snapshotChanges();
    }
 
-   deleteDestiny(key:string): Promise<void>{
-     return this.destinyRef.doc(key).delete();
-   }
-   getDestinyList(): AngularFirestoreCollection<Destiny>{
-     return this.destinyRef;
-   }
-
-   deleteAll(){
-     this.destinyRef.get().subscribe(
-       querySnapshot => {
-         querySnapshot.forEach((doc)=>{
-           doc.ref.delete();
-           
-         });
-      
-       },
-       error =>{
-         console.log('Error: ', error);
-       });
-   }
 
 }

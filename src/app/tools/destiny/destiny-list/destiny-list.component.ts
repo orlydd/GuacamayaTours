@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {DestinyService} from 'src/app/services/destiny/destiny.service';
+import {Destiny} from 'src/app/models/destiny.model';
 import { map } from 'rxjs/operators';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-destiny-list',
@@ -10,31 +12,33 @@ import { map } from 'rxjs/operators';
 export class DestinyListComponent implements OnInit {
  
   
-  destiny: any;
+  destiny: Destiny[];
 
-  constructor(private destinyService: DestinyService) { }
+  constructor(private destinyService: DestinyService, private firestore: AngularFirestore) { }
 
   ngOnInit() {
-    this.getDestinyList();
-  }
-  updateActive(isActive : boolean){
-    this.destinyService.updateDestiny(this.destiny.key, {active: isActive}).catch(err => console.log(err));
-  }
-
-  deleteDestiny(){
-    this.destinyService.deleteDestiny(this.destiny.key).catch(err => console.log(err));
-  }
-  getDestinyList(){
-    this.destinyService.getDestinyList().snapshotChanges().pipe(
-      map(changes =>
-        changes.map(c=> ({key:c.payload.doc.id,...c.payload.doc.data()})
-         )
-        )
-    ).subscribe(destiny=>{
-      this.destiny = destiny;
+    this.destinyService.getDestinies().subscribe(actionArray=>{
+      this.destiny= actionArray.map(item=>{
+        return{key: item.payload.doc.id,
+          ...item.payload.doc.data()
+        } as Destiny;
+      })
     })
+    
   }
 
+  onEdit(dest: Destiny){
+    this.destinyService.destinyData= Object.assign({}, dest);
+  }
+  onDelete(key:string){
+    //if(confirm("¿Esta seguro que quiere eliminar este destino?")){
+      this.firestore.doc('Destiny/'+key).delete();
+   // }
+  }
+  
+ 
+ 
+ 
  
 
 }

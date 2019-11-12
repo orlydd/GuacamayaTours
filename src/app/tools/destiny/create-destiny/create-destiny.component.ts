@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, NgForm} from '@angular/forms';
 import {DestinyService} from 'src/app/services/destiny/destiny.service';
 import {Destiny} from 'src/app/models/destiny.model';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 
 @Component({
@@ -10,27 +11,63 @@ import {Destiny} from 'src/app/models/destiny.model';
   styleUrls: ['./create-destiny.component.scss']
 })
 export class CreateDestinyComponent implements OnInit {
-
+  
   destiny: Destiny = new Destiny();
-  submitted= false;
+  
 
-  constructor(private destinyService : DestinyService) { }
+  constructor(private destinyService : DestinyService, 
+    private firestore: AngularFirestore ) { }
 
   ngOnInit() {
+    this.resetForm();
   }
 
-  newDestiny(): void{
-    this.submitted=false;
-    this.destiny= new Destiny();
+
+  resetForm(form?: NgForm){
+  
+    if(form!=null)
+      form.resetForm();
+    this.destinyService.destinyData={
+      key: null,
+    destinyId: '',
+    name: '',
+    description: '',
+    category: '',
+    services:'',
+    activities: '',
+    latitude: '',
+    longitude: '',
+    state: '',
+    city: '',
+    direction: '',
+    photo1:'',
+    photo2:'',
+    photo3:'',
+    culture: '',
+    gastronomy: '',
+    hotel1: '',
+    hotel2: '',
+    hotel3: '',
+    active : true,
+    }
   }
 
-  save(){
+
+ /*  save(){
     this.destinyService.createDestiny(this.destiny);
     this.destiny= new Destiny();
-  }
-  onSubmit(){
-    this.submitted= true;
-    this.save();
-  }
-
+  } */
+  onSubmit(form: NgForm){
+    let data = Object.assign({},form.value);
+    delete data.key;
+    if(form.value.key == null){
+      this.firestore.collection('Destiny').add(data);
+    }
+    else {
+        this.firestore.collection('Destiny').doc(form.value.key).set(data); 
+    }  
+      
+    this.resetForm(form);
+  
+  } 
 }

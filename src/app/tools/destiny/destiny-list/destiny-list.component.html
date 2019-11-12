@@ -6,20 +6,32 @@
         <th>Categoría</th>
         <th>Estado</th>
         <th>Ciudad</th>
-        <th></th>
+     <!--    <th>Descripción</th>
+        <th>Servicios</th>
+        <th>Actividades</th>
+        <th>Latitud</th>
+        <th>Longitud</th>
+        <th>Dirección</th>
+        <th>Cultura</th>
+        <th>Gastronomía</th>
+        <th>Foto 1 url</th>
+        <th>Foto 2 url</th>
+        <th>Foto 3 url</th>
+        <th>Hotel 1</th>
+        <th>Hotel 2</th>
+        <th>Hotel 3</th> -->
+<!--         <th [hidden]></th> -->
         <th></th>
     </thead>
     <tbody>
-        <tr *ngFor="let destiny of destiny">
-            <td> {{destiny.destinyId}} </td>
-            <td>{{destiny.name}}</td>
-            <td>{{destiny.category}}</td>   
-            <td>{{destiny.state}}</td>     
-            <td>{{destiny.city}}</td> 
-            <td><a class="btn btn-success btn-sm" role="button">Editar</a></td>  
-            <td><a class="btn btn-danger btn-sm" role="button" (click)='deleteDestiny()'>Eliminar</a></td> 
-            
-             
+        <tr *ngFor="let dest of destiny">
+                <td (click)="onEdit(dest)"> {{dest.destinyId}} </td>
+                <td (click)="onEdit(dest)">{{dest.name}}</td>
+                <td (click)="onEdit(dest)">{{dest.category}}</td>   
+                <td (click)="onEdit(dest)">{{dest.state}}</td>     
+                <td (click)="onEdit(dest)">{{dest.city}}</td> 
+                
+                <td><button class="btn btn-block btn-sm btn-danger" (click)="onDelete(dest.key)">Eliminar</button></td>  
         </tr>
     </tbody>
 
