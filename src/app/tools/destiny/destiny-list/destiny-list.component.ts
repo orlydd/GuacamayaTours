@@ -28,7 +28,8 @@ export class DestinyListComponent implements OnInit {
   }
 
   onEdit(dest: Destiny){
-    this.destinyService.destinyData= Object.assign({}, dest);
+    let destiny = Object.assign({}, dest);
+    this.destinyService.destinyData= destiny;
   }
   onDelete(key:string){
     //if(confirm("¿Esta seguro que quiere eliminar este destino?")){

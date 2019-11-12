@@ -11,7 +11,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~8.2.12",
+    "@angular/animations": "^8.2.13",
     "@angular/common": "~8.2.12",
     "@angular/compiler": "~8.2.12",
     "@angular/core": "~8.2.12",
@@ -21,10 +21,11 @@
     "@angular/platform-browser-dynamic": "~8.2.12",
     "@angular/router": "~8.2.12",
     "angularfire2": "^5.2.1",
-    "bootstrap": "4.1.1",
+    "bootstrap": "^4.3.1",
     "firebase": "^7.2.3",
     "ngx-bootstrap": "^5.2.0",
     "ngx-bootstrap-slider": "^1.7.0",
+    "ngx-toastr": "^11.2.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

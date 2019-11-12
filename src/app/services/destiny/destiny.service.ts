@@ -21,5 +21,7 @@ export class DestinyService {
      return this.firestore.collection('Destiny').snapshotChanges();
    }
 
+  
+
 
 }

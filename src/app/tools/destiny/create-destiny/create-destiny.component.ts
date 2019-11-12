@@ -11,10 +11,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
   styleUrls: ['./create-destiny.component.scss']
 })
 export class CreateDestinyComponent implements OnInit {
-  
-  destiny: Destiny = new Destiny();
-  
-
+ 
   constructor(private destinyService : DestinyService, 
     private firestore: AngularFirestore ) { }
 
@@ -22,7 +19,7 @@ export class CreateDestinyComponent implements OnInit {
     this.resetForm();
   }
 
-
+//Resets the value of the form
   resetForm(form?: NgForm){
   
     if(form!=null)
@@ -52,21 +49,19 @@ export class CreateDestinyComponent implements OnInit {
     }
   }
 
-
- /*  save(){
-    this.destinyService.createDestiny(this.destiny);
-    this.destiny= new Destiny();
-  } */
+  /**
+   * Operations add and update with firestore
+   * @param form 
+   */
   onSubmit(form: NgForm){
-    let data = Object.assign({},form.value);
+    let data = Object.assign({}, form.value);
     delete data.key;
-    if(form.value.key == null){
+    if(form.value.key == null)
       this.firestore.collection('Destiny').add(data);
-    }
-    else {
-        this.firestore.collection('Destiny').doc(form.value.key).set(data); 
-    }  
-      
+    else 
+        this.firestore.collection('Destiny').doc( form.value.key).update(data);
+        //this.firestore.collection('Destiny').doc(form.value.key).set(data, {merge:true});
+    
     this.resetForm(form);
   
   } 
