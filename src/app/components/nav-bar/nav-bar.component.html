@@ -1,40 +1,54 @@
-<!--Navigation Bar-->
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" >
-    <!--Isotipe-->
-    <a href="#" class="navbar-brand">
-            <img src=".\assets\Images\logotipo.jpg" width="30" height="30" class="d-inline-block align-top" alt="logo">
-            GUACAMAYA TOURS
-    </a>
-    <button class="navbar-toggler collapsed" type="button" (click)="toggleState()">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <!--Links-->
-    <div class="navbar-collapse" [ngClass]="{ 'collapse': isCollapse }">
-            <ul class="navbar-nav ml-auto">
-                    <li class="nav-items ">
-                            <a (click)="Home()" class="nav-link">HOME<span class="sr-only">(current)</span></a>
-                    </li> 
-                    <li class="nav-items">
-                            <a (click)="AboutUs()" class="nav-link">SOBRE NOSOTROS</a>
-                    </li>
-                    <li class="nav-items">
-                            <a href="#" class="nav-link">DESTINOS</a>
-                    </li>
-                    <li class="nav-items">
-                            <a href="#" class="nav-link">HOTELES</a>
-                    </li>
-                    <li class="nav-items">
-                            <a href="#" class="nav-link">MI ITINERARIO</a>
-                    </li>
-                    <li class="nav-items">
-                            <a href="#" class="nav-link">PLANEA TU VIAJE</a>
-                    </li>
-                    <li class="nav-items">
-                            <a (click)="Contacts()" class="nav-link">CONTÁCTANOS</a>
-                    </li>
-            </ul>
-    </div>
-    
-          
-</nav>
 
+<!--Nav Bar-->
+<nav class="navbar  sticky-top navbar-expand-md navbar-light fixed-top bg-light">
+        <a class="navbar-brand" routerLink="/">
+                <img src=".\assets\Images\logotipo.jpg" width="30" height="30" class="d-inline-block align-top" alt="logo">
+                {{appName}}
+        </a>
+        <button class="navbar-toggler collapsed" type="button" (click)="toggleState()">
+                        <span class="navbar-toggler-icon"></span>
+        </button>
+       
+     <!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>  -->
+      
+        <div class=div class="navbar-collapse" [ngClass]="{ 'collapse': isCollapse }">
+          <ul class="navbar-nav mr-auto">
+        
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item" *ngIf="!isLogged">
+              <a class="nav-link" routerLink="/Home">HOME</a>
+            </li>
+            <li class="nav-item" *ngIf="!isLogged">
+                        <a class="nav-link" routerLink="/AboutUs">SOBRE NOSOTROS</a>
+            </li>
+            <li class="nav-item" *ngIf="!isLogged">
+                        <a class="nav-link" routerLink="/">DESTINOS</a>
+            </li>
+            <li class="nav-item" *ngIf="!isLogged">
+                        <a class="nav-link">HOTELES</a>
+            </li>
+            <li class="nav-item" *ngIf="!isLogged">
+                        <a class="nav-link" >VER ITINERARIO</a>
+            </li>
+            <li class="nav-item" *ngIf="!isLogged">
+                        <a class="nav-link">PLANEA TU VIAJE</a>
+            </li>
+            <li class="nav-item" *ngIf="!isLogged">
+                        <a class="nav-link" routerLink="/Contacts">CONTÁCTANOS</a>
+            </li>
+            <li class="nav-item" *ngIf="isLogged">
+              <a class="nav-link" routerLink="/dashboard">DASHBOARD</a>
+            </li>
+            <li class="nav-item" *ngIf="isLogged">
+              <a class="nav-link" routerLink="/adminDestiny">DESTINOS</a>
+            </li>
+            <li class="nav-item" *ngIf="isLogged">
+              <a href="#" class="nav-link" (click)="onLogout()">CERRAR SESIÓN</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
