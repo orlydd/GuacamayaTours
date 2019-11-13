@@ -16,6 +16,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { MyItineraryComponent } from './my-itinerary/my-itinerary.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
     ContactFormComponent,
     ContactUsComponent,
     HomeComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    MyItineraryComponent
   ],
   imports: [
     CarouselModule.forRoot(),
