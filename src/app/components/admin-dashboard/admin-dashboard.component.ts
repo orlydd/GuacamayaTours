@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
+import { AuthService } from 'src/app/services/auth/auth.service';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminDashboardComponent implements OnInit {
 
-  constructor() { }
+  user: firebase.User;
+  constructor(public auth: AuthService, private router: Router
+  ) { }
 
   ngOnInit() {
+    this.auth.getUserState().subscribe(user=>{
+      this.user = user;
+    })
+   }
+
+  logout(){
+    this.auth.logout();
+    this.router.navigate(['/sign-in']);
   }
+
 
 }

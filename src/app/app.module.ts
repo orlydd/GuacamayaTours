@@ -3,7 +3,7 @@
 import { AngularFireModule} from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule,  FirestoreSettingsToken } from '@angular/fire/firestore';
-//Angular imports
+import { AngularFireAuthModule } from "@angular/fire/auth";
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -30,9 +30,10 @@ import { DestinyCrudComponent } from './admin/destiny-crud/destiny-crud.componen
 import { CreateDestinyComponent } from './tools/destiny/create-destiny/create-destiny.component';
 import { DestinyListComponent } from './tools/destiny/destiny-list/destiny-list.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
-import { SingInComponent } from './components/sing-in/sing-in.component';
+import { SignInComponent } from './tools/sign-in/sign-in/sign-in.component';
 //Authentication Service
 import {AuthService} from './services/auth/auth.service';
+
 
 
 @NgModule({
@@ -49,7 +50,7 @@ import {AuthService} from './services/auth/auth.service';
     CreateDestinyComponent,
     DestinyListComponent,
     AdminDashboardComponent,
-    SingInComponent
+    SignInComponent
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
@@ -63,7 +64,8 @@ import {AuthService} from './services/auth/auth.service';
     ModalModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule
   ],
   providers: [{provide: FirestoreSettingsToken, useValue: {}}, AuthService],
   bootstrap: [AppComponent]
