@@ -25,11 +25,13 @@
 }
 
 .vision{
-    height:380px;
+    min-height: 380px;
+    height:auto;
     width:100%;
 }
 .mission{
-    height:300px;
+    min-height: 300px;
+    height:auto;
     width:100%;
 }
 .visionText{

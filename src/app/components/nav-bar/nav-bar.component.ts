@@ -26,7 +26,7 @@ export class NavBarComponent implements OnInit {
   }
 
   Home(){
-    this.r.navigate(['/Home']);
+    this.r.navigate(['/']);
   }
 
   AboutUs(){

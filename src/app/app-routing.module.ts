@@ -11,7 +11,7 @@ const routes: Routes = [
   component: ContactUsComponent
 },
 {
-  path:'Home',
+  path:'',
   component: HomeComponent
 },
 {

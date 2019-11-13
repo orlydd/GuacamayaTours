@@ -15,6 +15,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ButtonsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

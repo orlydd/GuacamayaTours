@@ -16,7 +16,7 @@ export class FooterComponent implements OnInit {
   }
 
   Home(){
-    this.r.navigate(['/Home']);
+    this.r.navigate(['/']);
   }
 
   AboutUs(){
