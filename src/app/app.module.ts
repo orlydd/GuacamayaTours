@@ -6,7 +6,7 @@ import { AngularFirestoreModule,  FirestoreSettingsToken } from '@angular/fire/f
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 //Bootstrap imports;
@@ -33,6 +33,8 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 import { SignInComponent } from './tools/sign-in/sign-in/sign-in.component';
 //Authentication Service
 import {AuthService} from './services/auth/auth.service';
+import { ItineraryListComponent } from './tools/itinerary/itinerary-list/itinerary-list.component';
+import { ItineraryCrudComponent } from './admin/itinerary-crud/itinerary-crud.component';
 
 
 
@@ -50,7 +52,9 @@ import {AuthService} from './services/auth/auth.service';
     CreateDestinyComponent,
     DestinyListComponent,
     AdminDashboardComponent,
-    SignInComponent
+    SignInComponent,
+    ItineraryListComponent,
+    ItineraryCrudComponent
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
@@ -59,6 +63,7 @@ import {AuthService} from './services/auth/auth.service';
     TabsModule.forRoot(),
     RatingModule.forRoot(),
     FormsModule,
+    ReactiveFormsModule,
     ToastrModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
@@ -67,7 +72,7 @@ import {AuthService} from './services/auth/auth.service';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule
   ],
-  providers: [{provide: FirestoreSettingsToken, useValue: {}}, AuthService],
+  providers: [{provide: FirestoreSettingsToken, useValue: {}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

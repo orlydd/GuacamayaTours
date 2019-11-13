@@ -3,5 +3,4 @@
 
 
 <h4 class="mt-4">DASHBOARD</h4>
-<p *ngIf="user">Logged as: {{user?.email}}-{{user?.displayName}}</p>
-<button class="btn btn-primary"  *ngIf="user" (click)="logout()">Log Out</button>
+<button class="btn btn-primary"(click)="logout()">Log Out</button>

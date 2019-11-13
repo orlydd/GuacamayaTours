@@ -1,11 +1,7 @@
-export interface User {
+export interface Users {
     uid: string;
     email: string;
-    name: string;
+    emailVerified: boolean;
+    displayName: string;
     photoURL: string;
-    role: Roles;
- }
- export interface Roles {
-    subscriber?: boolean;
-    admin?: boolean;
  }
