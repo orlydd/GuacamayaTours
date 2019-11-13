@@ -10,15 +10,14 @@ import { Router } from "@angular/router";
 export class AdminDashboardComponent implements OnInit {
 
   
-  constructor(public auth: AuthService, private router: Router
-  ) { }
+  constructor(public authService: AuthService, private router: Router) { }
 
   ngOnInit() {
 
    }
 
   logout(){
-    this.auth.signOut();
+    this.authService.logOut();
   }
 
 

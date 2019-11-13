@@ -32,7 +32,7 @@ const routes: Routes = [
   component: AboutUsComponent
 },
 { 
-  path: 'sign-in', 
+  path: 'gtAdmin', 
   component: SignInComponent
 },
 {
@@ -41,7 +41,7 @@ const routes: Routes = [
   canActivate: [AuthGuard]  
 }, 
 {
-  path: 'destiny-crud', 
+  path: 'adminDestiny', 
   component: DestinyCrudComponent,
   canActivate: [AuthGuard]
 },

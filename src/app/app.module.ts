@@ -10,7 +10,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 //Bootstrap imports;
-import { ToastrModule } from 'ngx-toastr';
+//import { ToastrModule } from 'ngx-toastr';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { TabsModule } from 'ngx-bootstrap';
 import { RatingModule } from 'ngx-bootstrap/rating';
@@ -64,7 +64,7 @@ import { ItineraryCrudComponent } from './admin/itinerary-crud/itinerary-crud.co
     RatingModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
-    ToastrModule.forRoot(),
+    //ToastrModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     BrowserModule,
