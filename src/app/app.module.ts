@@ -37,6 +37,7 @@ import { ItineraryListComponent } from './tools/itinerary/itinerary-list/itinera
 import { ItineraryCrudComponent } from './admin/itinerary-crud/itinerary-crud.component';
 
 
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { ItineraryCrudComponent } from './admin/itinerary-crud/itinerary-crud.co
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    ButtonsModule.forRoot()
   ],
   providers: [{provide: FirestoreSettingsToken, useValue: {}}],
   bootstrap: [AppComponent]

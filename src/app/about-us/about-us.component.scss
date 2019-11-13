@@ -3,9 +3,13 @@
     margin-left: auto;
     margin-right:auto;
     text-align: center;
-    width: 600px;
+    width: 40%;
     height:auto;
     font-family: "Montserrat", sans-serif;
+}
+
+.row{
+    overflow: hidden;
 }
 
 .text{
@@ -14,13 +18,82 @@
 }
 
 .info{
+    text-align: center;
     font-size: 12px;
     font-weight: lighter;
     color:black;
 }
 
 .vision{
-    overflow: hidden;
-    height:400px;
+    min-height: 380px;
+    height:auto;
     width:100%;
+}
+.mission{
+    min-height: 300px;
+    height:auto;
+    width:100%;
+}
+.visionText{
+    margin-top:100px;
+    width: 70%;
+    height:auto;
+    margin-left: 200px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.missionText{
+    width: 70%;
+    margin-top:30px;
+    height:auto;
+    margin-left: 60px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.ImageWorld{
+    margin-top: 60px;
+    margin-left:200px;
+    height:60%;
+    width: 60%;
+}
+
+.title{
+    text-align: left;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+}
+
+.titleMission{
+    text-align: left;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+}
+
+.textV{
+    text-align: justify;
+    font-weight: lighter;
+    font-size: 13px;
+    color:black;
+}
+
+img{
+    margin-top: 50px;
+    height:70%;
+    width: 70%;
+}
+
+.line{
+    height:5px;
+    width: 100%;
+    background: #ffdf00;
+    border: 1px solid #ffdf00;
+}
+
+.picture{
+    height:650px;
+    width:100%;
+}
+
+.row{
+    padding:0;
 }

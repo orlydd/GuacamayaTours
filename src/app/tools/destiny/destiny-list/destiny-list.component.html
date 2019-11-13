@@ -16,8 +16,8 @@
                 <td (click)="onEdit(dest)">{{dest.state}}</td>     
                 <td (click)="onEdit(dest)">{{dest.city}}</td> 
                 
-                <td><button class="btn btn-block btn-sm btn-danger" (click)="onDelete(dest.key)">Eliminar</button></td>
-                <td><button class="btn btn-block btn-sm btn-success" (click)="isActive(dest)" *ngIf= "dest.active==true">Deshabilitar</button></td>  
+<!--                 <td><button class="btn btn-block btn-sm btn-danger" (click)="onDelete(dest.key)">Eliminar</button></td> -->
+                <td><button class="btn btn-block btn-sm  btn-danger" (click)="isActive(dest)" *ngIf= "dest.active==true">Deshabilitar</button></td>  
                 <td><button class="btn btn-block btn-sm btn-success" (click)="isActive(dest)" *ngIf= "dest.active==false">Habilitar</button></td>    
         </tr>
     </tbody>
