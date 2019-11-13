@@ -19,6 +19,6 @@ export class Destiny {
     hotel1: string;
     hotel2: string;
     hotel3: string;
-    active =true;
+    active: boolean;
     
 }

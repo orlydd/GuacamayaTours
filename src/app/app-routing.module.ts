@@ -11,13 +11,19 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 
 
 
+
+
 const routes: Routes = [
+ {
+  path: '',
+ component: HomeComponent
+}, 
 {
   path:'Contacts',
   component: ContactUsComponent
 },
 {
-  path:'',
+  path:'Home',
   component: HomeComponent
 },
 {

@@ -32,7 +32,7 @@
                                 <!--SERVICES-->
                                 <div class="form-group">
                                     <label for="services">Servicios</label>
-                                            <input class="form-control " name="service" #service="ngModel"[(ngModel)]="destinyService.destinyData.services" placeholder="Servicios">
+                                            <input class="form-control " name="services" #services="ngModel"[(ngModel)]="destinyService.destinyData.services" placeholder="Servicios">
                                 </div>
                                 <!--ACTIVITIES-->
                                 <div class="form-group">
@@ -49,7 +49,7 @@
                 
                                         <div class="form-group col-md-6">
                                                 <label for="longitude">Longitud</label>
-                                                    <input class="form-control " name="longitude" #longitude="ngModel"[(ngModel)]="destinyService.destinyData.ongitude" placeholder="Longitud">
+                                                    <input class="form-control " name="longitude" #longitude="ngModel"[(ngModel)]="destinyService.destinyData.longitude" placeholder="Longitud">
                                         </div>
                                 </div>
                                 <!--STATE&CITY-->
@@ -102,7 +102,9 @@
                                 </div>
                                 <!--SUBMIT BUTTON-->
                                 <div class="form-group">
-                                        <button type="submit" class="btn btn-block btn-info" >GUARDAR</button>
+                                        <button type="submit" class="btn btn-block btn-info" *ngIf= "destinyService.destinyData.key == null" >GUARDAR</button>
+                                        <button type="submit" class="btn btn-block btn-info"  *ngIf= "destinyService.destinyData.key!== null">EDITAR</button>
+                                        
                                 </div>
                             </form>
               

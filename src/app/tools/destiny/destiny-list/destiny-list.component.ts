@@ -17,6 +17,14 @@ export class DestinyListComponent implements OnInit {
   constructor(private destinyService: DestinyService, private firestore: AngularFirestore) { }
 
   ngOnInit() {
+    this.destinyService.getDestinies().subscribe(
+      destiny=>{
+        this.destiny = destiny;
+      }
+    );
+
+
+    /*
     this.destinyService.getDestinies().subscribe(actionArray=>{
       this.destiny= actionArray.map(item=>{
         return{key: item.payload.doc.id,
@@ -24,7 +32,12 @@ export class DestinyListComponent implements OnInit {
         } as Destiny;
       })
     })
-    
+    */
+  }
+
+  isActive(d: Destiny){
+    d.active = !d.active;
+    this.destinyService.updateDestiny(d);
   }
 
   onEdit(dest: Destiny){
