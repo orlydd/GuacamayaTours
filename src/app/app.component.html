@@ -3,8 +3,8 @@
    <app-nav-bar></app-nav-bar>
 </div>
 <div class="section">
-    
-    <app-destiny-crud></app-destiny-crud>
-
+    <router-outlet></router-outlet>
 </div>
+<ng-template [ngIf]="!admin"><div><app-footer></app-footer></div></ng-template> <!-- Test? -->  
+
 

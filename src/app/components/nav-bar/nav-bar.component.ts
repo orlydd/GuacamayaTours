@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { Router } from '@angular/router';
 import { print } from 'util';
 
@@ -31,6 +30,10 @@ export class NavBarComponent implements OnInit {
 
   AboutUs(){
     this.r.navigate(['/AboutUs']);
+  }
+
+  Hotels(){
+    this.r.navigate(['/Hotels'])
   }
 
 }

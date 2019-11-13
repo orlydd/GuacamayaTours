@@ -22,6 +22,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { DestinyCrudComponent } from './admin/destiny-crud/destiny-crud.component';
 import { CreateDestinyComponent } from './tools/destiny/create-destiny/create-destiny.component';
 import { DestinyListComponent } from './tools/destiny/destiny-list/destiny-list.component';
+import { HotelsComponent } from './hotels/hotels.component';
+import { HotelsListComponent } from './hotels-list/hotels-list.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { DestinyListComponent } from './tools/destiny/destiny-list/destiny-list.
     AboutUsComponent,
     DestinyCrudComponent,
     CreateDestinyComponent,
-    DestinyListComponent
+    DestinyListComponent,
+    HotelsComponent,
+    HotelsListComponent
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
