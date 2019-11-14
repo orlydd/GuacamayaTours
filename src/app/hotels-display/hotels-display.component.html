@@ -5,7 +5,7 @@
                 <img src="{{h.photos}}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">{{h.name}}</h5>
-                        <span>Estrellas:</span>
+                        <span><b>Estrellas:</b></span>
                             <span *ngIf="h.stars == 1">   
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star"></span>
@@ -41,9 +41,9 @@
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>	
                             </span>
-                        <br><span>Habitaciones disponibles: {{h.availability}}</span>
-                        <h6>Estado: {{h.state}}</h6>
-                        <h6>Precio: {{h.price}}$</h6>
+                        <br><span><b>Habitaciones disponibles:</b> {{h.availability}}</span>
+                        <h6><b>Estado:</b> {{h.state}}</h6>
+                        <h6><b>Precio:</b> {{h.price}}$</h6>
                         <p class="card-text"> {{h.description}}</p>
                         <button type="button" class="btn btn-primary" (click)="openModal(template)">Explorar!</button>
                 </div>

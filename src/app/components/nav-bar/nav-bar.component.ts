@@ -35,5 +35,8 @@ export class NavBarComponent implements OnInit {
   Hotels(){
     this.r.navigate(['/Hotels'])
   }
+  Destinies(){
+    this.r.navigate(['/Destinies'])
+  }
 
 }

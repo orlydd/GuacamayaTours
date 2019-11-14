@@ -25,6 +25,9 @@ import { DestinyListComponent } from './tools/destiny/destiny-list/destiny-list.
 import { HotelsComponent } from './hotels/hotels.component';
 import { HotelsListComponent } from './hotels-list/hotels-list.component';
 import { HotelsDisplayComponent } from './hotels-display/hotels-display.component';
+import { HotelsSeeMoreComponent } from './hotels-see-more/hotels-see-more.component';
+import { DestiniesComponent } from './destinies/destinies.component';
+import { DestiniesDisplayComponent } from './destinies-display/destinies-display.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import { HotelsDisplayComponent } from './hotels-display/hotels-display.componen
     DestinyListComponent,
     HotelsComponent,
     HotelsListComponent,
-    HotelsDisplayComponent
+    HotelsDisplayComponent,
+    HotelsSeeMoreComponent,
+    DestiniesComponent,
+    DestiniesDisplayComponent
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
