@@ -1,1 +1,72 @@
-<p>hotels-see-more works!</p>
+<div class="container my-container" id="let h of Hotels">
+    <!--Header Container-->
+   <div class="row">
+           <!--Image-->
+         <div class="col-6 my-col">
+           <img src="{{h.photo2}}" alt="Hotel Image" class="hotel-image">
+         </div>
+           <!--Title-->
+         <div class="col-5 align-self-center my-title">
+            <button>X</button>
+           <span>
+               <h1>{{h.name}}</h1>
+               <h2>{{h.city}}</h2>
+           </span>              
+         </div>
+         <div class="col-1 my-icon">
+             <img class="icon" src="{{h.icon}}">
+         </div>
+   </div>
+   <div class="row my-row">
+       <div class="col line1">
+           <div class="line">
+ 
+             </div>
+       </div>
+   </div>
+   <div class="row my-row">
+     <div class="col nav justify-content-center">
+         <tabset>
+             <tab heading="INFORMACIÓN" id="nav-information" (selectTab)="onSelect($event)"> </tab>
+             <tab heading="HABITACIONES" id="nav-rooms" (selectTab)="onSelect($event)"></tab>
+             <tab heading="SERVICIOS" id="nav-services" (selectTab)="onSelect($event)"></tab>
+         </tabset>
+     </div>
+   </div>
+   <div class="row my-row3">
+     <div class="col-5 my-information">
+         <div class="info" *ngIf="value">
+           <p *ngIf="value=== 'nav-information'">{{h.description}}</p>
+           <p *ngIf="value==='nav-rooms'">{{h.rooms}}</p>
+           <p *ngIf="value==='nav-services'">{{h.services}}</p>
+         </div>
+     </div>
+     <div class="col-1 line2">
+         <div class="blueLine">
+ 
+         </div>
+     </div>
+     <div class="col-6 my-carousel">
+         <div class="pictures">
+             <carousel>
+                     <ng-template Slide>
+                       <div class="picsum-img-wrapper">
+                         <img class="img-fluid" src="{{h.picture1}}">
+                       </div>
+                     </ng-template>
+                     <ng-template Slide>
+                       <div class="picsum-img-wrapper">
+                         <img class="img-fluid" src="{{h.picture2}}">
+                       </div>
+                     </ng-template>
+                     <ng-template Slide>
+                       <div class="picsum-img-wrapper">
+                         <img class="img-fluid" src="{{h.picture3}}">
+                       </div>
+                     </ng-template>
+                    </carousel>
+       </div>
+     </div>
+   </div>
+ </div>
+ 

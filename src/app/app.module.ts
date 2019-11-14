@@ -1,6 +1,8 @@
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,6 +30,7 @@ import { HotelsDisplayComponent } from './hotels-display/hotels-display.componen
 import { HotelsSeeMoreComponent } from './hotels-see-more/hotels-see-more.component';
 import { DestiniesComponent } from './destinies/destinies.component';
 import { DestiniesDisplayComponent } from './destinies-display/destinies-display.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,8 @@ import { DestiniesDisplayComponent } from './destinies-display/destinies-display
     HotelsDisplayComponent,
     HotelsSeeMoreComponent,
     DestiniesComponent,
-    DestiniesDisplayComponent
+    DestiniesDisplayComponent,
+    ModalComponent
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
@@ -58,10 +62,12 @@ import { DestiniesDisplayComponent } from './destinies-display/destinies-display
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     BrowserModule,
+    BrowserAnimationsModule,
+    MaterialModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [{provide: FirestoreSettingsToken, useValue: {}}],
+  providers: [BrowserModule,BrowserAnimationsModule,MaterialModule,{provide: FirestoreSettingsToken, useValue: {}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
