@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="flexit">
+<div class="hotelsclass" *ngFor="let h of Hotels">
+        <div class="card" style="width: 18rem;">
+                <img src="{{h.photos}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{h.name}}</h5>
+                        <span>Estrellas:</span>
+                            <span *ngIf="h.stars == 1">   
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span *ngIf="h.stars == 2">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>	
+                            </span>
+                            <span *ngIf="h.stars == 3">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>	
+                            </span>
+                            <span *ngIf="h.stars == 4">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span *ngIf="h.stars == 5">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>	
+                            </span>
+                        <br><span>Habitaciones disponibles: {{h.availability}}</span>
+                        <h6>Estado: {{h.state}}</h6>
+                        <h6>Precio: {{h.price}}$</h6>
+                        <p class="card-text"> {{h.description}}</p>
+                        <button type="button" class="btn btn-primary" (click)="openModal(template)">Explorar!</button>
+                </div>
+              
+        </div>
