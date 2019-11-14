@@ -9,7 +9,11 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import {SignInComponent} from  "./tools/sign-in/sign-in/sign-in.component";
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import {DestinyCrudComponent} from './admin/destiny-crud/destiny-crud.component';
+<<<<<<< HEAD
 import { MyItineraryComponent } from './my-itinerary/my-itinerary.component';
+=======
+import {ItineraryCrudComponent} from './admin/itinerary-crud/itinerary-crud.component';
+>>>>>>> Develop
 
 
 
@@ -47,9 +51,16 @@ const routes: Routes = [
   canActivate: [AuthGuard]
 },
 {
+<<<<<<< HEAD
   path:'seeItinerary',
   component: MyItineraryComponent
 }
+=======
+  path: 'adminItinerary', 
+  component: ItineraryCrudComponent,
+  canActivate: [AuthGuard]
+},
+>>>>>>> Develop
 ];
 
 @NgModule({
