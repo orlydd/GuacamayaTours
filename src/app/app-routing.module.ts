@@ -47,7 +47,7 @@ const routes: Routes = [
   canActivate: [AuthGuard]
 },
 {
-  path:'myItinerary',
+  path:'seeItinerary',
   component: MyItineraryComponent
 }
 ];

@@ -1,7 +1,22 @@
 <section>
     <app-hero [title]="'MI ITINERARIO'" [description]="'GUACAMAYA TOURS'" 
-    [image]="'https://revistavenezolana.com/wp-content/uploads/2017/09/morrocoy.jpg'">
+    [image]="'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Cayo_de_Agua%2C_Archipi%C3%A9lago_de_Los_Roques%2C_Venezuela.jpg/1200px-Cayo_de_Agua%2C_Archipi%C3%A9lago_de_Los_Roques%2C_Venezuela.jpg'">
     </app-hero>
+</section>
+<section>
+    <div class="row askCode" [ngStyle]="{'background' : 'url(assets/Images/palmera.jpg) center'}">
+        <div class="white">
+            <p class="bigText">INGRESA TU CÓDIGO</p>
+            <p class="smallText">VERIFICA TU ITINERARIO</p>
+        </div>
+        <form #form= "ngForm" autocomplete="off" (submit)="onSubmit(form)">
+            <input class="code" type="text" id="codeID" name="code" placeholder="Ingrese su código">
+        </form>
+        <button type="submit" class="btn btn-lg btn-success btn-block" onclick="check()">CONTINUAR</button>
+    </div>
+</section>
+<section>
+    
 </section>
 <div class="section">
     <app-footer></app-footer>
