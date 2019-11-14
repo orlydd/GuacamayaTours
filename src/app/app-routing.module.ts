@@ -9,6 +9,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import {SignInComponent} from  "./tools/sign-in/sign-in/sign-in.component";
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import {DestinyCrudComponent} from './admin/destiny-crud/destiny-crud.component';
+import {ItineraryCrudComponent} from './admin/itinerary-crud/itinerary-crud.component';
 
 
 
@@ -43,6 +44,11 @@ const routes: Routes = [
 {
   path: 'adminDestiny', 
   component: DestinyCrudComponent,
+  canActivate: [AuthGuard]
+},
+{
+  path: 'adminItinerary', 
+  component: ItineraryCrudComponent,
   canActivate: [AuthGuard]
 },
 ];
