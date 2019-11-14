@@ -1,7 +1,7 @@
 
 .AboutUs{
     position: relative;
-    height:350px;
+    min-height:350px;
     width:100%;
     margin:0;
     padding:0;
@@ -68,6 +68,7 @@
     margin-top: 4%;
     font-size: 2vh;
     color:black;
+    margin-bottom: 5vh;
 }
 
 .pasos{
@@ -174,7 +175,7 @@
     width:60vh;
     margin-top:15vw;
     margin-left:55vw;
-    background: white !important;
+    background: rgb(253, 249, 0) !important;
     color: black;
     font-family: "Montserrat", sans-serif;
     font-weight: lighter;
@@ -184,7 +185,7 @@
 .create:hover{
     margin-top:15vw;
     margin-left:55vw;
-    background: white !important;
+    background: rgb(253, 249, 0) !important;
 }
 
 .contactUs{

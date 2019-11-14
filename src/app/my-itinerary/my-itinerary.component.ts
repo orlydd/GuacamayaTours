@@ -12,4 +12,8 @@ export class MyItineraryComponent implements OnInit {
   ngOnInit() {
   }
 
+  check(){
+    
+  }
+
 }
