@@ -1,0 +1,115 @@
+<div class="container" >
+    
+    <div class="row justify-content-center">
+        <div class="col">
+                <h4>Destino</h4>
+        </div>
+       
+        <div class="col col-md-12" >
+                        <form #form= "ngForm" autocomplete="off" (submit)="onSubmit(form)">
+                                <input type="hidden" name= "key" #key="ngModel"[(ngModel)]="destinyService.destinyData.key">    
+                            <!--ID & NAME-->
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="destinyId">ID</label>
+                                        <input  class="form-control" name="destinyId"  #destinyId="ngModel"[(ngModel)]="destinyService.destinyData.destinyId" placeholder="ID" >
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="name">Nombre</label>
+                                            <input class="form-control " name="name" #name="ngModel"[(ngModel)]="destinyService.destinyData.name" placeholder="Nombre">
+                                    </div>
+                                </div>
+                                <!--DESCRIPTION-->
+                                <div class="form-group">
+                                    <label for="description">Descripción</label>
+                                            <input class="form-control " name="description" #description="ngModel"[(ngModel)]="destinyService.destinyData.description" placeholder="Descripción">
+                                </div>
+                                <!--CATEGORY-->
+                                <div class="form-group">
+                                    <label for="category">Categoría</label>
+                                        <input class="form-control " name="category" #category="ngModel"[(ngModel)]="destinyService.destinyData.category" placeholder="Categoría">
+                                </div>
+                                <!--SERVICES-->
+                                <div class="form-group">
+                                    <label for="services">Servicios</label>
+                                            <input class="form-control " name="services" #services="ngModel"[(ngModel)]="destinyService.destinyData.services" placeholder="Servicios">
+                                </div>
+                                <!--ACTIVITIES-->
+                                <div class="form-group">
+                                    <label for="activities">Actividades</label>
+                                                <input class="form-control " name="activities" #activities="ngModel"[(ngModel)]="destinyService.destinyData.activities" placeholder="Actividades">
+                                </div>
+                                <!--LATITUDE&LONGITUDE-->
+                                <div class="row">
+                                    
+                                        <div class="form-group col-md-6">
+                                                <label for="latitude">Latitud</label>
+                                                <input class="form-control " name="latitude" #latitude="ngModel"[(ngModel)]="destinyService.destinyData.latitude" placeholder="Latitud">
+                                        </div>
+                
+                                        <div class="form-group col-md-6">
+                                                <label for="longitude">Longitud</label>
+                                                    <input class="form-control " name="longitude" #longitude="ngModel"[(ngModel)]="destinyService.destinyData.longitude" placeholder="Longitud">
+                                        </div>
+                                </div>
+                                <!--STATE&CITY-->
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="state">Estado</label>
+                                        <input class="form-control  " name="state" #state="ngModel"[(ngModel)]="destinyService.destinyData.state" placeholder="Estado">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="city">Ciudad</label>
+                                        <input class="form-control " name="city" #city="ngModel"[(ngModel)]="destinyService.destinyData.city" placeholder="Cuidad">
+                                    </div>
+                                </div>
+                                <!--DIRECTION-->
+                                <div class="form-group">
+                                    <label for="direction">Dirección</label>
+                                    <input class="form-control " name="direction" #direction="ngModel"[(ngModel)]="destinyService.destinyData.direction" placeholder="Dirección">
+                                </div>
+                                <!--CULTURE-->
+                                <div class="form-group">
+                                    <label for="culture">Cultura</label>
+                                            <input class="form-control " name="culture" #culture="ngModel"[(ngModel)]="destinyService.destinyData.culture" placeholder="Cultura">
+                                </div>
+                                <!--GASTRONOMY-->
+                                <div class="form-group">
+                                    <label for="gastronomy">Gastronomía</label>
+                                        <input class="form-control " name="gastronomy" #gastronomy="ngModel"[(ngModel)]="destinyService.destinyData.gastronomy" placeholder="Gastronomía">
+                                </div>
+                                <!--HOTELS-->
+                                <p>Hoteles</p>
+                                <div class="form-group">
+                                        <input class="form-control " name="hotel1" #hotel1="ngModel"[(ngModel)]="destinyService.destinyData.hotel1" placeholder="Hotel 1">
+                                </div>
+                                <div class="form-group">
+                                        <input class="form-control " name="hotel2" #hotel2="ngModel"[(ngModel)]="destinyService.destinyData.hotel2" placeholder="Hotel 2">
+                                </div>
+                                <div class="form-group">
+                                        <input class="form-control " name="hotel3" #hotel3="ngModel"[(ngModel)]="destinyService.destinyData.hotel3" placeholder="Hotel 3">
+                                </div>
+                                <!--Photos--> 
+                                <p>Fotos</p>
+                                <div class="form-group">
+                                    <input class="form-control " name="photo1" #photo1="ngModel"[(ngModel)]="destinyService.destinyData.photo1" placeholder="Foto 1">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control " name="photo2" #photo2="ngModel"[(ngModel)]="destinyService.destinyData.photo2" placeholder="Foto 2">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control " name="photo3" #photo3="ngModel"[(ngModel)]="destinyService.destinyData.photo3" placeholder="Foto 3">
+                                </div>
+                                <!--SUBMIT BUTTON-->
+                                <div class="form-group">
+                                        <button type="submit" class="btn btn-block btn-info" *ngIf= "destinyService.destinyData.key == null" >GUARDAR</button>
+                                        <button type="submit" class="btn btn-block btn-info"  *ngIf= "destinyService.destinyData.key!== null">EDITAR</button>
+                                        
+                                </div>
+                            </form>
+              
+        </div>
+    </div>
+</div>
+
+

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { Router } from '@angular/router';
-import { print } from 'util';
+import { AuthService } from 'src/app/services/auth/auth.service';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-nav-bar',
@@ -9,28 +8,43 @@ import { print } from 'util';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-
   isCollapse = true;
+  
   toggleState() {
     let foo = this.isCollapse
     this.isCollapse = foo === false ? true : false;
   }
 
-  constructor(private r: Router) { }
+  public appName: string = 'Guacamaya Tours';
+  
+  public isLogged: boolean = false;
 
-  ngOnInit() {
+  constructor(private authService: AuthService, private afsAuth: AngularFireAuth) { }
+    
+    ngOnInit() {
+        this.getCurrentUser();
+      }
+
+
+      /**
+       * If the user is logged in we will show the admin navigation navbar
+       */
+    getCurrentUser() {
+      this.authService.isAuth().subscribe(auth => {
+        if (auth) {
+          console.log('user logged');
+          this.isLogged = true;
+        } else {
+          console.log('NOT user logged');
+          this.isLogged = false;
+        }
+      });
+    }
+
+    /**
+     * Log Out Fuction
+     */
+    onLogout() {
+      this.afsAuth.auth.signOut();
+    }
   }
-
-  Contacts(){
-    this.r.navigate(['/Contacts']);
-  }
-
-  Home(){
-    this.r.navigate(['/']);
-  }
-
-  AboutUs(){
-    this.r.navigate(['/AboutUs']);
-  }
-
-}
