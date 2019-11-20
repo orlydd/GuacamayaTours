@@ -13,7 +13,7 @@
       </carousel>
 </section>
 <section>
-  <div class="AboutUs" [ngStyle]="{'background' : 'url(../../assets/Imagess/SobreNosotrosHome.png) center'}">
+  <div class="AboutUs" [ngStyle]="{'background' : 'url(../../assets/Images/SobreNosotrosHome.png) center', 'background-size':'cover'}">
   <div class="row AboutUs">
     <div class="col-12 title">
       <img class="logo" src="../../assets/Images/logotipo.jpg">
@@ -29,28 +29,37 @@
 </section>
 <section>
   <div class="row pasos">
-    <div class="col pasosTitle justify-content-center">
+    <div class="col pasosTitle">
       <p>SOLO TRES SENCILLOS PASOS</p>
-      <div class="Line">
-
-      </div>
     </div>
   </div>
   <div class="row pasos2">
-    <div class="col-4 location justify-content-center">
-      <img class="pic" src="../../assets/Images/localizacion.png">
-      <p class="bigText">ELIGE TU DESTINO</p>
-      <p class="smallText">Comienza tu aventura eligiendo el destino turístico de tu preferencia</p>
+    <div class="col-md-4 location justify-content-center">
+        <div class="card" style="width: 18rem;">
+            <img src="../../assets/Images/localizacion.png" class="card-img-top" alt="localizacion">
+            <div class="card-body">
+              <h5 class="card-title">ELIGE TU DESTINO</h5>
+              <p class="card-text">Comienza tu aventura eligiendo el destino turístico de tu preferencia</p>
+            </div>
+          </div>
     </div>
-    <div class="col-4 hotel justify-content-center">
-      <img class="pic" src="../../assets/Images/hotel.jpg">
-      <p class="bigText">SELECCIONA TU HOTEL</p>
-      <p class="smallText">Elige el hotel que más se acomode a tus necesidades</p>
+    <div class="col-md-4 hotel justify-content-center">
+        <div class="card" style="width: 18rem;">
+            <img src="../../assets/Images/hotel.jpg" class="card-img-top" alt="hotel">
+            <div class="card-body">
+              <h5 class="card-title">SELECCIONA TU HOTEL</h5>
+              <p class="card-text">Elige el hotel que más se acomode a tus necesidades</p>
+            </div>
+          </div>
     </div>
-    <div class="col-4 adventure">
-      <img class="pic " src="../../assets/Images/Maleta.png">
-      <p class="bigText">DISFRUTA LA AVENTURA</p>
-      <p class="smallText">Y listo! ya puedes comenzar tu aventura.</p>
+    <div class="col-md-4 adventure">
+        <div class="card" style="width: 18rem;">
+            <img src="../../assets/Images/Maleta.png" class="card-img-top" alt="maleta">
+            <div class="card-body">
+              <h5 class="card-title">DISFRUTA LA AVENTURA</h5>
+              <p class="card-text">Y listo! ya puedes comenzar tu aventura.</p>
+            </div>
+          </div>
     </div>
   </div>
 </section>
@@ -58,43 +67,55 @@
   <div class="row more">
     <div class="col moreTitle">
       <p>CONOCE MÁS SOBRE NOSOTROS</p>
-      <div class="yellowLine">
-
-      </div>
     </div>
     <div class="row more2">
-      <div class="col-4 destiny justify-content-center">
-        <img class="pic" src="../../assets/Images/avion.png">
-        <p class="bigTextYellow">NUESTROS DESTINOS</p>
-        <p class="smallTextWhite">Te ofrecemos una gran variedad de destinos que se ajustan a tus gustos</p>
-        <button type="button" class="btn btn-primary">
-          VER
-        </button>
+      <div class="col-md-4 mb-4 destiny justify-content-center">
+          <div class="card" id="blueCard" style="width: 18rem;">
+              <img src="../../assets/Images/avion.png" class="card-img-top" alt="avion">
+              <div class="card-body">
+                <h5 class="card-title" id="blueTitle">NUESTROS DESTINOS</h5>
+                <p class="card-text" id=blueText>Te ofrecemos una gran variedad de destinos que se ajustan a tus gustos</p>
+                <a href="#" class="btn btn-primary" id=blueButton>VER</a>
+              </div>
+            </div>
       </div>
-    <div class="col-4 hotel justify-content-center">
-      <img class="pic" src="../../assets/Images/avion.png">
-      <p class="bigTextYellow">NUESTROS HOTELES</p>
-      <p class="smallTextWhite">Te ofrecemos una gran variedad de hoteles que se ajustan a tus necesidades</p>
-      <button type="button" class="btn btn-primary">
-        VER
-      </button>
+    <div class="col-md-4 hotel justify-content-center">
+       <div class="col-md-4 mb-4 destiny justify-content-center">
+          <div class="card" id="blueCard" style="width: 18rem;">
+              <img src="../../assets/Images/cama.png" class="card-img-top" alt="cama">
+              <div class="card-body">
+                <h5 class="card-title" id="blueTitle">NUESTROS HOTELES</h5>
+                <p class="card-text" id=blueText>Te ofrecemos una gran variedad de hoteles que se ajustan a tus necesidades</p>
+                <a href="#" class="btn btn-primary" id=blueButton>VER</a>
+              </div>
+            </div>
+      </div>
     </div>
     <div class="col-4 search justify-content-center">
-      <img class="pic" src="../../assets/Images/lupa.png">
-      <p class="bigTextYellow">VER ITINERARIO</p>
-      <p class="smallTextWhite">¿Ya tienes tu itinerario? Revisalo en la página</p>
-      <button type="button" class="btn btn-primary">
-        VER
-      </button>
+        <div class="col-md-4 mb-4 destiny justify-content-center">
+            <div class="card" id="blueCard" style="width: 18rem;">
+                <img src="../../assets/Images/lupa.png" class="card-img-top" alt="lupa">
+                <div class="card-body">
+                  <h5 class="card-title" id="blueTitle">VER ITINERARIO</h5>
+                  <p class="card-text" id=blueText>¿Ya tienes tu itinerario? Revisalo en la página</p>
+                  <a href="#" class="btn btn-primary" id=blueButton>VER</a>
+                </div>
+              </div>
+        </div>
     </div>
   </div>
 </div>
 </section>
 <section>
-  <div class="plane" [ngStyle]="{'background' : 'url(../../assets/Images/fondoAvion.png) center no-repeat'}">
-    <button type="button" class="btn btn-primary create">
-        CREA TU ITINERARIO
-      </button>
+  <div class="plane" [ngStyle]="{'background' : 'url(../../assets/Images/fondoAvion.png) center', 'background-size':'cover'}">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="adventureTitle">¡UNETE A LA AVENTURA!</p>
+          <button type="button" class="btn btn-primary create">
+              CREA TU ITINERARIO
+          </button>
+      </div>
+    </div>
   </div>
 
 </section>
@@ -102,9 +123,6 @@
   <div class="row contactUs"[ngStyle]="{'background' : 'url(../../assets/Images/fondoTriangulos.png) center'}">
     <div class="col">
       <p class="cTitle">CONTÁCTANOS</p>
-      <div class="cLine">
-
-      </div>
       <p class="cBigText">DIRECCIÓN</p>
       <p class="cSmallText">Calle Suero de Quiñones, 4 - 1 C, VENEZUELA, 28002 , VENEZUELA</p>
       <p class="cBigText">E-MAIL</p>

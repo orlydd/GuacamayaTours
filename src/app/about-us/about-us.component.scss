@@ -38,7 +38,9 @@
     margin-top:100px;
     width: 70%;
     height:auto;
-    margin-left: 200px;
+    float:left;
+    margin-left: 10%;
+    margin-bottom: 5%;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -46,15 +48,16 @@
     width: 70%;
     margin-top:30px;
     height:auto;
-    margin-left: 60px;
+    float: right;
     font-family: "Montserrat", sans-serif;
 }
 
 .ImageWorld{
-    margin-top: 60px;
-    margin-left:200px;
-    height:60%;
-    width: 60%;
+    float: center;
+    margin-top: 70px;
+    margin-left: 30%;
+    height:12em;
+    width: 14em;
 }
 
 .title{
