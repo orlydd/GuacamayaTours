@@ -19,29 +19,20 @@
 
 .logo{
     position: relative;
-    justify-content: center;
-    width:8vw;
-    height: 8vw;
-    margin-top:15%;
-    margin-left: 84%;
+    width:18vh;
+    height: 18vh;
 }
 
 .title{
     font-family: "Montserrat", sans-serif;
     height:auto;
     font-weight: bold;
-    font-size: 6.3vh;
+    font-size: 300%;
     color:#2EBFC4;
-    margin-top:6%;
-    margin-left: 4%;
+    margin-top: 4%;
+    text-align: center;
 }
 
-.blueLine{
-    height:2px;
-    width: 62vh;
-    border: 2px solid #2EBFC4;
-    background: #2EBFC4;
-}
 
 .Line{
 
@@ -65,7 +56,7 @@
     height:auto;
     width:60%;
     font-weight: lighter;
-    margin-top: 4%;
+    margin-top:0;
     font-size: 2vh;
     color:black;
     margin-bottom: 5vh;
