@@ -29,12 +29,12 @@ export class DestinyService {
      this.destinyDoc.delete();
    }
 
-   /*
-   isActive(destiny: Destiny){
+   
+  /*  isActive(destiny: Destiny){
     this.destinyDoc = this.db.doc(`Destiny/${destiny.key}`);
     this.destinyDoc.set()
-   }
-   */
+   } */
+   
   addDestiny(destiny: Destiny){
     this.destinyCollection.add(destiny);
   }

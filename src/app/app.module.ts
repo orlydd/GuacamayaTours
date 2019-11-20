@@ -35,6 +35,8 @@ import { SignInComponent } from './tools/sign-in/sign-in/sign-in.component';
 import {AuthService} from './services/auth/auth.service';
 import { ItineraryListComponent } from './tools/itinerary/itinerary-list/itinerary-list.component';
 import { ItineraryCrudComponent } from './admin/itinerary-crud/itinerary-crud.component';
+import { StateListComponent } from './tools/state/state-list/state-list.component';
+import { CreateStateComponent } from './tools/state/create-state/create-state.component';
 
 
 
@@ -54,7 +56,9 @@ import { ItineraryCrudComponent } from './admin/itinerary-crud/itinerary-crud.co
     AdminDashboardComponent,
     SignInComponent,
     ItineraryListComponent,
-    ItineraryCrudComponent
+    ItineraryCrudComponent,
+    StateListComponent,
+    CreateStateComponent
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
