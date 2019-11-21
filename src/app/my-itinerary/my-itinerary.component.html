@@ -4,15 +4,25 @@
     </app-hero>
 </section>
 <section>
-    <div class="row askCode" [ngStyle]="{'background' : 'url(assets/Images/palmera.jpg) center'}">
+    <div class="row askCode">
         <div class="white">
-            <p class="bigText">INGRESA TU CÓDIGO</p>
-            <p class="smallText">VERIFICA TU ITINERARIO</p>
+            <div class="row title">
+                <div class="col-md-12">
+                        <p class="bigText">INGRESA TU CÓDIGO</p>
+                        <p class="smallText">VERIFICA TU ITINERARIO</p>
+                </div>
+            </div>
+            <div class="row form">
+                    <div class="col-md-10 formMargin">
+                            <form>
+                                <div class="form-group">
+                                    <input type="code" class="form-control" id="code1" aria-describedby="codeHelp" placeholder="Ingresa tu código">
+                                </div>
+                                <button type="submit" class="btn btn-primary" (click)="checkCode()">CONTINUAR</button>
+                            </form>
+                    </div>
+                </div>
         </div>
-        <form #form= "ngForm" autocomplete="off" (submit)="onSubmit(form)">
-            <input class="code" type="text" id="codeID" name="codeName" placeholder="Ingrese su código">
-        </form>
-        <button type="submit" class="btn btn-lg btn-success btn-block" onclick="check()">CONTINUAR</button>
     </div>
 </section>
 <section>
