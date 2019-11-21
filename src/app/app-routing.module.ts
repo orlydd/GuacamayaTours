@@ -11,9 +11,7 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 import {DestinyCrudComponent} from './admin/destiny-crud/destiny-crud.component';
 import {StateCrudComponent} from './admin/state-crud/state-crud.component';
 import {ItineraryCrudComponent} from './admin/itinerary-crud/itinerary-crud.component';
-
-
-
+import{MyItineraryComponent} from './my-itinerary/my-itinerary.component';
 
 
 const routes: Routes = [
@@ -21,6 +19,10 @@ const routes: Routes = [
   path: '',
  component: HomeComponent
 }, 
+{
+path :'seeItinerary',
+component: MyItineraryComponent
+},
 {
   path:'Contacts',
   component: ContactUsComponent

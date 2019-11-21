@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {ItineraryService} from 'src/app/services/itinerary/itinerary.service';
+import {Itinerary} from 'src/app/models/itinerary';
+import { map } from 'rxjs/operators';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-itinerary-list',
@@ -7,9 +11,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItineraryListComponent implements OnInit {
 
-  constructor() { }
+  
+  itinerary: Itinerary[];
+
+  constructor(private itineraryService: ItineraryService, private firestore: AngularFirestore) { }
 
   ngOnInit() {
-  }
+    this.itineraryService.getItinerary().subscribe(
+      itinerary =>{
+        this.itinerary = itinerary;
+      }
+    )
 
+
+
+  }
+/* 
+
+  onEdit(dest: itinerary){
+    let destiny = Object.assign({}, dest);
+    this.destinyService.destinyData= destiny;
+  } */
+
+  onDelete(key:string){
+    //if(confirm("¿Esta seguro que quiere eliminar este destino?")){
+      this.firestore.doc('Itinerary/'+key).delete();
+   // }
+  }
 }

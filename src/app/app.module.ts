@@ -40,6 +40,8 @@ import { CreateStateComponent } from './tools/state/create-state/create-state.co
 import { StateCrudComponent } from './admin/state-crud/state-crud.component';
 
 
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { MyItineraryComponent } from './my-itinerary/my-itinerary.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,7 @@ import { StateCrudComponent } from './admin/state-crud/state-crud.component';
     ContactUsComponent,
     HomeComponent,
     AboutUsComponent,
+    MyItineraryComponent,
     DestinyCrudComponent,
     CreateDestinyComponent,
     DestinyListComponent,
@@ -76,7 +79,8 @@ import { StateCrudComponent } from './admin/state-crud/state-crud.component';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    ButtonsModule.forRoot()
   ],
   providers: [{provide: FirestoreSettingsToken, useValue: {}}],
   bootstrap: [AppComponent]

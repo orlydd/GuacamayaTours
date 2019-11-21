@@ -1,0 +1,33 @@
+<section>
+    <app-hero [title]="'MI ITINERARIO'" [description]="'GUACAMAYA TOURS'" 
+    [image]="'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Cayo_de_Agua%2C_Archipi%C3%A9lago_de_Los_Roques%2C_Venezuela.jpg/1200px-Cayo_de_Agua%2C_Archipi%C3%A9lago_de_Los_Roques%2C_Venezuela.jpg'">
+    </app-hero>
+</section>
+<section>
+    <div class="row askCode">
+        <div class="white">
+            <div class="row title">
+                <div class="col-md-12">
+                        <p class="bigText">INGRESA TU CÓDIGO</p>
+                        <p class="smallText">VERIFICA TU ITINERARIO</p>
+                </div>
+            </div>
+            <div class="row form">
+                    <div class="col-md-10 formMargin">
+                            <form>
+                                <div class="form-group">
+                                    <input type="code" class="form-control" id="code1" aria-describedby="codeHelp" placeholder="Ingresa tu código">
+                                </div>
+                                <button type="submit" class="btn btn-primary" (click)="checkCode()">CONTINUAR</button>
+                            </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+<section>
+
+</section>
+<div class="section">
+    <app-footer></app-footer>
+</div>

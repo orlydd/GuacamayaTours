@@ -1,13 +1,30 @@
-<div class="container">
-    <div class="row">
-        <div class="col ">
-                 <app-destiny-list></app-destiny-list>
-        </div>   
-    </div>
-    <hr />
-    <div class="row  justify-content-end">
-        <div class="col">
-                <app-create-destiny></app-create-destiny>
+<div class="wrapper container-fluid page-container" style="width: fit-content; height: fit-content;" >
+        <div class="row page-row" >
+          
+            <div class="col col-lg-2 col-sm-1 col-xs-0 admin-sidebar">
+                    <a class="nav-link" routerLink="/dashboard">DASHBOARD</a>
+                    <a class="nav-link" routerLink="/adminDestiny">DESTINOS</a>
+                    <a class="nav-link" routerLink="/adminItinerary">ITINERARIOS</a>
+                    <a class="nav-link" routerLink="/inbox">INBOX</a>
+            </div>
+            
+            <div class="col col-lg-10 col-sm-11 col-xs-12 page-content" style="margin-left: 15vw; padding-left: 20px;" >
+                    <section class="container" style="margin-top: 5vh;">
+                            <div class="row">
+                                    <div class="col ">
+                                             <app-destiny-list></app-destiny-list>
+                                    </div>   
+                                </div>
+                                <hr />
+                                <div class="row  justify-content-end">
+                                    <div class="col">
+                                            <app-create-destiny></app-create-destiny>
+                                    </div>
+                                </div>
+                            
+                    </section>
+    
+            </div>
         </div>
     </div>
-</div>
+
