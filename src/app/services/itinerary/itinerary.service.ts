@@ -24,6 +24,12 @@ export class ItineraryService {
     
    }
 
+   
+  getAnItinerary(key:string){
+    return this.db.collection('Itinerary').doc(key).snapshotChanges();
+
+  }
+
    deleteDestiny(itinerary: Itinerary){
      this.itineraryDoc = this.db.doc(`Itinerary/${itinerary.key}`);
      this.itineraryDoc.delete();
