@@ -37,6 +37,7 @@ import { ItineraryListComponent } from './tools/itinerary/itinerary-list/itinera
 import { ItineraryCrudComponent } from './admin/itinerary-crud/itinerary-crud.component';
 import { StateListComponent } from './tools/state/state-list/state-list.component';
 import { CreateStateComponent } from './tools/state/create-state/create-state.component';
+import { StateCrudComponent } from './admin/state-crud/state-crud.component';
 
 
 
@@ -58,7 +59,8 @@ import { CreateStateComponent } from './tools/state/create-state/create-state.co
     ItineraryListComponent,
     ItineraryCrudComponent,
     StateListComponent,
-    CreateStateComponent
+    CreateStateComponent,
+    StateCrudComponent
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
