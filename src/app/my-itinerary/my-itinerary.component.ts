@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ItineraryService} from '../services/itinerary/itinerary.service'
 
 @Component({
   selector: 'app-my-itinerary',
@@ -7,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyItineraryComponent implements OnInit {
 
-  constructor() { }
+
+  constructor() { 
+  }
 
   ngOnInit() {
   }
 
-  check(){
+  checkCode(code:string){
     
   }
 
