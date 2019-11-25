@@ -30,5 +30,5 @@ export class HotelsDisplayComponent implements OnInit {
       this.Hotels = Hotels;
     })
   }
-
 }
+
