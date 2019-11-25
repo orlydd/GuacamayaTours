@@ -8,10 +8,9 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./Hotels-display.component.scss']
 })
 export class HotelsDisplayComponent implements OnInit {
- 
   
   Hotels: any;
-
+ 
   constructor(private HotelsService: HotelsService) { }
 
   ngOnInit() {

@@ -2,7 +2,7 @@
     padding: 0;
     border : 1px solid rgb(168, 167, 167);
     border: 1px solid black;
-    width: 60%;
+    width: 80%;   
 }
 
 .my-row{
@@ -25,6 +25,7 @@
 .my-carousel{
     padding:0;
     width:100%;
+    max-height:500px;
 }
 
 .container-image{
@@ -32,7 +33,7 @@
     margin:0;
     padding:0;
     width: 100%;
-    height:40%;
+    height:80%;
 }
 
 .line1{
@@ -71,6 +72,7 @@
 .my-icon{
     margin-top:13vw;
     padding: 0;
+    z-index:0;
 }
 
 .icon{
@@ -127,8 +129,10 @@ a:hover{
 
 .info{
     margin:0;
-    height: 80%;
+    height: 90%;
+    max-height:600px;
     width: 100%;
+    overflow-y:auto;
 }
 
 .my-information{
@@ -155,8 +159,9 @@ a:hover{
 .pictures{
     margin-left: 1vw;
     margin-bottom: 1vw;
-    height: 25%;
+    height: 90%;
     width:90%;
+    overflow:hidden;
 }
 
 .my-row3{
@@ -165,6 +170,7 @@ a:hover{
     margin-top:1vh;
     margin-right:0;
     width:100%;
+    height:100%;
 }
 
 .nav{

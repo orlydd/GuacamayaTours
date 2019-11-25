@@ -1,20 +1,23 @@
-<div class="container my-container" id="let h of Hotels">
+<ng-container *ngFor="let h of Hotels;let i=index">
+<ng-container *ngIf="i1 == i">
+<div class="container my-container">
     <!--Header Container-->
+   
    <div class="row">
            <!--Image-->
          <div class="col-6 my-col">
-           <img src="{{h.photo2}}" alt="Hotel Image" class="hotel-image">
+           <img src="{{h.photos}}" alt="Hotel Image" class="hotel-image">
          </div>
            <!--Title-->
          <div class="col-5 align-self-center my-title">
-            <button>X</button>
+            
            <span>
                <h1>{{h.name}}</h1>
                <h2>{{h.city}}</h2>
            </span>              
          </div>
          <div class="col-1 my-icon">
-             <img class="icon" src="{{h.icon}}">
+             <img class="icon" src="../../assets/Images/hotelsiconseemore.jpg">
          </div>
    </div>
    <div class="row my-row">
@@ -27,18 +30,30 @@
    <div class="row my-row">
      <div class="col nav justify-content-center">
          <tabset>
-             <tab heading="INFORMACIÓN" id="nav-information" (selectTab)="onSelect($event)"> </tab>
-             <tab heading="HABITACIONES" id="nav-rooms" (selectTab)="onSelect($event)"></tab>
-             <tab heading="SERVICIOS" id="nav-services" (selectTab)="onSelect($event)"></tab>
-         </tabset>
+            <tab id="1" (selectTab)="onSelect($event)">
+                <ng-template tabHeading>
+                  <span class="badge badge-secondary">INFORMACIÓN</span>
+                </ng-template>
+              </tab>
+            <tab id="2" (selectTab)="onSelect($event)">
+              <ng-template tabHeading>
+                <span class="badge badge-secondary">HABITACIONES</span>
+              </ng-template>
+            </tab>
+            <tab id="3" (selectTab)="onSelect($event)">
+                <ng-template tabHeading="SERVICIOS">
+                  <span class="badge badge-secondary">SERVICIOS</span>
+                </ng-template>
+              </tab>
+          </tabset>
      </div>
    </div>
    <div class="row my-row3">
      <div class="col-5 my-information">
-         <div class="info" *ngIf="value">
-           <p *ngIf="value=== 'nav-information'">{{h.description}}</p>
-           <p *ngIf="value==='nav-rooms'">{{h.rooms}}</p>
-           <p *ngIf="value==='nav-services'">{{h.services}}</p>
+         <div class="info">
+           <p *ngIf="value=='1'">{{h.description}}</p>
+           <p *ngIf="value=='2'">{{h.rooms}}</p>
+           <p *ngIf="value=='3'">{{h.services}}</p>
          </div>
      </div>
      <div class="col-1 line2">
@@ -48,25 +63,19 @@
      </div>
      <div class="col-6 my-carousel">
          <div class="pictures">
-             <carousel>
-                     <ng-template Slide>
-                       <div class="picsum-img-wrapper">
-                         <img class="img-fluid" src="{{h.picture1}}">
-                       </div>
-                     </ng-template>
-                     <ng-template Slide>
-                       <div class="picsum-img-wrapper">
-                         <img class="img-fluid" src="{{h.picture2}}">
-                       </div>
-                     </ng-template>
-                     <ng-template Slide>
-                       <div class="picsum-img-wrapper">
-                         <img class="img-fluid" src="{{h.picture3}}">
-                       </div>
-                     </ng-template>
-                    </carousel>
+          <carousel>
+            <slide>
+              <img src="{{h.photo1}}" alt="first slide" style="display: block; width: 100%;">
+            </slide>
+            <slide>
+              <img src="{{h.photo2}}" alt="second slide" style="display: block; width: 100%;">
+            </slide>
+            <slide>
+              <img src="{{h.photo3}}" alt="third slide" style="display: block; width: 100%;">
+            </slide>
+          </carousel>
        </div>
      </div>
-   </div>
+     </div>
  </div>
- 
+ </ng-container>

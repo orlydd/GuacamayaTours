@@ -1,0 +1,22 @@
+.guacamodal {
+    max-width:90%;
+
+  }
+  .guacamodal .modal-dialog {
+      margin:0;
+  }
+  .guacamodal .modal-header {
+    background-color: white;
+    width:100%;
+  }
+  
+  .guacamodal .modal-body {
+    background-color: white;
+    width:90%;
+    left:5%;
+  }
+  .guacamodal .modal-content {
+    background-color:rgb(159, 238, 156);
+    width:100%;
+  }
+  

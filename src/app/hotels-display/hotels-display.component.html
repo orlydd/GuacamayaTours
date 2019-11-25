@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="flexit">
-<div class="hotelsclass" *ngFor="let h of Hotels">
+<div class="hotelsclass" *ngFor="let h of Hotels;let i=index">
         <div class="card" style="width: 18rem;">
                 <img src="{{h.photos}}" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -45,7 +45,7 @@
                         <h6><b>Estado:</b> {{h.state}}</h6>
                         <h6><b>Precio:</b> {{h.price}}$</h6>
                         <p class="card-text"> {{h.description}}</p>
-                        <app-modal></app-modal>
+                        <app-modal [i1]="i"></app-modal>
                 </div>
               
         </div>
