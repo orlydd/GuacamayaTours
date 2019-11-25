@@ -51,23 +51,4 @@ export class NavBarComponent implements OnInit {
     }
   }
 
-  Contacts(){
-    this.r.navigate(['/Contacts']);
-  }
 
-  Home(){
-    this.r.navigate(['/Home']);
-  }
-
-  AboutUs(){
-    this.r.navigate(['/AboutUs']);
-  }
-
-  Hotels(){
-    this.r.navigate(['/Hotels'])
-  }
-  Destinies(){
-    this.r.navigate(['/Destinies'])
-  }
-
-}

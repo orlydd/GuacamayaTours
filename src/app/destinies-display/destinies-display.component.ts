@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {DestinyService} from 'src/app/services/destiny/destiny.service';
+import {DestinyService2} from 'src/app/services/destiny/destiny.service2';
 import { map } from 'rxjs/operators';
 
 @Component({
@@ -12,17 +12,17 @@ export class DestiniesDisplayComponent implements OnInit {
   
   Destiny: any;
 
-  constructor(private DestinyService: DestinyService) { }
+  constructor(private DestinyService2: DestinyService2) { }
 
   ngOnInit() {
     this.getDestinyList();
   }
   updateActive(isActive : boolean){
-    this.DestinyService.updateDestiny(this.Destiny.key, {active: isActive}).catch(err => console.log(err));
+    this.DestinyService2.updateDestiny(this.Destiny.key, {active: isActive}).catch(err => console.log(err));
   }
 
   getDestinyList(){
-    this.DestinyService.getDestinyList().snapshotChanges().pipe(
+    this.DestinyService2.getDestinyList().snapshotChanges().pipe(
       map(changes =>
         changes.map(c=> ({key:c.payload.doc.id,...c.payload.doc.data()})
          )

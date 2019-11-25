@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
 import {Destiny} from 'src/app/models/destiny.model';
 import { Injectable } from '@angular/core';
-import { DestinyService } from 'src/app/services/destiny/destiny.service'
+import { DestinyService2 } from 'src/app/services/destiny/destiny.service2'
 
 @Component({
   selector: 'app-destinies',
@@ -12,7 +12,7 @@ import { DestinyService } from 'src/app/services/destiny/destiny.service'
 export class DestiniesComponent implements OnInit {
   destiny:any;
 
-  constructor(private DestinyService : DestinyService) { 
+  constructor(private DestinyService2 : DestinyService2) { 
 
 }
 ngOnInit(){}

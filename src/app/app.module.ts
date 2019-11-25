@@ -63,7 +63,7 @@ import { ModalComponent } from './modal/modal.component';
     AdminDashboardComponent,
     SignInComponent,
     ItineraryListComponent,
-    ItineraryCrudComponent
+    ItineraryCrudComponent,
     HotelsComponent,
     HotelsListComponent,
     HotelsDisplayComponent,
