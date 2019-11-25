@@ -45,6 +45,7 @@ import { HotelsSeeMoreComponent } from './hotels-see-more/hotels-see-more.compon
 import { DestiniesComponent } from './destinies/destinies.component';
 import { DestiniesDisplayComponent } from './destinies-display/destinies-display.component';
 import { ModalComponent } from './modal/modal.component';
+import { DestiniesSeeMoreComponent } from '../app/destinies-see-more/destinies-see-more.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { ModalComponent } from './modal/modal.component';
     HotelsSeeMoreComponent,
     DestiniesComponent,
     DestiniesDisplayComponent,
-    ModalComponent
+    ModalComponent,
+    DestiniesSeeMoreComponent
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features

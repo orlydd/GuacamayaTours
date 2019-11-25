@@ -9,7 +9,7 @@ import { BsModalService, BsModalRef, ModalModule } from 'ngx-bootstrap/modal';
 export class ModalComponent implements OnInit {
 
   @Input() i1: number;
-
+  @Input() i2: number;
 modalRef: BsModalRef;
 config = {
   animated: true,
