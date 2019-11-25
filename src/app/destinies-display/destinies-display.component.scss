@@ -1,0 +1,48 @@
+.fa-star {
+    font-size:20px;
+}
+.checked {
+    font-size:20px;
+    color: orange;
+  }
+.card{
+
+    border: solid grey 1px;
+    height: 500px;
+    margin: 20px;
+    overflow: hidden;
+    max-width:300px;
+
+    img{
+        width: 100%;
+        height:150px;
+    }
+    .card-text{
+        width: 100%;
+        height:100px;
+        overflow:hidden;
+    }
+    .card-title{
+        text-align:center;
+        
+    }
+    .btn.btn-primary{
+        margin-left:30%;
+        position: relative;
+    }}
+    
+
+    
+.destiniesclass{
+    display:flex;
+    justify-content:center;
+    width: 300px;
+    position:relative;
+ 
+}
+.flexit{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}

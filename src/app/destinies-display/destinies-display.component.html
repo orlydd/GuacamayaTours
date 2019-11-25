@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="flexit">
+<div class="destiniesclass" *ngFor="let d of Destiny">
+        <div class="card" style="width: 18rem;">
+                <img src="{{d.photo1}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{d.name}}</h5>
+                        <span><b>Tipo de destino:</b> {{d.category}}</span><br>
+                        <span><b>Hoteles disponibles:</b> {{d.availability}}</span>
+                        <h6><b>Estado:</b> {{d.state}}</h6>
+                        <p class="card-text"> {{d.description}}</p>
+                        <button type="button" class="btn btn-primary" (click)="openModal(template)">Explorar!</button>
+                </div>
+              
+        </div>
+</div>
+</div>

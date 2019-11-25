@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
+import { print } from 'util';
 
 @Component({
   selector: 'app-nav-bar',
@@ -48,3 +50,24 @@ export class NavBarComponent implements OnInit {
       this.afsAuth.auth.signOut();
     }
   }
+
+  Contacts(){
+    this.r.navigate(['/Contacts']);
+  }
+
+  Home(){
+    this.r.navigate(['/Home']);
+  }
+
+  AboutUs(){
+    this.r.navigate(['/AboutUs']);
+  }
+
+  Hotels(){
+    this.r.navigate(['/Hotels'])
+  }
+  Destinies(){
+    this.r.navigate(['/Destinies'])
+  }
+
+}

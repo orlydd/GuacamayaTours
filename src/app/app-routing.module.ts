@@ -12,6 +12,11 @@ import {DestinyCrudComponent} from './admin/destiny-crud/destiny-crud.component'
 import {ItineraryCrudComponent} from './admin/itinerary-crud/itinerary-crud.component';
 import{MyItineraryComponent} from './my-itinerary/my-itinerary.component'
 
+import { ContactUsComponent } from './contact-us/contact-us.component'
+import { HomeComponent } from './home/home.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { HotelsComponent } from './hotels/hotels.component'
+import { DestiniesComponent } from './destinies/destinies.component'
 
 const routes: Routes = [
  {
@@ -52,6 +57,13 @@ component: MyItineraryComponent
   path: 'adminItinerary', 
   component: ItineraryCrudComponent,
   canActivate: [AuthGuard]
+{
+  path:'Hotels',
+  component: HotelsComponent
+},
+{
+  path:'Destinies',
+  component: DestiniesComponent
 },
 ];
 

@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 //Bootstrap imports;
 //import { ToastrModule } from 'ngx-toastr';
+import { MaterialModule } from './material.module';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { TabsModule } from 'ngx-bootstrap';
 import { RatingModule } from 'ngx-bootstrap/rating';
@@ -35,10 +36,15 @@ import { SignInComponent } from './tools/sign-in/sign-in/sign-in.component';
 import {AuthService} from './services/auth/auth.service';
 import { ItineraryListComponent } from './tools/itinerary/itinerary-list/itinerary-list.component';
 import { ItineraryCrudComponent } from './admin/itinerary-crud/itinerary-crud.component';
-
-
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { MyItineraryComponent } from './my-itinerary/my-itinerary.component';
+import { HotelsComponent } from './hotels/hotels.component';
+import { HotelsListComponent } from './hotels-list/hotels-list.component';
+import { HotelsDisplayComponent } from './hotels-display/hotels-display.component';
+import { HotelsSeeMoreComponent } from './hotels-see-more/hotels-see-more.component';
+import { DestiniesComponent } from './destinies/destinies.component';
+import { DestiniesDisplayComponent } from './destinies-display/destinies-display.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +64,13 @@ import { MyItineraryComponent } from './my-itinerary/my-itinerary.component';
     SignInComponent,
     ItineraryListComponent,
     ItineraryCrudComponent
+    HotelsComponent,
+    HotelsListComponent,
+    HotelsDisplayComponent,
+    HotelsSeeMoreComponent,
+    DestiniesComponent,
+    DestiniesDisplayComponent,
+    ModalComponent
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
@@ -71,12 +84,14 @@ import { MyItineraryComponent } from './my-itinerary/my-itinerary.component';
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     BrowserModule,
+    BrowserAnimationsModule,
+    MaterialModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     ButtonsModule.forRoot()
   ],
-  providers: [{provide: FirestoreSettingsToken, useValue: {}}],
+  providers: [BrowserModule,BrowserAnimationsModule,MaterialModule,{provide: FirestoreSettingsToken, useValue: {}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
