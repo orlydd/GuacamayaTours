@@ -1,8 +1,7 @@
 <ng-container *ngFor="let h of Hotels;let i=index">
-<ng-container *ngIf="i1 == i">
+<ng-container *ngIf="i1 === h.key">
 <div class="container my-container">
     <!--Header Container-->
-   
    <div class="row">
            <!--Image-->
          <div class="col-6 my-col">

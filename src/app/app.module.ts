@@ -46,6 +46,7 @@ import { DestiniesComponent } from './destinies/destinies.component';
 import { DestiniesDisplayComponent } from './destinies-display/destinies-display.component';
 import { ModalComponent } from './modal/modal.component';
 import { DestiniesSeeMoreComponent } from '../app/destinies-see-more/destinies-see-more.component';
+import { HotelFilterComponent } from './hotel-filter/hotel-filter.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { DestiniesSeeMoreComponent } from '../app/destinies-see-more/destinies-s
     DestiniesComponent,
     DestiniesDisplayComponent,
     ModalComponent,
-    DestiniesSeeMoreComponent
+    DestiniesSeeMoreComponent,
+    HotelFilterComponent
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features

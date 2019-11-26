@@ -7,8 +7,7 @@ import { BsModalService, BsModalRef, ModalModule } from 'ngx-bootstrap/modal';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
-
-  @Input() i1: number;
+  @Input() i1: string;
   @Input() i2: number;
 modalRef: BsModalRef;
 config = {
