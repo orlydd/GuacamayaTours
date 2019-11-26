@@ -30,5 +30,10 @@ export class FooterComponent implements OnInit {
   Contacts(){
     this.r.navigate(['/Contacts']);
   }
-
+  Destinies(){
+    this.r.navigate(['/Destinies']);
+  }
+  Hotels(){
+    this.r.navigate(['/Hotels']);
+  }
 }
