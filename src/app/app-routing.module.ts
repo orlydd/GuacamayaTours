@@ -12,7 +12,8 @@ import {DestinyCrudComponent} from './admin/destiny-crud/destiny-crud.component'
 import {StateCrudComponent} from './admin/state-crud/state-crud.component';
 import {ItineraryCrudComponent} from './admin/itinerary-crud/itinerary-crud.component';
 import{MyItineraryComponent} from './my-itinerary/my-itinerary.component';
-
+import { HotelsComponent } from './Hotel Components/hotels/hotels.component';
+import { DestiniesComponent } from './Destiny Components/destinies/destinies.component';
 
 const routes: Routes = [
  {
@@ -57,9 +58,15 @@ component: MyItineraryComponent
 {
   path: 'adminItinerary', 
   component: ItineraryCrudComponent,
-  canActivate: [AuthGuard]
+  canActivate: [AuthGuard]},
+{
+  path:'Hotels',
+  component: HotelsComponent
 },
-];
+{
+  path:'Destinies',
+  component: DestiniesComponent
+}]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
