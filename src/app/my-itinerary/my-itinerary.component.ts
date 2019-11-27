@@ -16,9 +16,8 @@ export class MyItineraryComponent implements OnInit {
   itinerary : Itinerary[];
   itineraryCollection: AngularFirestoreCollection<Itinerary>;
   codeEntered: string;
-  itineraryDoc: Itinerary;
+  itineraryDoc: {};
   show: boolean;
-  public itenerary:any;
 
 
   constructor( private db: AngularFirestore, private itineraryService: ItineraryService) { 
@@ -43,21 +42,23 @@ export class MyItineraryComponent implements OnInit {
 
 
   onSubmit(form: NgForm){
-    this.itinerary=[];
+    console.log(this.checkCode(form));
+  }
+
+  checkCode(form: NgForm) {
     this.show= true;
     let codeEntered = form.value.code;
     let code = this.db.collectionGroup('Itinerary', ref=>ref.where('itineraryCode', '==', codeEntered));
-    code.get().toPromise().then(function(querySnapshot){
+    let codeAux = code.get().toPromise().then(function(querySnapshot){
       querySnapshot.forEach(function(doc){
-        console.log(doc.id,'=>',doc.data());
-        this.itineraryDoc = this.getItinerary(doc.id);
-        console.log(this.itineraryDoc);
+        let itineraryDoc =(doc.id,'=>',doc.data());
+        console.log(codeAux);
+        return itineraryDoc;
       });
     }).catch(e=>{
       console.log(e);
     });
-
-    return code;
+    return codeAux;
   }
 
 }
