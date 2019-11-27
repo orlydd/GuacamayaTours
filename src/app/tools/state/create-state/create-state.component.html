@@ -1,34 +1,27 @@
 <div class="container" >
-    
-        <div class="row justify-content-center">
-            <div class="col col-md-12" >
-                            <h4>Itinerario</h4>
-                            <form #form= "ngForm" autocomplete="off" (submit)="onSubmit(form)">
-                                    <input type="hidden" name= "key" #key="ngModel"[(ngModel)]="statesService.stateData.key">    
-                                <!--ID -->
-                                    <div class="form-group">
-                                        
-                                            <label for="stateID">ID</label>
-                                            <input  class="form-control" name="stateID"  #destinyId="ngModel"[(ngModel)]="statesService.stateData.stateID" placeholder="ID" >
-                                       
-                                        
-                                    </div>
-                                    <!--NAME-->
-                                    <div class="form-group">
-                                           
-                                        <label for="name">Nombre</label>
-                                        <input class="form-control " name="name" #name="ngModel"[(ngModel)]="statesService.stateData.name" placeholder="Nombre">
-                                           
-                                    </div>
+    <div class="row justify-content-center">
+        <div class="col col-md-12" >
+            <h4>Estado</h4>
+                 <form #form= "ngForm" autocomplete="off" (submit)="onSubmit(form)">
+                    <input type="hidden" name= "key" #key="ngModel"[(ngModel)]="statesService.stateData.key">    
+                            <!--ID -->
+                            <div class="form-group">
+                                <label for="stateID">ID</label>
+                                    <input  class="form-control" name="stateID"  #destinyId="ngModel"[(ngModel)]="statesService.stateData.stateID" placeholder="ID" >   
+                                </div>
+                            <!--NAME-->
+                            <div class="form-group">        
+                                <label for="name">Nombre</label>
+                                    <input class="form-control " name="name" #name="ngModel"[(ngModel)]="statesService.stateData.name" placeholder="Nombre">       
+                                </div>
                                     
-                                    <!--SUBMIT BUTTON-->
-                                    <div class="form-group">
-                                            <button type="submit" class="btn btn-block btn-info" *ngIf= "statesService.stateData.key == null" >GUARDAR</button>
-                                            <button type="submit" class="btn btn-block btn-info"  *ngIf= "statesService.stateData.key!== null">EDITAR</button>
+                            <!--SUBMIT BUTTON-->
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-block btn-info" *ngIf= "statesService.stateData.key == null" >GUARDAR</button>
+                                    <button type="submit" class="btn btn-block btn-info"  *ngIf= "statesService.stateData.key!== null">EDITAR</button>
                                             
-                                    </div>
-                                </form>
-                  
+                                </div>
+                            </form>
             </div>
         </div>
     </div>

@@ -42,6 +42,8 @@ import { StateCrudComponent } from './admin/state-crud/state-crud.component';
 
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { MyItineraryComponent } from './my-itinerary/my-itinerary.component';
+import { CityListComponent } from './tools/city/city-list/city-list.component';
+import { CreateCityComponent } from './tools/city/create-city/create-city.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +65,9 @@ import { MyItineraryComponent } from './my-itinerary/my-itinerary.component';
     ItineraryCrudComponent,
     StateListComponent,
     CreateStateComponent,
-    StateCrudComponent
+    StateCrudComponent,
+    CityListComponent,
+    CreateCityComponent
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features

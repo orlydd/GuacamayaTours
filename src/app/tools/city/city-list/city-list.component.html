@@ -1,0 +1,22 @@
+<h4>Lista de Estados</h4>
+<table class="table table-hover">
+    <thead>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Estado</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let city of cities">
+                <td (click)="onEdit(city)"> {{city.cityID}} </td>
+                <td (click)="onEdit(city)">{{city.name}}</td>
+                <td (click)="onEdit(city)">{{city.state}}</td>
+              
+                <td>
+                    <button class="btn btn-block btn-sm btn-danger" (click)="isActive(city)" *ngIf= "city.active==true">Deshabilitar</button>
+                    <button class="btn btn-block btn-sm btn-success" (click)="isActive(city)" *ngIf= "city.active==false">Habilitar</button>
+                </td>   
+        </tr>
+    </tbody>
+
+</table>

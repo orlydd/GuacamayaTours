@@ -36,6 +36,12 @@ export class ItineraryService {
   updateDestiny(itinerary: Itinerary){
     this.itineraryDoc = this.db.doc(`Itinerary/${itinerary.key}`);
     this.itineraryDoc.update(itinerary);
+  
+  }
+
+   
+  getItineraryArray(){
+    return this.db.collection('Itinerary').snapshotChanges();
   }
 
    getItinerary(): Observable<Itinerary[]>{
