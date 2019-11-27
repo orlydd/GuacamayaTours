@@ -2,9 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import {HotelsService} from 'src/app/services/HotelsService/Hotels.service';
 import { map } from 'rxjs/operators';
 import * as _ from 'lodash';
-import { AngularFireDatabase } from 'angularfire2/database';
-import { switchMap, startWith, tap } from 'rxjs/operators';
-import { Hotels } from '../models/Hotels.model';
 
 @Component({
   selector: 'app-Hotels-display',

@@ -49,7 +49,51 @@
                 (click)="removeFilter('category')">
       
                 Remover filtro
-        </button>
+            </button><hr>
+        <h5>Por Estrellas</h5>
+                <input type="range" class="starsselect" min="1" max="5" step="1" [(ngModel)]="stars" (change)="filterExact('stars', stars)"><br>
+                    <span *ngIf="stars == 1">   
+                            <span class="fa fa-star checked2"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </span>
+                        <span *ngIf="stars == 2">
+                            <span class="fa fa-star checked2"></span>
+                            <span class="fa fa-star checked2"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>	
+                        </span>
+                        <span *ngIf="stars == 3">
+                            <span class="fa fa-star checked2"></span>
+                            <span class="fa fa-star checked2"></span>
+                            <span class="fa fa-star checked2"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>	
+                        </span>
+                        <span *ngIf="stars == 4">
+                            <span class="fa fa-star checked2"></span>
+                            <span class="fa fa-star checked2"></span>
+                            <span class="fa fa-star checked2"></span>
+                            <span class="fa fa-star checked2"></span>
+                            <span class="fa fa-star"></span>
+                        </span>
+                        <span *ngIf="stars == 5">
+                            <span class="fa fa-star checked2"></span>
+                            <span class="fa fa-star checked2"></span>
+                            <span class="fa fa-star checked2"></span>
+                            <span class="fa fa-star checked2"></span>
+                            <span class="fa fa-star checked2"></span>	
+                        </span>
+                        <br>
+                        <button class="button" *ngIf="stars"
+                    (click)="removeFilter('stars')">
+                    Remover filtro
+                    </button>
+                    
+       
         <hr>
         <h5>Por Popularidad</h5>
         <button class="button" (click)="sortDescending('popularity')">Mayor a menor

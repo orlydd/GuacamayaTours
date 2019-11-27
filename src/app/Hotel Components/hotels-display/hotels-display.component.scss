@@ -5,6 +5,10 @@
     font-size:20px;
     color: orange;
   }
+.checked2 {
+    font-size:30px;
+    color: orange;
+}
 
 
 .card{
@@ -98,10 +102,15 @@
       
     }
     .selectstyle{
-       width:150px;
+       width:120px;
        background-color:darkgray;
-        
     }
+    .starsselect{
+            width:120px;
+            background-color:darkgray;
+            margin-left:10px;
+    }
+    
 }
 .container1{
     width: 100%;
