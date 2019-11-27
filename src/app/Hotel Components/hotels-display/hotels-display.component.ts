@@ -1,33 +1,40 @@
-import { Component, OnInit } from '@angular/core';
-import * as _ from 'lodash';
+import { Component, OnInit, Input } from '@angular/core';
 import {HotelsService} from 'src/app/services/HotelsService/Hotels.service';
 import { map } from 'rxjs/operators';
+import * as _ from 'lodash';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { switchMap, startWith, tap } from 'rxjs/operators';
 import { Hotels } from '../models/Hotels.model';
 
 @Component({
-  selector: 'app-hotel-filter',
-  templateUrl: './hotel-filter.component.html',
-  styleUrls: ['./hotel-filter.component.scss']
+  selector: 'app-Hotels-display',
+  templateUrl: './Hotels-display.component.html',
+  styleUrls: ['./Hotels-display.component.scss']
 })
-export class HotelFilterComponent implements OnInit {
-
+export class HotelsDisplayComponent implements OnInit {
+  
+  Hotels: any;
+  filteredHotels:any;
+    /// Active filter rules
+    filters = {}
   constructor(private HotelsService: HotelsService) { }
 
-  /// unwrapped arrays from firebase
-  Hotels: any;
-  filteredHotels: any;
+  ngOnInit(){
+    this.getHotelsList();
 
-  /// Active filter rules
-  filters = {}
-
-  ngOnInit() {
-    this.Hotels.list('/Hotels')
-      .subscribe(Hotels => {
-        this.Hotels = Hotels;
-        this.applyFilters()
-    })
   }
+
+  sortAscending(property: any){
+    this.filteredHotels=_.sortBy(this.filteredHotels,[property] );
+  }
+  sortDescending(property: any){
+    this.filteredHotels=_.reverse(_.sortBy(this.filteredHotels,[property] ));
+  }
+
+  updateActive(isActive : boolean){
+    this.HotelsService.updateHotels(this.Hotels.key, {active: isActive}).catch(err => console.log(err));
+  }
+
 
   private applyFilters() {
     this.filteredHotels = _.filter(this.Hotels, _.conforms(this.filters) )
@@ -42,6 +49,11 @@ export class HotelFilterComponent implements OnInit {
   /// filter  numbers greater than rule
   filterGreaterThan(property: string, rule: number) {
     this.filters[property] = val => val > rule
+    this.applyFilters()
+  }
+  /// filter  numbers lesser than rule
+  filterLessThan(property: string, rule: number) {
+    this.filters[property] = val => val < rule
     this.applyFilters()
   }
 
@@ -61,6 +73,7 @@ export class HotelFilterComponent implements OnInit {
         )
     ).subscribe(Hotels=>{
       this.Hotels = Hotels;
+      this.filteredHotels=Hotels;
     })
   }
   /// removes filter
@@ -69,5 +82,6 @@ export class HotelFilterComponent implements OnInit {
     this[property] = null
     this.applyFilters()
   }
+  
+ 
 }
-

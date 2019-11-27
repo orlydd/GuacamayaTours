@@ -11,8 +11,8 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 import {DestinyCrudComponent} from './admin/destiny-crud/destiny-crud.component';
 import {ItineraryCrudComponent} from './admin/itinerary-crud/itinerary-crud.component';
 import{MyItineraryComponent} from './my-itinerary/my-itinerary.component'
-import { HotelsComponent } from './hotels/hotels.component'
-import { DestiniesComponent } from './destinies/destinies.component'
+import { HotelsComponent } from './Hotel Components/hotels/hotels.component'
+import { DestiniesComponent } from './Destiny Components/destinies/destinies.component'
 
 const routes: Routes = [
  {

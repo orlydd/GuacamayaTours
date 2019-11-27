@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="columnas1">
+                <div id="filtro2" class="filtro">
+                <h4>Encuentra tu Destino</h4>
+                <hr>
+                <h5>Por Estado</h5>
+                <select class="selectstyle" [(ngModel)]="state" (change)="filterExact('state', state)">
+                  <option class="optionselect" value="Amazonas">Amazonas</option>
+                  <option class="optionselect"value="Anzoátegui">Anzoátegui</option>
+                  <option class="optionselect"value="Apure">Apure</option>
+                  <option class="optionselect"value="Aragua">Aragua</option>
+                  <option class="optionselect"value="Barinas">Barinas</option>
+                  <option class="optionselect"value="Bolívar">Bolívar</option>
+                  <option class="optionselect"value="Carabobo">Carabobo</option>
+                  <option class="optionselect"value="Cojedes">Cojedes</option>
+                  <option class="optionselect"value="Delta Amacuro">Delta Amacuro</option>
+                  <option class="optionselect"value="Dependencias Federales">Dependencias Federales</option>
+                  <option class="optionselect"value="Distrito Capital">Distrito Capital</option>
+                  <option class="optionselect"value="Falcón">Falcón</option>
+                  <option class="optionselect"value="Guárico">Guárico</option>
+                  <option class="optionselect"value="Lara">Lara</option>
+                  <option class="optionselect"value="Mérida">Mérida</option>
+                  <option class="optionselect"value="Miranda">Miranda</option>
+                  <option class="optionselect"value="Monagas">Monagas</option>
+                  <option class="optionselect"value="Nueva Esparta">Nueva Esparta</option>
+                  <option class="optionselect"value="Portuguesa">Portuguesa</option>
+                  <option class="optionselect"value="Sucre">Sucre</option>
+                  <option class="optionselect"value="Táchira">Táchira</option>
+                  <option class="optionselect"value="Trujillo">Trujillo</option>
+                  <option class="optionselect"value="Vargas">Vargas</option>
+                  <option class="optionselect"value="Yaracuy">Yaracuy</option>
+                  <option class="optionselect"value="Zulia">Zulia</option>
+                </select><br>
+                <button class="button" *ngIf="state"
+                        (click)="removeFilter('state')">
+              
+                        Remover filtro
+                </button>
+                <hr>
+                <h5>Por Categoría</h5>
+                <select class="selectstyle" [(ngModel)]="category" (change)="filterExact('category', category)">
+                        <option value="Montaña">Montaña</option>
+                        <option value="Playa">Playa</option>
+                        <option value="Selva">Selva</option>
+                        <option value="Sabana">Sabana</option>
+                </select><br>
+                <button class="button" *ngIf="category"
+                        
+                        (click)="removeFilter('category')">
+              
+                        Remover filtro
+                </button>
+                <hr>
+                <h5>Por Hoteles disponibles</h5>
+                <button class="button" (click)="sortDescending('availability')">Mayor a menor
+                </button>
+                <button class="button" (click)="sortAscending('availability')">Menor a mayor
+                </button>
+                <hr>
+                <button class="button" *ngIf="true"
+                       (click)="removeFilter()">
+             
+                       Remover filtro de orden
+                     </button>
+                </div>
+<div class="flexit">
+<div class="destiniesclass" *ngFor="let d of filteredDestiny;let i=index">
+        <div class="card" style="width: 18rem;">
+                <img src="{{d.photos}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{d.name}}</h5>
+                        <span><b>Tipo de destino:</b> {{d.category}}</span><br>
+                        <span><b>Hoteles disponibles:</b> {{d.availability}}</span>
+                        <h6><b>Estado:</b>{{d.state}}</h6>
+                        <p class="card-text"> {{d.description}}</p>
+                        <app-modal [i2]="i"></app-modal>
+                </div>
+              
+        </div>
+</div>
+</div>
+</div>

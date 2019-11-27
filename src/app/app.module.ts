@@ -38,15 +38,14 @@ import { ItineraryListComponent } from './tools/itinerary/itinerary-list/itinera
 import { ItineraryCrudComponent } from './admin/itinerary-crud/itinerary-crud.component';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { MyItineraryComponent } from './my-itinerary/my-itinerary.component';
-import { HotelsComponent } from './hotels/hotels.component';
+import { HotelsComponent } from './Hotel Components/hotels/hotels.component';
 import { HotelsListComponent } from './hotels-list/hotels-list.component';
-import { HotelsDisplayComponent } from './hotels-display/hotels-display.component';
-import { HotelsSeeMoreComponent } from './hotels-see-more/hotels-see-more.component';
-import { DestiniesComponent } from './destinies/destinies.component';
-import { DestiniesDisplayComponent } from './destinies-display/destinies-display.component';
+import { HotelsDisplayComponent } from './Hotel Components/hotels-display/hotels-display.component';
+import { HotelsSeeMoreComponent } from './Hotel Components/hotels-see-more/hotels-see-more.component';
+import { DestiniesComponent } from '../app/Destiny Components/destinies/destinies.component';
+import { DestiniesDisplayComponent } from './Destiny Components/destinies-display/destinies-display.component';
 import { ModalComponent } from './modal/modal.component';
-import { DestiniesSeeMoreComponent } from '../app/destinies-see-more/destinies-see-more.component';
-import { HotelFilterComponent } from './hotel-filter/hotel-filter.component';
+import { DestiniesSeeMoreComponent } from './Destiny Components/destinies-see-more/destinies-see-more.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +73,6 @@ import { HotelFilterComponent } from './hotel-filter/hotel-filter.component';
     DestiniesDisplayComponent,
     ModalComponent,
     DestiniesSeeMoreComponent,
-    HotelFilterComponent
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
