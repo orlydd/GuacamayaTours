@@ -38,6 +38,7 @@ export class CreateDestinyComponent implements OnInit {
     state: '',
     city: '',
     direction: '',
+    photos: '',
     photo1:'',
     photo2:'',
     photo3:'',
@@ -98,11 +99,11 @@ export class CreateDestinyComponent implements OnInit {
         this.destinyService.updateDestiny(data);
       }
       if(form.value.state !== ''){
-        data.state = form.value.state ;
+        data.state= form.value.state;
         this.destinyService.updateDestiny(data);
       }
-      if(form.value.city !== ''){
-        data.city = form.value.city ;
+      if(form.value.city !== ''){ 
+        data.city = form.value.city;
         this.destinyService.updateDestiny(data);
       }
       if(form.value.direction !== ''){
@@ -127,6 +128,10 @@ export class CreateDestinyComponent implements OnInit {
       }
       if(form.value.hotel3 !== ''){
         data.hotel3= form.value.hotel3;
+        this.destinyService.updateDestiny(data);
+      }
+      if(form.value.photos !== ''){
+        data.photos= form.value.photos;
         this.destinyService.updateDestiny(data);
       }
       if(form.value.photo1 !== ''){

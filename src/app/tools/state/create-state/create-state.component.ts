@@ -39,11 +39,11 @@ export class CreateStateComponent implements OnInit {
       this.statesService.addState(data);
     } else{
       if(form.value.stateID !== ''){
-        data.stateID= form.value.stateID ;
+        data.cityID= form.value.cityID;
         this.statesService.updateState(data);
       }
       if(form.value.name !== ''){
-        data.name= form.value.name ;
+        data.name= form.value.name;
         this.statesService.updateState(data);
       }
       
