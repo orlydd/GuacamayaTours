@@ -53,6 +53,9 @@ import { ModalComponent } from './modal/modal.component';
 import { DestiniesSeeMoreComponent } from './Destiny Components/destinies-see-more/destinies-see-more.component';
 import { CityCrudComponent } from './admin/city-crud/city-crud.component';
 import { InboxComponent } from './admin/inbox/inbox.component';
+import { CreateHotelComponent } from './tools/hotel/create-hotel/create-hotel.component';
+import { HotelCrudListComponent } from './tools/hotel/hotel-crud-list/hotel-crud-list.component';
+import { HotelCrudComponent } from './admin/hotel-crud/hotel-crud.component';
 
 @NgModule({
   declarations: [
@@ -87,6 +90,9 @@ import { InboxComponent } from './admin/inbox/inbox.component';
     DestiniesSeeMoreComponent,
     CityCrudComponent,
     InboxComponent,
+    CreateHotelComponent,
+    HotelCrudListComponent,
+    HotelCrudComponent,
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features

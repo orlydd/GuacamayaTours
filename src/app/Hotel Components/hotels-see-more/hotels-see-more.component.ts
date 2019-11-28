@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, AfterViewInit, ViewChild, ElementRef, AfterContentInit, OnChanges} from '@angular/core';
-import {HotelsService} from 'src/app/services/HotelsService/Hotels.service';
+import {HotelsService} from './../../services/Hotelsservice/hotels.service';
 import { map } from 'rxjs/operators';
 import { TabDirective } from 'ngx-bootstrap/tabs';
 
