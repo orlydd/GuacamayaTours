@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import {ItineraryService} from '../services/itinerary/itinerary.service'
+import { AngularFirestoreCollection, AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Itinerary } from '../models/itinerary';
-import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { firestore } from 'firebase';
 import {FormsModule, NgForm} from '@angular/forms';
+export class HttpComponent {
+  code:string;
+}
 
 @Component({
   selector: 'app-my-itinerary',
@@ -16,9 +19,8 @@ export class MyItineraryComponent implements OnInit {
   itinerary : Itinerary[];
   itineraryCollection: AngularFirestoreCollection<Itinerary>;
   codeEntered: string;
-  itineraryDoc: Itinerary;
+  itineraryDoc: {};
   show: boolean;
-  public itenerary:any;
 
 
   constructor( private db: AngularFirestore, private itineraryService: ItineraryService) { 
@@ -32,32 +34,32 @@ export class MyItineraryComponent implements OnInit {
    )
   }
 
-  getItinerary(key: string){
-    return this.itineraryService.getAnItinerary(key);
-  }
-
-
   ngOnInit() {
     this.show = false;
   }
 
 
   onSubmit(form: NgForm){
-    this.itinerary=[];
+    console.log(form);
+    this.itineraryCollection = this.checkCode(form);
+  
+  }
+
+  checkCode(codeEntered: string) {
     this.show= true;
-    let codeEntered = form.value.code;
     let code = this.db.collectionGroup('Itinerary', ref=>ref.where('itineraryCode', '==', codeEntered));
+    var collection;
     code.get().toPromise().then(function(querySnapshot){
       querySnapshot.forEach(function(doc){
         console.log(doc.id,'=>',doc.data());
-        this.itineraryDoc = this.getItinerary(doc.id);
-        console.log(this.itineraryDoc);
+        let itineraryDoc = {...doc.data()};
+        console.log(itineraryDoc);
       });
+      collection = querySnapshot;
     }).catch(e=>{
       console.log(e);
     });
-
-    return code;
+    return collection;
   }
 
 }

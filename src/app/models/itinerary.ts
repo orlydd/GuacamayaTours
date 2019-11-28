@@ -1,10 +1,9 @@
 export class Itinerary {
-    itineraryCode: string; 
     clientName: string;
     clientID: string;
     email: string;
     phoneNumber: string;
-    roomType: string;
+    companions: number;
     totalPrice: number;
     adress: string;
     destination: string;

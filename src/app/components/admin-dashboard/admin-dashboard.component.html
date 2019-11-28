@@ -1,40 +1,47 @@
 <div class="wrapper container-fluid page-container" >
     <div class="row page-row" >
-      
-        <div class="col col-lg-2 col-sm-1 col-xs-0 admin-sidebar">
-                <a class="nav-link" routerLink="/dashboard">DASHBOARD</a>
-                <a class="nav-link" routerLink="/adminDestiny">DESTINOS</a>
-                <a class="nav-link" routerLink="/adminItinerary">ITINERARIOS</a>
-                <a class="nav-link" routerLink="/inbox">INBOX</a>
-        </div>
-        
-        <div class="col col-lg-10 col-sm-11 col-xs-12 page-content" style="margin-left: 15%;" >
-                <section class="container" style="margin: 0;">
-                        <h1 class="mt-4">DASHBOARD</h1>
-                        <div class="row mt-5">
-                          <div class="offset-lg-4 col-lg-4 col-sm-6 col-12 main-section text-center card">
-                            <div class="row">
-                              <div class="col-lg-12 col-sm-12 col-12 profile-header"></div>
-                            </div>
-                            <div class="row user-details">
-                              <div class="col-12">
-                                <img src=".\assets\Images\logotipo.jpg" class="rounded-circle img-thumbnail" alt="profile">
-                                <h5>
-                                  BIENVENIDO ADMIN!
-                                </h5>
-                      
-                                <hr>
-                                <div>EMAIL: guacamayatours@gmail.com</div>
-                                <div>CONTRASEÑA: ******</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                </section>
+        <div class="col-md-2" style="margin-left: 4vw;">
 
         </div>
-    </div>
+
+        <div class="col-md-4">
+            <div class="card" style=" margin-top:5vw">
+                <img src=".\assets\Images\logotipo.jpg" class="rounded-circle img-thumbnail" style="align-self: center; max-height: 10vw; max-width: 10vw;" alt="profile">
+                <div class="card-body">
+                  <h5 style="text-align: center;">BIENVENIDO ADMIN</h5>
+                  <p class="card-text" style="text-align: center;">EMAIL: guacamayatoursadm@gmail.com</p>
+                  <p class="card-text" style="text-align: center;">CONTRASEÑA: ******</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card-body blue" style=" margin-top:5vw">
+                <h5 style="text-align: center; color: white;">MENSAJES</h5>
+                <p class="card-text changeSize" style="text-align: center; color: white;">TIENES MENSAJES DISPONIBLES</p>
+                <a class="btn btn-primary" routerLink="/adminInbox" style="margin-left: 40%;">VER</a>
+              </div>
+              <div class="card-body yellow" style=" margin-top:2vw">
+                  <p class="card-text changeSize" style="text-align: center; color: black;">REALIZA CAMBIOS EN LA PÁGINA CON LOS CRUDS OFRECIDOS</p>
+                </div>
+        </div>
 </div> 
+</div>
+<div class="row" style="margin-top:5vw">
+  <div class="col-md-2">
+
+  </div>
+  <div class="col-md-5" style="margin-left:5vw">
+      <h5> REVISA LAS ÚLTIMAS RESERVAS</h5>
+  </div>
+</div>
+<div class="row" style="margin-top:3vw">
+  <div class="col-md-3">
+
+  </div>
+  <div class="col-md-8">
+    <app-itinerary-list></app-itinerary-list>
+  </div>
+</div>
 
 
 
