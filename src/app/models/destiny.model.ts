@@ -11,6 +11,7 @@ export class Destiny {
     state: string;
     city: string;
     direction: string; 
+    photos: string; //Modal Header photo
     photo1:string;
     photo2:string;
     photo3:string;

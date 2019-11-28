@@ -9,9 +9,11 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import {SignInComponent} from  "./tools/sign-in/sign-in/sign-in.component";
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import {DestinyCrudComponent} from './admin/destiny-crud/destiny-crud.component';
+import {StateCrudComponent} from './admin/state-crud/state-crud.component';
 import {ItineraryCrudComponent} from './admin/itinerary-crud/itinerary-crud.component';
-import{MyItineraryComponent} from './my-itinerary/my-itinerary.component'
-
+import{MyItineraryComponent} from './my-itinerary/my-itinerary.component';
+import { HotelsComponent } from './Hotel Components/hotels/hotels.component';
+import { DestiniesComponent } from './Destiny Components/destinies/destinies.component';
 
 const routes: Routes = [
  {
@@ -49,11 +51,22 @@ component: MyItineraryComponent
   canActivate: [AuthGuard]
 },
 {
-  path: 'adminItinerary', 
-  component: ItineraryCrudComponent,
+  path: 'adminState', 
+  component: StateCrudComponent,
   canActivate: [AuthGuard]
 },
-];
+{
+  path: 'adminItinerary', 
+  component: ItineraryCrudComponent,
+  canActivate: [AuthGuard]},
+{
+  path:'Hotels',
+  component: HotelsComponent
+},
+{
+  path:'Destinies',
+  component: DestiniesComponent
+}]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

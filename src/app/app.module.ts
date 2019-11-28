@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 //Bootstrap imports;
 //import { ToastrModule } from 'ngx-toastr';
+import { MaterialModule } from './material.module';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { TabsModule } from 'ngx-bootstrap';
 import { RatingModule } from 'ngx-bootstrap/rating';
@@ -35,10 +36,21 @@ import { SignInComponent } from './tools/sign-in/sign-in/sign-in.component';
 import {AuthService} from './services/auth/auth.service';
 import { ItineraryListComponent } from './tools/itinerary/itinerary-list/itinerary-list.component';
 import { ItineraryCrudComponent } from './admin/itinerary-crud/itinerary-crud.component';
-
-
+import { StateListComponent } from './tools/state/state-list/state-list.component';
+import { CreateStateComponent } from './tools/state/create-state/create-state.component';
+import { StateCrudComponent } from './admin/state-crud/state-crud.component';
+import { CityListComponent } from './tools/city/city-list/city-list.component';
+import { CreateCityComponent } from './tools/city/create-city/create-city.component';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { MyItineraryComponent } from './my-itinerary/my-itinerary.component';
+import { HotelsComponent } from './Hotel Components/hotels/hotels.component';
+import { HotelsListComponent } from './hotels-list/hotels-list.component';
+import { HotelsDisplayComponent } from './Hotel Components/hotels-display/hotels-display.component';
+import { HotelsSeeMoreComponent } from './Hotel Components/hotels-see-more/hotels-see-more.component';
+import { DestiniesComponent } from '../app/Destiny Components/destinies/destinies.component';
+import { DestiniesDisplayComponent } from './Destiny Components/destinies-display/destinies-display.component';
+import { ModalComponent } from './modal/modal.component';
+import { DestiniesSeeMoreComponent } from './Destiny Components/destinies-see-more/destinies-see-more.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +69,20 @@ import { MyItineraryComponent } from './my-itinerary/my-itinerary.component';
     AdminDashboardComponent,
     SignInComponent,
     ItineraryListComponent,
-    ItineraryCrudComponent
+    ItineraryCrudComponent,
+    StateListComponent,
+    CreateStateComponent,
+    StateCrudComponent,
+    CityListComponent,
+    CreateCityComponent,
+    HotelsComponent,
+    HotelsListComponent,
+    HotelsDisplayComponent,
+    HotelsSeeMoreComponent,
+    DestiniesComponent,
+    DestiniesDisplayComponent,
+    ModalComponent,
+    DestiniesSeeMoreComponent,
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
@@ -71,12 +96,14 @@ import { MyItineraryComponent } from './my-itinerary/my-itinerary.component';
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     BrowserModule,
+    BrowserAnimationsModule,
+    MaterialModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     ButtonsModule.forRoot()
   ],
-  providers: [{provide: FirestoreSettingsToken, useValue: {}}],
+  providers: [BrowserModule,BrowserAnimationsModule,MaterialModule,{provide: FirestoreSettingsToken, useValue: {}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

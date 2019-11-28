@@ -12,16 +12,16 @@
                                     <h2 class="subtitles"> Nombre Completo</h2>
                                     <input type="text" name="name" class="input-box"  [(ngModel)]="name" required minlength="3" #nameInput="ngModel">
                                     <div class="help is-error" *ngIf="nameInput.invalid && nameInput.dirty">
-                                        Es necesario que introduzca un nombre y este debe tener mínimo 3 carateres
+                                        Es necesario que introduzca un nombre y este debe tener mínimo 3 carácteres
                                         </div>
                                 </div>
                                 <!--Email-->
                                 
                                 <div class="input-box">
-                                    <h2 class= "subtitles"> Email</h2>
+                                    <h2 class= "subtitles"> E-mail</h2>
                                     <input type="email" name="email" class="input-box" [(ngModel)]="email" required email #emailInput="ngModel">
                                     <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
-                                        Introduzca un email válido.
+                                        Introduzca un e-mail válido.
                                         </div>
                                 </div>
                                 <!--Message-->
@@ -48,7 +48,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12 text-align:center">
-                                    <p class="text">¿TIENES ALGUNA PREGUNTA? ESCRIBENOS UN MENSAJE</p>
+                                    <p class="text">¿TIENES ALGUNA PREGUNTA? ESCRÍBENOS UN MENSAJE</p>
                             </div>
                             <div class="col">
                                     <img style="width: 12rem; height: auto;" src="https://image.flaticon.com/icons/png/512/104/104069.png" alt="IMAGEN">
