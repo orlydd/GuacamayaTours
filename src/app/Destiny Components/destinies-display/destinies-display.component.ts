@@ -33,7 +33,6 @@ export class DestiniesDisplayComponent implements OnInit {
     this.DestinyService2.updateDestiny(this.Destiny.key, {active: isActive}).catch(err => console.log(err));
   }
 
-
   private applyFilters() {
     this.filteredDestiny = _.filter(this.Destiny, _.conforms(this.filters) )
   }
