@@ -1,25 +1,33 @@
-<h4>ITINERARIOS</h4>
-<table class="table table-hover">
-    <thead>
-        <th scope="col">Código</th>
-        <th scope="col">Destino</th>
-        <th scope="col">Hotel</th>
-        <th scope="col"> Fecha de llegada</th>
-        <th scope="col">Fecha de salida</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr *ngFor="let itin of itinerary">
-                <td > {{itin.itineraryCode}} </td>
-                <td >{{itin.destination}}</td>
-                <td >{{itin.hotel}}</td>   
-                <td>{{itin.arrivalDate}}</td>     
-                <td>{{itin.departureDate}}</td> 
-             
-                <td><button class="btn btn-block btn-sm btn-danger" (click)="onDelete(itin.key)">Eliminar</button></td> 
-                <!-- <td><button class="btn btn-block btn-sm  btn-danger" (click)="isActive(dest)" *ngIf= "dest.active==true">Deshabilitar</button></td>  
-                <td><button class="btn btn-block btn-sm btn-success" (click)="isActive(dest)" *ngIf= "dest.active==false">Habilitar</button></td>     -->
-        </tr>
-    </tbody>
+<div class="container">
+    <div class="row">
+            <h4>ITINERARIOS</h4>
+    </div>
+    <div class="table-responsive">
+            <table class="table table-hover">
+                    <thead>
+                        <th scope="col">Código</th>
+                        <th scope="col">Destino</th>
+                        <th scope="col">Hotel</th>
+                        <th scope="col"> Fecha de llegada</th>
+                        <th scope="col">Fecha de salida</th>
+                        <th scope="col"></th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let itin of itinerary">
+                                <td > {{itin.itineraryCode}} </td>
+                                <td >{{itin.destination}}</td>
+                                <td >{{itin.hotel}}</td>   
+                                <td>{{itin.arrivalDate}}</td>     
+                                <td>{{itin.departureDate}}</td> 
+                             
+                                <td><button class="btn btn-block btn-sm btn-danger" (click)="onDelete(itin.key)">Eliminar</button></td> 
+                                <!-- <td><button class="btn btn-block btn-sm  btn-danger" (click)="isActive(dest)" *ngIf= "dest.active==true">Deshabilitar</button></td>  
+                                <td><button class="btn btn-block btn-sm btn-success" (click)="isActive(dest)" *ngIf= "dest.active==false">Habilitar</button></td>     -->
+                        </tr>
+                    </tbody>
+                
+                </table>
+    </div>
+</div>
 
-</table>
+
