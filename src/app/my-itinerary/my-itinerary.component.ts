@@ -38,12 +38,12 @@ export class MyItineraryComponent implements OnInit {
     this.show = false;
   }
 
-
+/* 
   onSubmit(form: NgForm){
     console.log(form);
     this.itineraryCollection = this.checkCode(form);
   
-  }
+  } */
 
   checkCode(codeEntered: string) {
     this.show= true;

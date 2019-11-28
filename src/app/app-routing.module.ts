@@ -16,6 +16,8 @@ import{MyItineraryComponent} from './my-itinerary/my-itinerary.component';
 import { HotelsComponent } from './Hotel Components/hotels/hotels.component';
 import { DestiniesComponent } from './Destiny Components/destinies/destinies.component';
 import { InboxComponent } from './admin/inbox/inbox.component';
+import {HotelCrudComponent} from 'src/app/admin/hotel-crud/hotel-crud.component';
+import {CreateItineraryComponent} from '../app/tools/itinerary-view/create-itinerary/create-itinerary.component';
 
 const routes: Routes = [
  {
@@ -37,6 +39,10 @@ component: MyItineraryComponent
 {
   path:'AboutUs',
   component: AboutUsComponent
+},
+{
+  path:'Crear',
+  component: CreateItineraryComponent
 },
 { 
   path: 'gtAdmin', 
@@ -70,6 +76,11 @@ component: MyItineraryComponent
 {
   path: 'adminInbox', 
   component:InboxComponent,
+  canActivate: [AuthGuard]
+},
+{
+  path: 'adminHotels', 
+  component: HotelCrudComponent,
   canActivate: [AuthGuard]
 },
 {

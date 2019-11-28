@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormsModule, NgForm} from '@angular/forms';
 import {HotelsService} from 'src/app/services/Hotelsservice/hotels.service';
 import { AngularFirestore } from '@angular/fire/firestore';
-import {Hotels, Room} from 'src/app/models/Hotels.model';
+import {Hotels} from 'src/app/models/Hotels.model';
 
 @Component({
   selector: 'app-hotel-crud-list',
