@@ -51,12 +51,9 @@ import { DestiniesComponent } from '../app/Destiny Components/destinies/destinie
 import { DestiniesDisplayComponent } from './Destiny Components/destinies-display/destinies-display.component';
 import { ModalComponent } from './modal/modal.component';
 import { DestiniesSeeMoreComponent } from './Destiny Components/destinies-see-more/destinies-see-more.component';
-<<<<<<< HEAD
 import { SideBar2Component } from './components/side-bar2/side-bar2.component';
-=======
 import { CityCrudComponent } from './admin/city-crud/city-crud.component';
 import { InboxComponent } from './admin/inbox/inbox.component';
->>>>>>> origin/Admin-Navigation
 
 @NgModule({
   declarations: [
@@ -89,12 +86,9 @@ import { InboxComponent } from './admin/inbox/inbox.component';
     DestiniesDisplayComponent,
     ModalComponent,
     DestiniesSeeMoreComponent,
-<<<<<<< HEAD
     SideBar2Component,
-=======
     CityCrudComponent,
     InboxComponent,
->>>>>>> origin/Admin-Navigation
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features

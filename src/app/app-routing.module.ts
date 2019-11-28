@@ -68,7 +68,7 @@ component: MyItineraryComponent
   canActivate: [AuthGuard]
 },
 {
-  path: 'Inbox', 
+  path: 'adminInbox', 
   component:InboxComponent,
   canActivate: [AuthGuard]
 },
