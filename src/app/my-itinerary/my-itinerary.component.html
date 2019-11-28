@@ -24,9 +24,15 @@
                 </div>
         </div>
     </div>
-    <div class="row itineraryForm" *ngIf="show==true">
-            <div class="col-md-10 formMargin">
-                    
+    <div class="row itineraryForm" style="margin-top:10vw" *ngIf="show==true">
+            <div class="col-md-4 information" >
+                <img class="image" style="margin-left:35%"src="../../assets/Images/calendario.png">
+                    <p class="especialText" style="text-align: center;">Su reserva es la siguiente:</p>
+                    <p style=" text-align: center;">Fecha de llegada: {{itinerary.arrivalDate}} </p>
+                    <p style="text-align: center;">Fecha de salida:{{itinerary.departureDate}}</p>
+                    <p style="text-align: center;">Destino: {{itinerary.destination}}</p>
+                    <p style="text-align: center;">Hotel:{{itinerary.hotel}}</p>
+                
             </div>
     </div>
 </section>
