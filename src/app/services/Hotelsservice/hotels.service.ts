@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
-import {Hotels} from 'src/app/models/Hotels.model';
+import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from '@angular/fire/firestore';
+import {Hotels, Services} from 'src/app/models/Hotels.model';
 
 
 @Injectable({

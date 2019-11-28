@@ -1,3 +1,13 @@
+.fa-check-square-o{
+    position:relative;
+    color:green;
+    font-size:20px;
+}
+.fa-times{
+    position:relative;
+    color:red;
+    font-size:20px;
+}
 .my-container{
     padding: 0;
     border : 1px solid rgb(168, 167, 167);
@@ -10,6 +20,10 @@
     margin:0;
 }
 
+#map {
+    height: 500px;
+    width: 100%;
+   }
 
 .col{
     padding:0;
@@ -126,19 +140,47 @@ a:hover{
     padding:0;
     text-align: center;
 }
-
-.info{
-    margin:0;
-    height: 90%;
-    max-height:600px;
-    width: 100%;
-    overflow-y:auto;
+.hidden{
+    display:none;
 }
+
 
 .my-information{
     position: relative;
     padding: 0;
     width:90%;
+    .info{
+    margin:0;
+    height: 90%;
+    max-height:600px;
+    width: 100%;
+    overflow-y:auto;
+    .map {
+    height: 500px;
+    width: 100%;
+   }
+   .price{
+       color:green;
+       text-emphasis-color: lightgreen;
+       font-size:30px;
+       margin:0px;
+       padding:5px;
+   }
+   .roomsclass{
+       display:flex;
+       justify-content:center;
+       flex-direction:column;
+       text-align:center;
+   }
+   .servicesclass{
+    position:relative;
+
+    justify-content:center;
+    flex-direction:column;
+    text-align:center;
+   }
+}
+    
 }
 
 .blueLine{

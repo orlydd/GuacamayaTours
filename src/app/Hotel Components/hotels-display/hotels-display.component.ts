@@ -9,7 +9,6 @@ import * as _ from 'lodash';
   styleUrls: ['./Hotels-display.component.scss']
 })
 export class HotelsDisplayComponent implements OnInit {
-  
   Hotels: any;
   filteredHotels:any;
     /// Active filter rules

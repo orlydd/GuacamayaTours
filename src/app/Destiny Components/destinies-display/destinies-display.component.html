@@ -73,7 +73,7 @@
                         <span><b>Hoteles disponibles:</b> {{d.availability}}</span>
                         <h6><b>Estado:</b>{{d.state}}</h6>
                         <p class="card-text"> {{d.description}}</p>
-                        <app-modal [i2]="i"></app-modal>
+                        <app-modal [i2]="d.key" [lat1]='d.latitude' [lng1]='d.longitude'></app-modal>
                 </div>
               
         </div>

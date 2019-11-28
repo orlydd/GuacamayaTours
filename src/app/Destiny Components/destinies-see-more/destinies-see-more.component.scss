@@ -9,7 +9,10 @@
     padding: 0;
     margin:0;
 }
-
+#map {
+    height: 500px;
+    width: 100%;
+   }
 
 .col{
     padding:0;
@@ -191,4 +194,13 @@ button{
     text-decoration-color: black;
     border:none;
     font-size: 20px;
+}
+.gohotel{
+    position:relative;
+    top:0px;
+    right:0px;
+    background:cyan;
+    border: solid black 1px;
+    font-size:10px;
+
 }
