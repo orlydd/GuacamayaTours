@@ -44,15 +44,80 @@
                   <span class="badge badge-secondary">SERVICIOS</span>
                 </ng-template>
               </tab>
+            <tab id="4" (selectTab)="onSelect($event);mapInitializer()">
+              <ng-template tabHeading>
+                <span class="badge badge-secondary">COORDENADAS</span>
+              </ng-template>
+            </tab>
           </tabset>
      </div>
    </div>
    <div class="row my-row3">
      <div class="col-5 my-information">
          <div class="info">
-           <p *ngIf="value=='1'">{{h.description}}</p>
-           <p *ngIf="value=='2'">{{h.rooms}}</p>
-           <p *ngIf="value=='3'">{{h.services}}</p>
+           <div *ngIf="value=='1'">{{h.description}}</div>
+           <div class="roomsclass" *ngIf="value=='2'">Habitación Estándar Single:<p class="price"><span *ngIf="h.room1"><strong>{{h.price}}$</strong></span></p>
+            <img src="{{h.room1}}" alt="Hotel Image unavailable" class="hotel-image"><br><br><br>
+            Habitación Estándar Doble:<p class="price"><span *ngIf="h.room2"><strong>{{h.price+15}}$</strong></span></p>
+            <img src="{{h.room2}}" alt="Hotel Image unavailable" class="hotel-image"><br><br><br>
+            Habitación Deluxe:<p class="price"><span *ngIf="h.room3"><strong>{{h.price+40}}$</strong></span></p>
+            <img src="{{h.room3}}" alt="Hotel Image unavailable" class="hotel-image"><br><br><br>
+            Suite deluxe:<p class="price"><span *ngIf="h.room4"><strong>{{h.price+60}}$</strong></span></p>
+            <img src="{{h.room4}}" alt="Hotel Image unavailable" class="hotel-image"><br>
+           </div>
+           <div class="servicesclass" *ngIf="value=='3'">
+            <ng-container *ngFor="let services of Hotels;let i=index">
+                <ng-container *ngIf="i1 == services.key">
+                  <span>Wi-Fi Gratis:</span><span *ngIf="services.services[0] == true">
+                    <i class="fa fa-check-square-o" aria-hidden="true"></i></span>
+                                        <span *ngIf="services.services[0] == false"><i class="fa fa-times" aria-hidden="true"></i></span><br>
+                  Bar / café:<span *ngIf="services.services[1] == true">
+                      <i class="fa fa-check-square-o" aria-hidden="true"></i></span>
+                                        <span *ngIf="services.services[1] == false"><i class="fa fa-times" aria-hidden="true"></i></span><br>
+                  Desayuno Gratis:<span *ngIf="services.services[2] == true">
+                      <i class="fa fa-check-square-o" aria-hidden="true"></i></span>
+                                        <span *ngIf="services.services[2] == false"><i class="fa fa-times" aria-hidden="true"></i></span><br>
+                  Limpieza diaria:<span *ngIf="services.services[3] == true">
+                      <i class="fa fa-check-square-o" aria-hidden="true"></i></span> 
+                                        <span *ngIf="services.services[3] == false"><i class="fa fa-times" aria-hidden="true"></i></span><br>
+                  Balcón:<span *ngIf="services.services[4] == true">
+                      <i class="fa fa-check-square-o" aria-hidden="true"></i></span> 
+                                        <span *ngIf="services.services[4] == false"><i class="fa fa-times" aria-hidden="true"></i></span><br>
+                  Traslado Aeropuerto:<span *ngIf="services.services[5] == true">
+                      <i class="fa fa-check-square-o" aria-hidden="true"></i></span> 
+                                        <span *ngIf="services.services[5] == false"><i class="fa fa-times" aria-hidden="true"></i></span><br>
+                  Estacionamiento Gratis:<span *ngIf="services.services[6] == true">
+                      <i class="fa fa-check-square-o" aria-hidden="true"></i></span> 
+                                        <span *ngIf="services.services[6] == false"><i class="fa fa-times" aria-hidden="true"></i></span><br>
+                  Entretenimiento:<span *ngIf="services.services[7] == true">
+                      <i class="fa fa-check-square-o" aria-hidden="true"></i></span> 
+                                        <span *ngIf="services.services[7] == false"><i class="fa fa-times" aria-hidden="true"></i></span><br>
+                  Recepción 24 horas:<span *ngIf="services.services[8] == true">
+                      <i class="fa fa-check-square-o" aria-hidden="true"></i></span> 
+                                        <span *ngIf="services.services[8] == false"><i class="fa fa-times" aria-hidden="true"></i></span><br> 
+                  Wake-up service:<span *ngIf="services.services[9] == true">
+                      <i class="fa fa-check-square-o" aria-hidden="true"></i></span> 
+                                        <span *ngIf="services.services[9] == false"><i class="fa fa-times" aria-hidden="true"></i></span><br> 
+                  Ascensores:<span *ngIf="services.services[10] == true">
+                      <i class="fa fa-check-square-o" aria-hidden="true"></i></span> 
+                                        <span *ngIf="services.services[10] == false"><i class="fa fa-times" aria-hidden="true"></i></span><br> 
+                  Servicio de planchado:<span *ngIf="services.services[11] == true">
+                      <i class="fa fa-check-square-o" aria-hidden="true"></i></span> 
+                                        <span *ngIf="services.services[11] == false"><i class="fa fa-times" aria-hidden="true"></i></span><br>
+                  Secadores de pelo:<span *ngIf="services.services[12] == true">
+                      <i class="fa fa-check-square-o" aria-hidden="true"></i></span> 
+                                        <span *ngIf="services.services[12] == false"><i class="fa fa-times" aria-hidden="true"></i></span><br>
+                  Zona de fumadores:<span *ngIf="services.services[13] == true">
+                      <i class="fa fa-check-square-o" aria-hidden="true"></i></span> 
+                                        <span *ngIf="services.services[13] == false"><i class="fa fa-times" aria-hidden="true"></i></span><br> 
+                  Amigable a mascotas:<span *ngIf="services.services[14] == true">
+                      <i class="fa fa-check-square-o" aria-hidden="true"></i></span> 
+                                        <span *ngIf="services.services[14] == false"><i class="fa fa-times" aria-hidden="true"></i></span><br> 
+          </ng-container></ng-container></div>
+
+           <div *ngIf="value=='4'">
+           <div #mapContainer id="map"></div>
+           </div>
          </div>
      </div>
      <div class="col-1 line2">
