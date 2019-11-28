@@ -16,6 +16,7 @@ export class Hotels{
     price: number;
     stars: number;
     state: string;
+    active: boolean;
     services: boolean[];
     rooms: Room[];
 }

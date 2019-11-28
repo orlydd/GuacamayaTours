@@ -35,8 +35,8 @@ export class HotelsService {
      this.hotelsDoc.delete();
    }
 
-   addHotel(hotel: Hotels){
-    this.hotelsCollection.add(hotel);
+   addHotel(hotels: Hotels){
+    this.hotelsCollection.add(hotels);
 
    }
    updateHotel(hotel: Hotels){

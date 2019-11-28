@@ -35,7 +35,7 @@ export class ItineraryService {
      this.itineraryDoc.delete();
    }
 
-  addDestiny(itinerary: Itinerary){
+  addItinerary(itinerary: Itinerary){
     this.itineraryCollection.add(itinerary);
   }
 

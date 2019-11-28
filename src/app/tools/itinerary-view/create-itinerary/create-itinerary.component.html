@@ -1,0 +1,19 @@
+<div class="section">
+        <div class="container">
+                <div class="row">
+                        <div class="booking">
+                                <form >
+                                        <div class="form-group">
+                                                <span class="form-label">Elige tu destino</span>
+                                                <select class="selectstyle" [(ngModel)]="destination" *ngFor="let dest of destiny">
+                                                        <option>{{dest.name}}</option>
+                                                </select>
+                                        </div>
+
+                                </form>
+                        </div>
+                        
+                </div>
+        </div>
+</div>
+
