@@ -19,43 +19,18 @@
 
 .logo{
     position: relative;
-    justify-content: center;
-    width:8vw;
-    height: 8vw;
-    margin-top:15%;
-    margin-left: 84%;
+    width:18vh;
+    height: 18vh;
 }
 
 .title{
     font-family: "Montserrat", sans-serif;
     height:auto;
     font-weight: bold;
-    font-size: 6.3vh;
+    font-size: 300%;
     color:#2EBFC4;
-    margin-top:6%;
-    margin-left: 4%;
-}
-
-.blueLine{
-    height:2px;
-    width: 62vh;
-    border: 2px solid #2EBFC4;
-    background: #2EBFC4;
-}
-
-.Line{
-
-    height:2px;
-    width:100vh ;
-    border: 2px solid #2EBFC4;
-    background: #2EBFC4;
-}
-
-.yellowLine{
-    height:2px;
-    width:108vh ;
-    border: 2px solid rgb(236, 236, 40);
-    background: rgb(236, 236, 40);
+    margin-top: 4%;
+    text-align: center;
 }
 
 .text{
@@ -65,7 +40,7 @@
     height:auto;
     width:60%;
     font-weight: lighter;
-    margin-top: 4%;
+    margin-top:0;
     font-size: 2vh;
     color:black;
     margin-bottom: 5vh;
@@ -82,44 +57,13 @@
     font-family: "Montserrat", sans-serif;
     height:auto;
     font-weight: bold;
-    font-size: 6.3vh;
+    font-size: 250%;
+    text-align: center;
     color:#2EBFC4;
-    margin-left: 28%;
     margin-right: auto;
     margin-top:10vh;
 }
 
-.pic{
-    margin-top:7.5vh;
-    margin-left: 28%;
-    height: 30vh;
-    width: 30vh;
-}
-
-.pic:hover{
-    height: 35vh;
-    width: 35vh;
-}
-
-.bigText{
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    color:#2EBFC4;
-    text-align: center;
-    font-size: 3vh;
-
-}
-
-.smallText{
-    font-family: "Montserrat", sans-serif;
-    font-weight: lighter;
-    color:rgb(27, 116, 119);
-    text-align: center;
-    font-size: 2.5vh;
-    margin-bottom: 10vh;
-    margin-left: 5vh;
-
-}
 
 .more{
     margin:0;
@@ -133,36 +77,30 @@
     font-family: "Montserrat", sans-serif;
     height:auto;
     font-weight: bold;
-    font-size: 6.3vh;
+    font-size: 250%;
     color:rgb(236, 236, 40);
-    margin-left: 25%;
+    text-align: center;
     margin-right: auto;
     margin-top:10vh;
+}
+
+.adventureTitle{
+        position: relative;
+        font-family: "Montserrat", sans-serif;
+        height:auto;
+        font-weight: bold;
+        font-size: 250%;
+        color:rgb(253, 249, 0);
+        text-align: right;
+        margin-right: 10%;
+        margin-top:10vh;
 }
 
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color: rgb(253, 249, 0)!important;
     color: black;
     margin-left: 40%;
-    margin-bottom: 10vh;
-}
-
-.bigTextYellow{
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    color:rgb(253, 249, 0);
-    text-align: center;
-    font-size: 3vh;
-
-}
-
-.smallTextWhite{
-    font-family: "Montserrat", sans-serif;
-    font-weight: lighter;
-    color:whitesmoke;
-    text-align: center;
-    font-size: 2.5vh;
-    margin-left: 5vh;
+    margin-bottom: 5vh;
 }
 
 .plane{
@@ -171,21 +109,17 @@
 }
 
 .create{
-    height:10vh;
-    width:60vh;
-    margin-top:15vw;
-    margin-left:55vw;
+    margin-top:4%;
+    cursor: pointer;
+    height:auto;
+    width:auto;
+    float: right;
+    margin-right: 20%;
     background: rgb(253, 249, 0) !important;
     color: black;
     font-family: "Montserrat", sans-serif;
     font-weight: lighter;
-    font-size:4vh;
-}
-
-.create:hover{
-    margin-top:15vw;
-    margin-left:55vw;
-    background: rgb(253, 249, 0) !important;
+    font-size:150%;
 }
 
 .contactUs{
@@ -197,18 +131,10 @@
     font-family: "Montserrat", sans-serif;
     height:auto;
     font-weight: bold;
-    font-size: 6.3vh;
+    font-size: 250%;
     color:#2EBFC4;
-    margin-left: 40%;
     margin-top:5vh;
-}
-
-.cLine{
-    margin-left:40%;
-    height:2px;
-    width:50vh ;
-    border: 2px solid #2EBFC4;
-    background: #2EBFC4;
+    text-align: center;
 }
 
 .cBigText{
@@ -227,4 +153,58 @@
     color:rgb(29, 106, 109);
     text-align: center;
     font-size: 2.5vh;
+}
+
+.card{
+    border: 1px solid white;
+}
+
+.hotel{
+    padding: 0px;
+}
+
+.destiny{
+    padding:0px;
+}
+
+.search{
+    padding:0px;
+}
+
+.card-title{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color:#2EBFC4;
+    text-align: center;
+    font-size: 3vh;
+}
+
+#blueTitle{
+     color:rgb(253, 249, 0);
+}
+#blueText{
+    color:whitesmoke;
+}
+
+#blueCard{
+    border: 1px solid #2EBFC4;
+    background: #2EBFC4;
+}
+
+.card-text{
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    color:rgb(27, 116, 119);
+    text-align: center;
+    font-size: 2.5vh;
+    margin-bottom: 5vh;
+
+}
+
+.pasos2{
+    margin-left: 4%;
+}
+
+.more2{
+    margin-left: 4%;
 }
