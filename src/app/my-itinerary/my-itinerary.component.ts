@@ -5,6 +5,9 @@ import { Itinerary } from '../models/itinerary';
 import { Observable } from 'rxjs';
 import { firestore } from 'firebase';
 import {FormsModule, NgForm} from '@angular/forms';
+export class HttpComponent {
+  code:string;
+}
 
 @Component({
   selector: 'app-my-itinerary',
@@ -37,13 +40,13 @@ export class MyItineraryComponent implements OnInit {
 
 
   onSubmit(form: NgForm){
+    console.log(form);
     this.itineraryCollection = this.checkCode(form);
-    console.log(this.itineraryDoc);
+  
   }
 
-  checkCode(form: NgForm) {
+  checkCode(codeEntered: string) {
     this.show= true;
-    let codeEntered = form.value.code;
     let code = this.db.collectionGroup('Itinerary', ref=>ref.where('itineraryCode', '==', codeEntered));
     var collection;
     code.get().toPromise().then(function(querySnapshot){
