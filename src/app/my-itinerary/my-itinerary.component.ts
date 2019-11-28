@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ItineraryService} from '../services/itinerary/itinerary.service'
+import { AngularFirestoreCollection, AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Itinerary } from '../models/itinerary';
-import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { firestore } from 'firebase';
 import {FormsModule, NgForm} from '@angular/forms';
@@ -16,9 +16,8 @@ export class MyItineraryComponent implements OnInit {
   itinerary : Itinerary[];
   itineraryCollection: AngularFirestoreCollection<Itinerary>;
   codeEntered: string;
-  itineraryDoc: Itinerary;
+  itineraryDoc: {};
   show: boolean;
-  public itenerary:any;
 
 
   constructor( private db: AngularFirestore, private itineraryService: ItineraryService) { 
@@ -35,9 +34,11 @@ export class MyItineraryComponent implements OnInit {
   ngOnInit() {
     this.show = false;
   }
-  
+
+
   onSubmit(form: NgForm){
-    this.checkCode(form);
+    this.itineraryCollection = this.checkCode(form);
+    console.log(this.itineraryDoc);
   }
 
   checkCode(form: NgForm) {
@@ -47,10 +48,9 @@ export class MyItineraryComponent implements OnInit {
     var collection;
     code.get().toPromise().then(function(querySnapshot){
       querySnapshot.forEach(function(doc){
-        console.log(doc.id, '=>',doc.data());
-        let itineraryDoc ={...doc.data()};
+        console.log(doc.id,'=>',doc.data());
+        let itineraryDoc = {...doc.data()};
         console.log(itineraryDoc);
-        return itineraryDoc;
       });
       collection = querySnapshot;
     }).catch(e=>{
