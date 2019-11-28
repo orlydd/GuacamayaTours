@@ -1,13 +1,13 @@
 <button type="button" class="btn btn-primary" (click)="(openModal(template))">Explorar!</button>
 <ng-template #template>
     <div class="modal-header">
-    <h4 class="modal-title pull-left">Información</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+    <h4 class="modal-title pull-left">Información{{i1}}{{i2}}</h4>
+    <button id="closethemodal" type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
       <span aria-hidden="false">&times;</span>
     </button>
   </div>
   <div class="modal-body">
      <app-hotels-see-more [i1]="i1" [lat2]=lat1 [lng2]=lng1></app-hotels-see-more>
-     <app-destiny-see-more [i2]="i2"></app-destiny-see-more>
+     <app-destiny-see-more [i2]="i2" [lat2]=lat1 [lng2]=lng1></app-destiny-see-more>
  </div>
 </ng-template>

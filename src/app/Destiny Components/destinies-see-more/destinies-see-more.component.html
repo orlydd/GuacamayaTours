@@ -1,5 +1,5 @@
 <ng-container *ngFor="let d of Destiny;let i=index">
-    <ng-container *ngIf="i2 == i">
+    <ng-container *ngIf="i2 == d.key">
     <div class="container my-container">
         <!--Header Container-->
        
@@ -34,26 +34,75 @@
                     <ng-template tabHeading>
                       <span class="badge badge-secondary">INFORMACIÓN</span>
                     </ng-template>
-                  </tab>
+                </tab>
                 <tab id="2" (selectTab)="onSelect($event)">
                   <ng-template tabHeading>
-                    <span class="badge badge-secondary">HABITACIONES</span>
+                    <span class="badge badge-secondary">ACTIVIDADES</span>
                   </ng-template>
                 </tab>
                 <tab id="3" (selectTab)="onSelect($event)">
-                    <ng-template tabHeading="SERVICIOS">
-                      <span class="badge badge-secondary">SERVICIOS</span>
+                    <ng-template tabHeading>
+                      <span class="badge badge-secondary">CULTURA</span>
                     </ng-template>
-                  </tab>
+                </tab>
+                <tab id="4" (selectTab)="onSelect($event)">
+                    <ng-template tabHeading>
+                      <span class="badge badge-secondary">GASTRONOMÍA</span>
+                    </ng-template>
+                </tab>
+                <tab id="5" (selectTab)="onSelect($event)">
+                    <ng-template tabHeading>
+                      <span class="badge badge-secondary">HOTELES</span>
+                    </ng-template>
+                </tab>
+                <tab id="6" (selectTab)="onSelect($event);mapInitializer()">
+                    <ng-template tabHeading>
+                      <span class="badge badge-secondary">COORDENADAS</span>
+                    </ng-template>
+                </tab>
               </tabset>
          </div>
        </div>
        <div class="row my-row3">
          <div class="col-5 my-information">
              <div class="info">
-               <p *ngIf="value=='1'">{{d.description}}</p>
-               <p *ngIf="value=='2'">{{d.rooms}}</p>
-               <p *ngIf="value=='3'">{{d.services}}</p>
+                <div *ngIf="value=='1'">
+                  {{d.description}}
+                </div>
+                <div *ngIf="value=='2'">
+                  {{d.rooms}}
+                </div>
+                <div *ngIf="value=='3'">
+                  {{d.services}}
+                </div>
+                <div *ngIf="value=='4'">
+                  {{d.gastronomy}}
+                </div>
+                <div *ngIf="value=='5'">
+                    <ng-container *ngFor="let names of Hotels;let i=index">
+                        <ng-container *ngIf="i2 == d.key">
+                  LOS HOTELES MÁS POPULARES EN ÉSTA ÁREA:
+                  <ol>
+                    <li>-{{d.hotel1}}</li>
+                    <div *ngIf="d.hotel1 == names.name">
+                        <p>¡Este Hotel se encuentra disponible en nuestra base de datos!</p>
+                          <button class="gohotel" (click)="Hotelsnavigate()">Visitalo</button>
+                          </div> 
+                          <li>-{{d.hotel2}}</li>
+                          <div *ngIf="d.hotel2 == names.name">
+                              <p>¡Este Hotel se encuentra disponible en nuestra base de datos!</p>
+                                <button class="gohotel" (click)="Hotelsnavigate()">Visitalo</button>
+                                </div>
+                                <li>-{{d.hotel3}}</li>
+                          <div *ngIf="d.hotel3 == names.name">
+                              <p>¡Este Hotel se encuentra disponible en nuestra base de datos!</p>
+                                <button class="gohotel" (click)="Hotelsnavigate()">Visitalo</button>
+                                </div>  
+                   
+                </ol></ng-container></ng-container> </div>
+                <div *ngIf="value=='6'">
+                  <div #mapContainer id="map"></div>
+                </div>
              </div>
          </div>
          <div class="col-1 line2">
@@ -79,3 +128,4 @@
          </div>
      </div>
      </ng-container>
+    </ng-container>
