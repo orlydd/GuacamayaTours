@@ -7,7 +7,9 @@
     </button>
   </div>
   <div class="modal-body">
-     <app-hotels-see-more [i1]="i1" [lat2]=lat1 [lng2]=lng1></app-hotels-see-more>
-     <app-destiny-see-more [i2]="i2" [lat2]=lat1 [lng2]=lng1></app-destiny-see-more>
+      <ng-container *ngIf="i1">
+     <app-hotels-see-more [i1]="i1" [lat2]=lat1 [lng2]=lng1></app-hotels-see-more></ng-container>
+     <ng-container *ngIf="i2">
+     <app-destiny-see-more [i2]="i2" [lat2]=lat1 [lng2]=lng1></app-destiny-see-more></ng-container>
  </div>
 </ng-template>
