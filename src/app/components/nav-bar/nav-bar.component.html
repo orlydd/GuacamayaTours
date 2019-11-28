@@ -50,8 +50,16 @@
               <a class="nav-link" routerLink="/adminItinerary">ITINERARIOS</a>
             </li>
             <li class="nav-item" *ngIf="isLogged">
+                <a href="#" class="nav-link" (click)="onLogout()">INBOX</a>
+              </li>
+            <li class="nav-item" *ngIf="isLogged">
               <a href="#" class="nav-link" (click)="onLogout()">CERRAR SESIÓN</a>
             </li>
           </ul>
         </div>
+
+        <div *ngIf = "isLogged">
+            <app-side-bar></app-side-bar>
+        </div>
+        
       </nav>
