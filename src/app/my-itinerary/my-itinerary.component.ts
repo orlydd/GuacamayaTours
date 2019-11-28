@@ -32,11 +32,6 @@ export class MyItineraryComponent implements OnInit {
    )
   }
 
-  getItinerary(key: string){
-    return this.itineraryService.getAnItinerary(key);
-  }
-
-
   ngOnInit() {
     this.show = false;
   }
@@ -51,13 +46,15 @@ export class MyItineraryComponent implements OnInit {
     let code = this.db.collectionGroup('Itinerary', ref=>ref.where('itineraryCode', '==', codeEntered));
     let codeAux = code.get().toPromise().then(function(querySnapshot){
       querySnapshot.forEach(function(doc){
-        let itineraryDoc =(doc.id,'=>',doc.data());
+        console.log(doc.id, '=>', doc.data());
+        let itineraryDoc ={...doc.data()};
         console.log(itineraryDoc);
-        
+        return itineraryDoc;
       });
     }).catch(e=>{
       console.log(e);
     });
+    return;
   }
 
 }
