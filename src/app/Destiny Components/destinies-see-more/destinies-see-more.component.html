@@ -70,36 +70,39 @@
                   {{d.description}}
                 </div>
                 <div *ngIf="value=='2'">
-                  {{d.rooms}}
+                  {{d.activities}}
                 </div>
                 <div *ngIf="value=='3'">
-                  {{d.services}}
+                  {{d.culture}}
                 </div>
                 <div *ngIf="value=='4'">
                   {{d.gastronomy}}
                 </div>
                 <div *ngIf="value=='5'">
-                    <ng-container *ngFor="let names of Hotels;let i=index">
+                    
                         <ng-container *ngIf="i2 == d.key">
-                  LOS HOTELES MÁS POPULARES EN ÉSTA ÁREA:
-                  <ol>
+                  LOS HOTELES MÁS POPULARES EN ÉSTE DESTINO:
+                    <ol>
                     <li>-{{d.hotel1}}</li>
-                    <div *ngIf="d.hotel1 == names.name">
-                        <p>¡Este Hotel se encuentra disponible en nuestra base de datos!</p>
+                    
+                          <li>-{{d.hotel2}}</li>
+                          
+                                <li>-{{d.hotel3}}</li></ol>
+                         <ng-container *ngFor="let names of Hotels;let i=index">
+                           <div class="availablehotel" *ngIf="d.hotel1 == names.name">
+                        <p>¡{{d.hotel1}} se encuentra disponible en nuestra base de datos!</p>
                           <button class="gohotel" (click)="Hotelsnavigate()">Visitalo</button>
                           </div> 
-                          <li>-{{d.hotel2}}</li>
-                          <div *ngIf="d.hotel2 == names.name">
-                              <p>¡Este Hotel se encuentra disponible en nuestra base de datos!</p>
+                          <div class="availablehotel" *ngIf="d.hotel2 == names.name">
+                              <p>¡{{d.hotel2}} se encuentra disponible en nuestra base de datos!</p>
                                 <button class="gohotel" (click)="Hotelsnavigate()">Visitalo</button>
-                                </div>
-                                <li>-{{d.hotel3}}</li>
-                          <div *ngIf="d.hotel3 == names.name">
-                              <p>¡Este Hotel se encuentra disponible en nuestra base de datos!</p>
+                                </div>   
+                                <div class="availablehotel" *ngIf="d.hotel3 == names.name">
+                              <p>¡{{d.hotel3}} se encuentra disponible en nuestra base de datos!</p>
                                 <button class="gohotel" (click)="Hotelsnavigate()">Visitalo</button>
-                                </div>  
+                                </div></ng-container>
                    
-                </ol></ng-container></ng-container> </div>
+                    </ng-container> </div>
                 <div *ngIf="value=='6'">
                   <div #mapContainer id="map"></div>
                 </div>
