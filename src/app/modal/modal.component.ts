@@ -9,7 +9,7 @@ import { HotelsSeeMoreComponent} from '../Hotel Components/hotels-see-more/hotel
 })
 export class ModalComponent implements OnInit {
   @Input() i1: string;
-  @Input() i2: number;
+  @Input() i2: string;
   @Input() lat1: number;
   @Input() lng1: number;
 modalRef: BsModalRef;

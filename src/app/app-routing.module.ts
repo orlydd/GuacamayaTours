@@ -16,6 +16,7 @@ import{MyItineraryComponent} from './my-itinerary/my-itinerary.component';
 import { HotelsComponent } from './Hotel Components/hotels/hotels.component';
 import { DestiniesComponent } from './Destiny Components/destinies/destinies.component';
 import { InboxComponent } from './admin/inbox/inbox.component';
+import { CreateItineraryComponent } from '../app/tools/itinerary-view/create-itinerary/create-itinerary.component'
 
 const routes: Routes = [
  {
@@ -26,6 +27,10 @@ const routes: Routes = [
 path :'seeItinerary',
 component: MyItineraryComponent
 },
+{
+  path :'createItinerary',
+  component: CreateItineraryComponent
+  },
 {
   path:'Contacts',
   component: ContactUsComponent

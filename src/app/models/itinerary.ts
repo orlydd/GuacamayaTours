@@ -11,15 +11,7 @@ export class Itinerary {
     hotel: string;
     arrivalDate: string;
     departureDate: string;
-    members : Members[];
     key: string;
 }
 
-export class Members{
-    name: string;
-    lastName: string;
-    personID: string;
-    age: number;
 
-
-}
