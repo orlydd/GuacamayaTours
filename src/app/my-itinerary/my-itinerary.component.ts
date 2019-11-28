@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {ItineraryService} from '../services/itinerary/itinerary.service'
 import { Itinerary } from '../models/itinerary';
 import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
-import { NgForm } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { firestore } from 'firebase';
+import {FormsModule, NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-my-itinerary',
@@ -14,8 +16,9 @@ export class MyItineraryComponent implements OnInit {
   itinerary : Itinerary[];
   itineraryCollection: AngularFirestoreCollection<Itinerary>;
   codeEntered: string;
-  itineraryDoc: {};
+  itineraryDoc: Itinerary;
   show: boolean;
+  public itenerary:any;
 
 
   constructor( private db: AngularFirestore, private itineraryService: ItineraryService) { 
@@ -29,6 +32,10 @@ export class MyItineraryComponent implements OnInit {
    )
   }
 
+  getItinerary(key: string){
+    return this.itineraryService.getAnItinerary(key);
+  }
+
 
   ngOnInit() {
     this.show = false;
@@ -36,21 +43,21 @@ export class MyItineraryComponent implements OnInit {
 
 
   onSubmit(form: NgForm){
-    this.checkCode(form);
-  }
-
-  checkCode(form: NgForm) {
+    this.itinerary=[];
     this.show= true;
     let codeEntered = form.value.code;
     let code = this.db.collectionGroup('Itinerary', ref=>ref.where('itineraryCode', '==', codeEntered));
-    let codeAux = code.get().toPromise().then(function(querySnapshot){
+    code.get().toPromise().then(function(querySnapshot){
       querySnapshot.forEach(function(doc){
-        let itineraryDoc =(doc.id,'=>',doc.data());
-        console.log(itineraryDoc);
+        console.log(doc.id,'=>',doc.data());
+        this.itineraryDoc = this.getItinerary(doc.id);
+        console.log(this.itineraryDoc);
       });
     }).catch(e=>{
       console.log(e);
     });
+
+    return code;
   }
 
 }
