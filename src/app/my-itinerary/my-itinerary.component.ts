@@ -42,7 +42,7 @@ export class MyItineraryComponent implements OnInit {
 
 
   onSubmit(form: NgForm){
-    console.log(this.checkCode(form));
+    this.checkCode(form);
   }
 
   checkCode(form: NgForm) {
@@ -52,13 +52,12 @@ export class MyItineraryComponent implements OnInit {
     let codeAux = code.get().toPromise().then(function(querySnapshot){
       querySnapshot.forEach(function(doc){
         let itineraryDoc =(doc.id,'=>',doc.data());
-        console.log(codeAux);
-        return itineraryDoc;
+        console.log(itineraryDoc);
+        
       });
     }).catch(e=>{
       console.log(e);
     });
-    return codeAux;
   }
 
 }
