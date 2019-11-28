@@ -1,0 +1,41 @@
+<div class="container">
+        <div class="row">
+                <div class="col-md-2">
+
+                </div>
+                <div class = "col-md-10" style="margin-top:5vw">
+                                <h4>INBOX</h4>
+                </div>
+        </div>
+<div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-10">
+                        <div class="table-responsive">
+                                        <table class="table table-hover">
+                                                <thead>
+                                                    <th scope="col">NOMBRE</th>
+                                                    <th scope="col">EMAIL</th>
+                                                    <th scope="col">MENSAJE</th>
+                                                    <th scope="col">ESTATUS</th>
+                                                    <th scope="col"></th>
+                                                </thead>
+                                                <tbody>
+                                                    <tr *ngFor="let m of messages">
+                                                            <td > {{m.sender}} </td>
+                                                            <td >{{m.email}}</td>
+                                                            <td >{{m.message}}</td>   
+                                                            <td><button class="btn btn-block btn-sm btn-success" (click)="isActive(m)" *ngIf= "m.answered==true">Respondido</button></td>  
+                                                            <td><button class="btn btn-block btn-sm btn-success" (click)="isActive(m)" *ngIf= "m.answered==false">Sin Responder</button></td>    
+                                                            <td><button class="btn btn-block btn-sm btn-danger" (click)="onDelete(m.key)">Eliminar</button></td> 
+                                                            
+                                                    </tr>
+                                                </tbody>
+                                            
+                                            </table>
+                                </div>
+        </div>
+</div>
+        
+        

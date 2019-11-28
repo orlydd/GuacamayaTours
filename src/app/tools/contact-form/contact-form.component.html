@@ -5,7 +5,7 @@
                             <h1 class="form-title">Ponte en contacto con nosotros</h1>
                         </div>
                         <!--Contact Form-->
-                        <form (ngSubmit)="Submit()">
+                        <form #form= "ngForm" autocomplete="off" (submit)="onSubmit(form)">
                                 <!--Name-->
                                 
                                 <div class="input-box">

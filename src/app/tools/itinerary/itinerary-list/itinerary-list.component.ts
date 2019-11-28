@@ -32,7 +32,10 @@ export class ItineraryListComponent implements OnInit {
   
 
   onDelete(key:string){
+    if(confirm("¿Estas seguro que quieres eliminar este elemento?")){
       this.firestore.doc('Itinerary/'+key).delete();
+    }
+      
   
   }
 }

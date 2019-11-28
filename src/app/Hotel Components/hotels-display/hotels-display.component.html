@@ -162,7 +162,7 @@
                         <h6><b>Estado:</b> {{h.state}}</h6>
                         <h6><b>Precio:</b> {{h.price}}$/noche en habitación sencilla</h6>
                         <p class="card-text"> {{h.description}}</p>
-                        <app-modal [i1]='h.key'></app-modal>
+                        <app-modal [i1]='h.key' [lat1]='h.latitude' [lng1]='h.longitude'></app-modal>
                 </div>
               
         </div>

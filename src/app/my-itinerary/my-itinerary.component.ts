@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import {ItineraryService} from '../services/itinerary/itinerary.service'
+import { AngularFirestoreCollection, AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Itinerary } from '../models/itinerary';
 import { AngularFirestoreCollection, AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { NgForm } from '@angular/forms';
@@ -24,7 +25,6 @@ export class MyItineraryComponent implements OnInit {
  
   }
 
-
   ngOnInit() {
     this.show = false;
   }
@@ -32,9 +32,10 @@ export class MyItineraryComponent implements OnInit {
 
   onSubmit(form: NgForm){
     this.checkCode(form);
+  
   }
 
-  checkCode(form: NgForm) {
+  checkCode(codeEntered: string) {
     this.show= true;
     let codeEntered = form.value.code;
     this.db.doc<Itinerary>(`Itinerary/${codeEntered}`).get().toPromise().then(snapshot => this.itinerary = snapshot.data() as Itinerary);

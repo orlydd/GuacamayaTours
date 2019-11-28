@@ -51,6 +51,13 @@ import { DestiniesComponent } from '../app/Destiny Components/destinies/destinie
 import { DestiniesDisplayComponent } from './Destiny Components/destinies-display/destinies-display.component';
 import { ModalComponent } from './modal/modal.component';
 import { DestiniesSeeMoreComponent } from './Destiny Components/destinies-see-more/destinies-see-more.component';
+import { SideBar2Component } from './components/side-bar2/side-bar2.component';
+import { CityCrudComponent } from './admin/city-crud/city-crud.component';
+import { InboxComponent } from './admin/inbox/inbox.component';
+import { CreateHotelComponent } from './tools/hotel/create-hotel/create-hotel.component';
+import { HotelCrudListComponent } from './tools/hotel/hotel-crud-list/hotel-crud-list.component';
+import { HotelCrudComponent } from './admin/hotel-crud/hotel-crud.component';
+import { CreateItineraryComponent } from './tools/itinerary-view/create-itinerary/create-itinerary.component';
 
 @NgModule({
   declarations: [
@@ -83,6 +90,13 @@ import { DestiniesSeeMoreComponent } from './Destiny Components/destinies-see-mo
     DestiniesDisplayComponent,
     ModalComponent,
     DestiniesSeeMoreComponent,
+    SideBar2Component,
+    CityCrudComponent,
+    InboxComponent,
+    CreateHotelComponent,
+    HotelCrudListComponent,
+    HotelCrudComponent,
+    CreateItineraryComponent,
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features

@@ -9,7 +9,10 @@
     padding: 0;
     margin:0;
 }
-
+#map {
+    height: 500px;
+    width: 100%;
+   }
 
 .col{
     padding:0;
@@ -92,9 +95,10 @@ h2{
 }
 
 li{
-    display:inline;
+    display:flex;
     padding-left:.5vw;
     padding-right:.5vw;
+    flex-direction:column;
 }
 
 ul{
@@ -191,4 +195,24 @@ button{
     text-decoration-color: black;
     border:none;
     font-size: 20px;
+}
+.availablehotel{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+    
+}.p{
+        margin-bottom:4px;
+    }
+.gohotel{
+    position:relative;
+    top:0px;
+    right:0px;
+    background:cyan;
+    border: solid black 1px;
+    font-size:10px;
+    margin-left:35%;
+    margin-bottom:15px;
+
 }
