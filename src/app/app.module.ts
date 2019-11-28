@@ -36,6 +36,11 @@ import { SignInComponent } from './tools/sign-in/sign-in/sign-in.component';
 import {AuthService} from './services/auth/auth.service';
 import { ItineraryListComponent } from './tools/itinerary/itinerary-list/itinerary-list.component';
 import { ItineraryCrudComponent } from './admin/itinerary-crud/itinerary-crud.component';
+import { StateListComponent } from './tools/state/state-list/state-list.component';
+import { CreateStateComponent } from './tools/state/create-state/create-state.component';
+import { StateCrudComponent } from './admin/state-crud/state-crud.component';
+import { CityListComponent } from './tools/city/city-list/city-list.component';
+import { CreateCityComponent } from './tools/city/create-city/create-city.component';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { MyItineraryComponent } from './my-itinerary/my-itinerary.component';
 import { HotelsComponent } from './Hotel Components/hotels/hotels.component';
@@ -46,6 +51,12 @@ import { DestiniesComponent } from '../app/Destiny Components/destinies/destinie
 import { DestiniesDisplayComponent } from './Destiny Components/destinies-display/destinies-display.component';
 import { ModalComponent } from './modal/modal.component';
 import { DestiniesSeeMoreComponent } from './Destiny Components/destinies-see-more/destinies-see-more.component';
+import { CityCrudComponent } from './admin/city-crud/city-crud.component';
+import { InboxComponent } from './admin/inbox/inbox.component';
+import { CreateHotelComponent } from './tools/hotel/create-hotel/create-hotel.component';
+import { HotelCrudListComponent } from './tools/hotel/hotel-crud-list/hotel-crud-list.component';
+import { HotelCrudComponent } from './admin/hotel-crud/hotel-crud.component';
+import { CreateItineraryComponent } from './tools/itinerary-view/create-itinerary/create-itinerary.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +76,11 @@ import { DestiniesSeeMoreComponent } from './Destiny Components/destinies-see-mo
     SignInComponent,
     ItineraryListComponent,
     ItineraryCrudComponent,
+    StateListComponent,
+    CreateStateComponent,
+    StateCrudComponent,
+    CityListComponent,
+    CreateCityComponent,
     HotelsComponent,
     HotelsListComponent,
     HotelsDisplayComponent,
@@ -73,6 +89,12 @@ import { DestiniesSeeMoreComponent } from './Destiny Components/destinies-see-mo
     DestiniesDisplayComponent,
     ModalComponent,
     DestiniesSeeMoreComponent,
+    CityCrudComponent,
+    InboxComponent,
+    CreateHotelComponent,
+    HotelCrudListComponent,
+    HotelCrudComponent,
+    CreateItineraryComponent,
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features

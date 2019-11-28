@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {DestinyService} from 'src/app/services/destiny/destiny.service';
 import {Destiny} from 'src/app/models/destiny.model';
-import { map } from 'rxjs/operators';
 import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
@@ -23,16 +22,6 @@ export class DestinyListComponent implements OnInit {
       }
     );
 
-
-    /*
-    this.destinyService.getDestinies().subscribe(actionArray=>{
-      this.destiny= actionArray.map(item=>{
-        return{key: item.payload.doc.id,
-          ...item.payload.doc.data()
-        } as Destiny;
-      })
-    })
-    */
   }
 
   isActive(d: Destiny){
@@ -44,11 +33,7 @@ export class DestinyListComponent implements OnInit {
     let destiny = Object.assign({}, dest);
     this.destinyService.destinyData= destiny;
   }
-  onDelete(key:string){
-    //if(confirm("¿Esta seguro que quiere eliminar este destino?")){
-      this.firestore.doc('Destiny/'+key).delete();
-   // }
-  }
+ 
   
  
  

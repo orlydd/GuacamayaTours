@@ -1,0 +1,33 @@
+<div class="container" >
+    <div class="row justify-content-center">
+        <div class="col col-md-12" >
+            <h4>Ciudad</h4>
+                 <form #form= "ngForm" autocomplete="off" (submit)="onSubmit(form)">
+                    <input type="hidden" name= "key" #key="ngModel"[(ngModel)]="cityService.cityData.key">    
+                            <!--ID -->
+                            <div class="form-group">
+                                <label for="stateID">ID</label>
+                                    <input  class="form-control" name="cityID"  #destinyId="ngModel"[(ngModel)]="cityService.cityData.cityID" placeholder="ID" >   
+                                </div>
+                            <!--NAME-->
+                            <div class="form-group">        
+                                <label for="name">Nombre</label>
+                                    <input class="form-control " name="name" #name="ngModel"[(ngModel)]="cityService.cityData.name" placeholder="Nombre">       
+                                </div>
+
+                            <!--STATE-->
+                            <div class="form-group">        
+                                <label for="name">Estado</label>
+                                    <input class="form-control " name="state" #state="ngModel"[(ngModel)]="cityService.cityData.state" placeholder="Estado">       
+                            </div>
+                                    
+                            <!--SUBMIT BUTTON-->
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-block btn-info" *ngIf= "cityService.cityData.key == null" >GUARDAR</button>
+                                    <button type="submit" class="btn btn-block btn-info"  *ngIf= "cityService.cityData.key!== null">EDITAR</button>
+                                            
+                                </div>
+                            </form>
+            </div>
+        </div>
+    </div>

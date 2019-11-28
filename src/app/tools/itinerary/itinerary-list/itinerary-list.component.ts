@@ -13,6 +13,7 @@ export class ItineraryListComponent implements OnInit {
 
   
   itinerary: Itinerary[];
+ 
 
   constructor(private itineraryService: ItineraryService, private firestore: AngularFirestore) { }
 
@@ -26,16 +27,15 @@ export class ItineraryListComponent implements OnInit {
 
 
   }
-/* 
 
-  onEdit(dest: itinerary){
-    let destiny = Object.assign({}, dest);
-    this.destinyService.destinyData= destiny;
-  } */
+
+  
 
   onDelete(key:string){
-    //if(confirm("¿Esta seguro que quiere eliminar este destino?")){
+    if(confirm("¿Estas seguro que quieres eliminar este elemento?")){
       this.firestore.doc('Itinerary/'+key).delete();
-   // }
+    }
+      
+  
   }
 }

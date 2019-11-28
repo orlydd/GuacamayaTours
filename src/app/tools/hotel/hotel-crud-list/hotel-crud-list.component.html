@@ -1,0 +1,24 @@
+<h4>Lista de Hoteles</h4>
+<table class="table table-hover">
+    <thead>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Categoría</th>
+        <th scope="col"> Estado</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let h of hotels">
+                <td (click)="onEdit(h)"> {{h.hotelsId}} </td>
+                <td (click)="onEdit(h)">{{h.name}}</td>
+                <td (click)="onEdit(h)">{{h.category}}</td>   
+                <td (click)="onEdit(h)">{{h.state}}</td>     
+                <td (click)="onEdit(h)">{{h.city}}</td> 
+
+                <td><button class="btn btn-block btn-sm btn-success" (click)="isActive(h)" *ngIf= "h.active==true">Deshabilitar</button></td>  
+                <td><button class="btn btn-block btn-sm btn-success" (click)="isActive(h)" *ngIf= "h.active==false">Habilitar</button></td>    
+        </tr>
+    </tbody>
+
+</table>

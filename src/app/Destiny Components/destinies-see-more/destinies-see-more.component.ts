@@ -2,7 +2,7 @@ import { Component, OnInit, Input, AfterViewInit, ViewChild, ElementRef, AfterCo
 import { DestinyService2 } from 'src/app/services/destiny/destiny.service2';
 import { map } from 'rxjs/operators';
 import { TabDirective } from 'ngx-bootstrap/tabs';
-import {HotelsService} from 'src/app/services/HotelsService/Hotels.service';
+import {HotelsService} from './../../services/Hotelsservice/hotels.service';
 import { Router } from '@angular/router';
 
 

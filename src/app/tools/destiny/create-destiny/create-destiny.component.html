@@ -92,6 +92,9 @@
                                 <!--Photos--> 
                                 <p>Fotos</p>
                                 <div class="form-group">
+                                    <input class="form-control " name="photos" #photos="ngModel"[(ngModel)]="destinyService.destinyData.photos" placeholder="Foto del header">
+                                </div>
+                                <div class="form-group">
                                     <input class="form-control " name="photo1" #photo1="ngModel"[(ngModel)]="destinyService.destinyData.photo1" placeholder="Foto 1">
                                 </div>
                                 <div class="form-group">

@@ -9,10 +9,13 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import {SignInComponent} from  "./tools/sign-in/sign-in/sign-in.component";
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import {DestinyCrudComponent} from './admin/destiny-crud/destiny-crud.component';
+import {StateCrudComponent} from './admin/state-crud/state-crud.component';
+import {CityCrudComponent} from './admin/city-crud/city-crud.component';
 import {ItineraryCrudComponent} from './admin/itinerary-crud/itinerary-crud.component';
-import{MyItineraryComponent} from './my-itinerary/my-itinerary.component'
-import { HotelsComponent } from './Hotel Components/hotels/hotels.component'
-import { DestiniesComponent } from './Destiny Components/destinies/destinies.component'
+import{MyItineraryComponent} from './my-itinerary/my-itinerary.component';
+import { HotelsComponent } from './Hotel Components/hotels/hotels.component';
+import { DestiniesComponent } from './Destiny Components/destinies/destinies.component';
+import { InboxComponent } from './admin/inbox/inbox.component';
 
 const routes: Routes = [
  {
@@ -50,9 +53,25 @@ component: MyItineraryComponent
   canActivate: [AuthGuard]
 },
 {
+  path: 'adminState', 
+  component: StateCrudComponent,
+  canActivate: [AuthGuard]
+},
+{
+  path: 'adminCity', 
+  component: CityCrudComponent ,
+  canActivate: [AuthGuard]
+},
+{
   path: 'adminItinerary', 
   component: ItineraryCrudComponent,
-  canActivate: [AuthGuard]},
+  canActivate: [AuthGuard]
+},
+{
+  path: 'Inbox', 
+  component:InboxComponent,
+  canActivate: [AuthGuard]
+},
 {
   path:'Hotels',
   component: HotelsComponent
