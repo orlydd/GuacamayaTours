@@ -44,17 +44,19 @@ export class MyItineraryComponent implements OnInit {
     this.show= true;
     let codeEntered = form.value.code;
     let code = this.db.collectionGroup('Itinerary', ref=>ref.where('itineraryCode', '==', codeEntered));
-    let codeAux = code.get().toPromise().then(function(querySnapshot){
+    var collection;
+    code.get().toPromise().then(function(querySnapshot){
       querySnapshot.forEach(function(doc){
         console.log(doc.id, '=>',doc.data());
         let itineraryDoc ={...doc.data()};
         console.log(itineraryDoc);
         return itineraryDoc;
       });
+      collection = querySnapshot;
     }).catch(e=>{
       console.log(e);
     });
-    return;
+    return collection;
   }
 
 }
