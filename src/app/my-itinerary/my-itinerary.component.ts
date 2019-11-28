@@ -40,24 +40,24 @@ export class MyItineraryComponent implements OnInit {
   ngOnInit() {
     this.show = false;
   }
-
-
+  
   onSubmit(form: NgForm){
-    this.itinerary=[];
+    this.checkCode(form);
+  }
+
+  checkCode(form: NgForm) {
     this.show= true;
     let codeEntered = form.value.code;
     let code = this.db.collectionGroup('Itinerary', ref=>ref.where('itineraryCode', '==', codeEntered));
-    code.get().toPromise().then(function(querySnapshot){
+    let codeAux = code.get().toPromise().then(function(querySnapshot){
       querySnapshot.forEach(function(doc){
-        console.log(doc.id,'=>',doc.data());
-        this.itineraryDoc = this.getItinerary(doc.id);
-        console.log(this.itineraryDoc);
+        let itineraryDoc =(doc.id,'=>',doc.data());
+        console.log(itineraryDoc);
+        
       });
     }).catch(e=>{
       console.log(e);
     });
-
-    return code;
   }
 
 }
