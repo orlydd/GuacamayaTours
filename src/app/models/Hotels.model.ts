@@ -24,5 +24,6 @@ export class Room{
     name: string;
     photo:string;
     price: number;
+    description: string;
     
 }
