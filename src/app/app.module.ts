@@ -52,6 +52,7 @@ import { DestiniesDisplayComponent } from './Destiny Components/destinies-displa
 import { ModalComponent } from './modal/modal.component';
 import { DestiniesSeeMoreComponent } from './Destiny Components/destinies-see-more/destinies-see-more.component';
 import { CityCrudComponent } from './admin/city-crud/city-crud.component';
+import { InboxComponent } from './admin/inbox/inbox.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +86,7 @@ import { CityCrudComponent } from './admin/city-crud/city-crud.component';
     ModalComponent,
     DestiniesSeeMoreComponent,
     CityCrudComponent,
+    InboxComponent,
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features

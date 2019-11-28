@@ -15,6 +15,7 @@ import {ItineraryCrudComponent} from './admin/itinerary-crud/itinerary-crud.comp
 import{MyItineraryComponent} from './my-itinerary/my-itinerary.component';
 import { HotelsComponent } from './Hotel Components/hotels/hotels.component';
 import { DestiniesComponent } from './Destiny Components/destinies/destinies.component';
+import { InboxComponent } from './admin/inbox/inbox.component';
 
 const routes: Routes = [
  {
@@ -64,7 +65,13 @@ component: MyItineraryComponent
 {
   path: 'adminItinerary', 
   component: ItineraryCrudComponent,
-  canActivate: [AuthGuard]},
+  canActivate: [AuthGuard]
+},
+{
+  path: 'Inbox', 
+  component:InboxComponent,
+  canActivate: [AuthGuard]
+},
 {
   path:'Hotels',
   component: HotelsComponent
