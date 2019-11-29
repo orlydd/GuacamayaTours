@@ -41,7 +41,7 @@ export class MyItineraryComponent implements OnInit {
 
   onSubmit(form: NgForm){
     console.log(form);
-    this.itineraryCollection = this.checkCode(form);
+    //this.itineraryCollection = this.checkCode(form);
   
   }
 

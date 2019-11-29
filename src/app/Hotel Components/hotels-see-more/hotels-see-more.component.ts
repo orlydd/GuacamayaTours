@@ -2,7 +2,7 @@ import { Component, OnInit, Input, AfterViewInit, ViewChild, ElementRef, AfterCo
 import {HotelsService} from './../../services/Hotelsservice/hotels.service';
 import { map } from 'rxjs/operators';
 import { TabDirective } from 'ngx-bootstrap/tabs';
-
+import { ItineraryService } from './../../services/itinerary/itinerary.service'
 @Component({
   selector: 'app-hotels-see-more',
   templateUrl: './hotels-see-more.component.html',
@@ -15,7 +15,7 @@ export class HotelsSeeMoreComponent implements OnInit,AfterViewInit {
   lng:number;
   @Input() lat2:number;
   @Input() lng2:number;
-
+  message: string;
   Hotels: any;
   value : any=1;
   
@@ -31,7 +31,7 @@ export class HotelsSeeMoreComponent implements OnInit,AfterViewInit {
   ngAfterViewInit(){
 
    }
-  constructor(private HotelsService: HotelsService) {  }
+  constructor(private HotelsService: HotelsService,private ItineraryService: ItineraryService) {  }
     
   ngOnInit() {
     this.lat=this.lat2;
@@ -42,7 +42,10 @@ export class HotelsSeeMoreComponent implements OnInit,AfterViewInit {
       zoom: 12,
     };
     this.getHotelsList();
-
+    this.ItineraryService.currentMessage.subscribe(message => this.message = message)
+  }
+  newMessage() {
+    this.ItineraryService.changeMessage("Hello from Sibling")
   }
   updateActive(isActive : boolean){
     this.HotelsService.updateHotels(this.Hotels.key, {active: isActive}).catch(err => console.log(err));

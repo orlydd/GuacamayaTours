@@ -3,12 +3,15 @@ import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} 
 import {Itinerary} from "src/app/models/itinerary";
 import {Observable}  from  'rxjs';
 import {map}  from  'rxjs/operators';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItineraryService {
 
+  private messageSource = new BehaviorSubject('default message');
+  currentMessage = this.messageSource.asObservable();
 
   itineraryCollection: AngularFirestoreCollection<Itinerary>;
   itineraryDoc: AngularFirestoreDocument<Itinerary>;
@@ -19,12 +22,14 @@ export class ItineraryService {
 
 
   constructor(public db : AngularFirestore) {
-
+    
     this.itineraryCollection= this.db.collection('Itinerary', ref=>ref);
     
    }
 
-   
+   changeMessage(message: string) {
+      this.messageSource.next(message);
+   }
   getAnItinerary(key:string){
     return this.db.collection('Itinerary').doc(key).snapshotChanges();
 
