@@ -4,7 +4,7 @@ import {HotelsService} from 'src/app/services/Hotelsservice/hotels.service';
 import {Hotels} from 'src/app/models/Hotels.model';
 
 @Component({
-  selector: 'app-hotel-crud-list',
+  selector: 'app-create-hotel',
   templateUrl: './create-hotel.component.html',
   styleUrls: ['./create-hotel.component.scss']
 })
