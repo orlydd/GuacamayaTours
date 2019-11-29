@@ -16,7 +16,9 @@ export class HotelsSeeMoreComponent implements OnInit,AfterViewInit {
   lng:number;
   @Input() lat2:number;
   @Input() lng2:number;
+  @Input() roomPrice:number;
   message: string;
+  message2: string;
   Hotels: any;
   value : any=1;
   
@@ -43,10 +45,15 @@ export class HotelsSeeMoreComponent implements OnInit,AfterViewInit {
       zoom: 12,
     };
     this.getHotelsList();
-    this.ItineraryService.currentMessage.subscribe(message => this.message = message)
+    
   }
   newMessage(i1) {
     this.ItineraryService.changeMessage(i1)
+    this.ItineraryService.currentMessage.subscribe(message => this.message = message)
+  }
+  newMessage2(i1) {
+    this.ItineraryService.changeMessage2(i1)
+    this.ItineraryService.currentMessage2.subscribe(message2 => this.message2 = message2)
   }
   updateActive(isActive : boolean){
     this.HotelsService.updateHotels(this.Hotels.key, {active: isActive}).catch(err => console.log(err));

@@ -11,18 +11,19 @@ import { Observable } from 'rxjs'
   styleUrls: ['./create-itinerary.component.scss']
 })
 export class CreateItineraryComponent implements OnInit {
+  message2:string;
+  message:string;
   itineraryData: Itinerary;
-message:string;
-  constructor( public ItineraryService: ItineraryService, private firestore: AngularFirestore) { }
-
+  constructor( private ItineraryService: ItineraryService, private firestore: AngularFirestore) { }
+  data:any;
   
     
-  ngOnInit(){ 
-    this.ItineraryService.currentMessage.subscribe(message => this.message = message)
+  ngOnInit(){ this.ItineraryService.currentMessage.subscribe(message => this.message = message)
+    this.ItineraryService.currentMessage2.subscribe(message2 => this.message2 = message2)
   }
   
-  newMessage(message:string){
-  this.ItineraryService.changeMessage(this.message)}
+  
+
   //Resets the value of the form
   resetForm(form?: NgForm){
   

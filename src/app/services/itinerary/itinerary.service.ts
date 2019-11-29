@@ -10,8 +10,10 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ItineraryService {
 
-  private messageSource = new BehaviorSubject<string>('Ningun hotel todavía');
+  private messageSource = new BehaviorSubject<string>("ningún Hotel");
+  private messageSource2 = new BehaviorSubject<string>("ningún precio");
   currentMessage = this.messageSource.asObservable();
+  currentMessage2 = this.messageSource2.asObservable();
 
   itineraryCollection: AngularFirestoreCollection<Itinerary>;
   itineraryDoc: AngularFirestoreDocument<Itinerary>;
@@ -29,6 +31,9 @@ export class ItineraryService {
 
    changeMessage(message: string) {
       this.messageSource.next(message);
+   }
+   changeMessage2(message2: string) {
+    this.messageSource2.next(message2);
    }
   getAnItinerary(key:string){
     return this.db.collection('Itinerary').doc(key).snapshotChanges();

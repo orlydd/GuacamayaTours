@@ -1,61 +1,55 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <section>
         <app-hero [title]="'CREAR ITINERARIO'" [description]="'GUACAMAYA TOURS'" 
         [image]="'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Cayo_de_Agua%2C_Archipi%C3%A9lago_de_Los_Roques%2C_Venezuela.jpg/1200px-Cayo_de_Agua%2C_Archipi%C3%A9lago_de_Los_Roques%2C_Venezuela.jpg'">
         </app-hero>
 </section>
 <section>
-        <div class="container" >
+        <div class="container2" >
     
                 <div class="row justify-content-center">
                     <div class="col">
-                            <h4>Crea tu itinerario!</h4>
+                            <span *ngIf="message=='ningún Hotel'"><h5><i class="fa fa-times" aria-hidden="true"></i>CLARAMENTE no ha seleccionado un hotel a reservar ¡DEVUÉLVASE!<i class="fa fa-times" aria-hidden="true"></i>
+                            </h5></span>
+                            <span *ngIf="message!='ningún Hotel'">
+                            <h5><i class="fa fa-check-square-o" aria-hidden="true"></i>Para reservar en {{message}} por {{message2}} $ continúe<i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                </h5></span>
                     </div>
                 </div>
-                <div class="row justify-content-center">
+                <div class="form-container">
                         <div class="col col-md-12" >
                                 <form #form= "ngForm" autocomplete="off" (submit)="onSubmit(form)">
-                                        <input type="hidden" name= "key" #key="ngModel"[(ngModel)]="itineraryService.itineraryData.key">    
-                                        <!--Destination-->
-                                        <div class="form-group">
-                                                <label for="destination">Destino</label>
-                                                        <input class="form-control " name="destination" #destination="ngModel"[(ngModel)]="itineraryService.itineraryData.destination" placeholder="Destino">
-                                        </div>
-                                        <!--Hotel-->
-                                        <div class="form-group">
-                                                <label for="hotel">Hotel</label>
-                                                        <input class="form-control " name="hotel" #hotel="ngModel"[(ngModel)]="itineraryService.itineraryData.hotel" placeholder="Hotel">
-                                        </div>
-                                   
+                                        <input type="hidden" name="key" #key="ngModel" [(ngModel)]="ItineraryService.key">
                                         <!--ID & NAME-->
                                         <div class="row">
                                             <div class="form-group col-md-6">
                                                 <label for="clientId">Cédula</label>
-                                                <input  class="form-control" name="clientId"  #clientId="ngModel"[(ngModel)]="itineraryService.itineraryData.clientId" placeholder="Cédula" >
+                                                <input  class="form-control" name="clientId"  #clientId="ngModel" [(ngModel)]="ItineraryService.itineraryData" placeholder="Cédula" >
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="clientName">Nombre</label>
-                                                    <input class="form-control " name="clientName" #clientName="ngModel"[(ngModel)]="itineraryService.itineraryData.clientName" placeholder="Nombre Completo">
+                                                    <input class="form-control " name="clientName" #clientName="ngModel" [(ngModel)]="ItineraryService.itineraryData" placeholder="Nombre Completo">
                                             </div>
                                         </div>
                                         <!--EMAIL-->
                                         <div class="form-group">
                                             <label for="email">Correo Electrónico</label>
-                                                    <input class="form-control " name="email" #email="ngModel"[(ngModel)]="itineraryService.itineraryData.email" placeholder="Correo Electrónico">
+                                                    <input class="form-control " name="email" #email="ngModel" [(ngModel)]="ItineraryService.itineraryData" placeholder="Correo Electrónico">
                                         </div>
                                         <!--Phone Number-->
                                         <div class="form-group">
                                             <label for="phoneNumber">Número de Teléfono</label>
-                                                <input class="form-control " name="phoneNumber" #phoneNumber="ngModel"[(ngModel)]="itineraryService.itineraryData.phoneNumber" placeholder="Número de Teléfono">
+                                                <input class="form-control " name="phoneNumber" #phoneNumber="ngModel" [(ngModel)]="ItineraryService.itineraryData" placeholder="Número de Teléfono">
                                         </div>
                                         <!--Adress-->
                                         <div class="form-group">
                                                 <label for="phoneNumber">Dirección</label>
-                                                    <input class="form-control " name="adress" #adress="ngModel"[(ngModel)]="itineraryService.itineraryData.adress" placeholder="Dirección">
+                                                    <input class="form-control " name="adress" #adress="ngModel" [(ngModel)]="ItineraryService.itineraryData" placeholder="Dirección">
                                             </div>
                                         <!--Companions-->
                                         <div class="form-group">
                                             <label for="companions">Acompañantes/Familiares</label>
-                                                    <input class="form-control " type= "number" name="companions" #companions="ngModel"[(ngModel)]="itineraryService.itineraryData.companions" >
+                                                    <input class="form-control " type= "number" name="companions" #companions="ngModel" [(ngModel)]="ItineraryService.itineraryData">
                                         </div>
                                         
                                         
@@ -64,12 +58,12 @@
                                             
                                                 <div class="form-group col-md-6">
                                                         <label for="arrivalDate">Fecha de llegada en el formato dd/mm/aa</label>
-                                                        <input class="form-control " name="arrivalDate" #arrivalDate="ngModel"[(ngModel)]="itineraryService.itineraryData.arrivalDate" placeholder="dd/mm/aa">
+                                                        <input class="form-control " name="arrivalDate" #arrivalDate="ngModel"[(ngModel)]="ItineraryService.itineraryData" placeholder="dd/mm/aa">
                                                 </div>
                         
                                                 <div class="form-group col-md-6">
                                                         <label for="departureDate">Fecha de salida en el formato dd/mm/aa</label>
-                                                            <input class="form-control " name="departureDate" #departureDate="ngModel"[(ngModel)]="itineraryService.itineraryData.departureDate" placeholder="dd/mm/aa">
+                                                            <input class="form-control " name="departureDate" #departureDate="ngModel"[(ngModel)]="ItineraryService.itineraryData" placeholder="dd/mm/aa">
                                                 </div>
                                         </div>
                                         <!--SUBMIT BUTTON-->
@@ -80,7 +74,7 @@
                       
                 </div>
             </div>
-            
+            <ng-container *ngIf="onSubmit()"><app-payme></app-payme></ng-container>
         </div>
 </section>
 <div class="section">

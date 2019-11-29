@@ -58,6 +58,7 @@ import { CreateHotelComponent } from './tools/hotel/create-hotel/create-hotel.co
 import { HotelCrudListComponent } from './tools/hotel/hotel-crud-list/hotel-crud-list.component';
 import { HotelCrudComponent } from './admin/hotel-crud/hotel-crud.component';
 import { CreateItineraryComponent } from './tools/itinerary-view/create-itinerary/create-itinerary.component';
+import { PaymeComponent } from './payme/payme.component';
 
 @NgModule({
   declarations: [
@@ -97,6 +98,7 @@ import { CreateItineraryComponent } from './tools/itinerary-view/create-itinerar
     HotelCrudListComponent,
     HotelCrudComponent,
     CreateItineraryComponent,
+    PaymeComponent,
   ],
   imports: [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
