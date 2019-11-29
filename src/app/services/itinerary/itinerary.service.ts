@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ItineraryService {
 
-  private messageSource = new BehaviorSubject('default message');
+  private messageSource = new BehaviorSubject<string>('Ningun hotel todavía');
   currentMessage = this.messageSource.asObservable();
 
   itineraryCollection: AngularFirestoreCollection<Itinerary>;

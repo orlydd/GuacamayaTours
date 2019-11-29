@@ -3,6 +3,7 @@ import {HotelsService} from './../../services/Hotelsservice/hotels.service';
 import { map } from 'rxjs/operators';
 import { TabDirective } from 'ngx-bootstrap/tabs';
 import { ItineraryService } from './../../services/itinerary/itinerary.service'
+
 @Component({
   selector: 'app-hotels-see-more',
   templateUrl: './hotels-see-more.component.html',
@@ -44,8 +45,8 @@ export class HotelsSeeMoreComponent implements OnInit,AfterViewInit {
     this.getHotelsList();
     this.ItineraryService.currentMessage.subscribe(message => this.message = message)
   }
-  newMessage() {
-    this.ItineraryService.changeMessage("Hello from Sibling")
+  newMessage(i1) {
+    this.ItineraryService.changeMessage(i1)
   }
   updateActive(isActive : boolean){
     this.HotelsService.updateHotels(this.Hotels.key, {active: isActive}).catch(err => console.log(err));

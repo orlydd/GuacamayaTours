@@ -35,7 +35,7 @@
                         <a class="nav-link" routerLink="/seeItinerary">VER ITINERARIO</a>
             </li>
             <li class="nav-item" *ngIf="!isLogged">
-                        <a class="nav-link" routerLink="/createItinerary">PLANEA TU VIAJE</a>
+                        <a class="nav-link"  routerLink="/Crear">PLANEA TU VIAJE</a>
             </li>
             <li class="nav-item" *ngIf="!isLogged">
                         <a class="nav-link" routerLink="/Contacts">CONTÁCTANOS</a>
@@ -48,9 +48,12 @@
             </li>
             <li class="nav-item" *ngIf="isLogged">
                 <a class="nav-link" routerLink="/adminCity">CIUDADES</a>
-            </li>
+            </li> 
             <li class="nav-item" *ngIf="isLogged">
               <a class="nav-link" routerLink="/adminDestiny">DESTINOS</a>
+            </li>
+            <li class="nav-item" *ngIf="isLogged">
+              <a class="nav-link" routerLink="/adminHotels">HOTELES</a>
             </li>
             <li class="nav-item" *ngIf="isLogged">
               <a class="nav-link" routerLink="/adminItinerary">ITINERARIOS</a>

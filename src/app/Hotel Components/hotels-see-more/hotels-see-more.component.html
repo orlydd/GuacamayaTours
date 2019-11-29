@@ -58,8 +58,8 @@
            <div *ngIf="value=='1'">{{h.description}}</div>
            <div class="roomsclass" *ngIf="value=='2'">Habitación Estándar Single:<p class="price"><span *ngIf="h.room1"><strong>{{h.price}}$</strong></span></p>
             <img src="{{h.room1}}" alt="Hotel Image unavailable" class="hotel-image"><br><br><br>
-            Habitación Estándar Doble:<p class="price"><span *ngIf="h.room2"><strong>{{h.price+15}}$</strong>{{message}}
-              <button class="roomsclass"(click)="newMessage()">New Message</button></span></p>
+            Habitación Estándar Doble:<p class="price"><span *ngIf="h.room2"><strong>{{h.price+15}}$</strong>
+              <button class="reservebutton"(click)="newMessage(i1)">Reservar esta habitación</button></span></p>
             <img src="{{h.room2}}" alt="Hotel Image unavailable" class="hotel-image"><br><br><br>
             Habitación Deluxe:<p class="price"><span *ngIf="h.room3"><strong>{{h.price+40}}$</strong></span></p>
             <img src="{{h.room3}}" alt="Hotel Image unavailable" class="hotel-image"><br><br><br>
