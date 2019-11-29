@@ -19,7 +19,7 @@
                 <div class="form-container">
                         <div class="col col-md-12" >
                                 <form #form= "ngForm" autocomplete="off" (submit)="onSubmit(form)">
-                                        <input type="hidden" name="key" #key="ngModel" [(ngModel)]="ItineraryService.key">
+                                        <input type="hidden" name="key" #key="ngModel" [(ngModel)]="ItineraryService.itineraryData">
                                         <!--ID & NAME-->
                                         <div class="row">
                                             <div class="form-group col-md-6">
