@@ -19,37 +19,37 @@
                 <div class="form-container">
                         <div class="col col-md-12" >
                                 <form #form= "ngForm" autocomplete="off" (submit)="onSubmit(form)">
-                                        <input type="hidden" name="key" #key="ngModel" [(ngModel)]="ItineraryService.itineraryData">
+                                        <input type="hidden" name="key" #key="ngModel" (ngModel)="ItineraryService.itineraryData">
                                         <!--ID & NAME-->
                                         <div class="row">
                                             <div class="form-group col-md-6">
                                                 <label for="clientId">Cédula</label>
-                                                <input  class="form-control" name="clientId"  #clientId="ngModel" [(ngModel)]="ItineraryService.itineraryData" placeholder="Cédula" >
+                                                <input  class="form-control" name="clientId"  #clientId="ngModel" (ngModel)="ItineraryService.itineraryData" placeholder="Cédula" >
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="clientName">Nombre</label>
-                                                    <input class="form-control " name="clientName" #clientName="ngModel" [(ngModel)]="ItineraryService.itineraryData" placeholder="Nombre Completo">
+                                                    <input class="form-control " name="clientName" #clientName="ngModel" (ngModel)="ItineraryService.itineraryData" placeholder="Nombre Completo">
                                             </div>
                                         </div>
                                         <!--EMAIL-->
                                         <div class="form-group">
                                             <label for="email">Correo Electrónico</label>
-                                                    <input class="form-control " name="email" #email="ngModel" [(ngModel)]="ItineraryService.itineraryData" placeholder="Correo Electrónico">
+                                                    <input class="form-control " name="email" #email="ngModel" (ngModel)="ItineraryService.itineraryData" placeholder="Correo Electrónico">
                                         </div>
                                         <!--Phone Number-->
                                         <div class="form-group">
                                             <label for="phoneNumber">Número de Teléfono</label>
-                                                <input class="form-control " name="phoneNumber" #phoneNumber="ngModel" [(ngModel)]="ItineraryService.itineraryData" placeholder="Número de Teléfono">
+                                                <input class="form-control " name="phoneNumber" #phoneNumber="ngModel" (ngModel)="ItineraryService.itineraryData" placeholder="Número de Teléfono">
                                         </div>
                                         <!--Adress-->
                                         <div class="form-group">
                                                 <label for="phoneNumber">Dirección</label>
-                                                    <input class="form-control " name="adress" #adress="ngModel" [(ngModel)]="ItineraryService.itineraryData" placeholder="Dirección">
+                                                    <input class="form-control " name="adress" #adress="ngModel" (ngModel)="ItineraryService.itineraryData" placeholder="Dirección">
                                             </div>
                                         <!--Companions-->
                                         <div class="form-group">
                                             <label for="companions">Acompañantes/Familiares</label>
-                                                    <input class="form-control " type= "number" name="companions" #companions="ngModel" [(ngModel)]="ItineraryService.itineraryData">
+                                                    <input class="form-control " type= "number" name="companions" #companions="ngModel" (ngModel)="ItineraryService.itineraryData">
                                         </div>
                                         
                                         
@@ -58,12 +58,12 @@
                                             
                                                 <div class="form-group col-md-6">
                                                         <label for="arrivalDate">Fecha de llegada en el formato dd/mm/aa</label>
-                                                        <input class="form-control " name="arrivalDate" #arrivalDate="ngModel"[(ngModel)]="ItineraryService.itineraryData" placeholder="dd/mm/aa">
+                                                        <input class="form-control " name="arrivalDate" #arrivalDate="ngModel"(ngModel)="ItineraryService.itineraryData" placeholder="dd/mm/aa">
                                                 </div>
                         
                                                 <div class="form-group col-md-6">
                                                         <label for="departureDate">Fecha de salida en el formato dd/mm/aa</label>
-                                                            <input class="form-control " name="departureDate" #departureDate="ngModel"[(ngModel)]="ItineraryService.itineraryData" placeholder="dd/mm/aa">
+                                                            <input class="form-control " name="departureDate" #departureDate="ngModel"(ngModel)="ItineraryService.itineraryData" placeholder="dd/mm/aa">
                                                 </div>
                                         </div>
                                         <!--SUBMIT BUTTON-->

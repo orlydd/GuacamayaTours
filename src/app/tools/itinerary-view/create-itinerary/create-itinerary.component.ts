@@ -20,6 +20,7 @@ export class CreateItineraryComponent implements OnInit {
     
   ngOnInit(){ this.ItineraryService.currentMessage.subscribe(message => this.message = message)
     this.ItineraryService.currentMessage2.subscribe(message2 => this.message2 = message2)
+    
   }
   
   
@@ -51,6 +52,10 @@ export class CreateItineraryComponent implements OnInit {
     this.resetForm(form);
   
   }
+  getHotelintodata(){
+  this.data.hotel=this.message;
+  this.data.price=this.message2;
+}
 }
 
 
