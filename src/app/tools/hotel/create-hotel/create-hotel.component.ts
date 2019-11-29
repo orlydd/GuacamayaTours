@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormsModule, NgForm} from '@angular/forms';
 import {HotelsService} from 'src/app/services/Hotelsservice/hotels.service';
-import {Hotels, Room} from 'src/app/models/Hotels.model';
+import {Hotels} from 'src/app/models/Hotels.model';
 
 @Component({
   selector: 'app-create-hotel',
@@ -30,7 +30,6 @@ export class CreateHotelComponent implements OnInit {
     popularity: 0,
     price: 0,
     stars: 0,
-    services : [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
     latitude: 0,
     longitude: 0,
     state: '',
@@ -39,10 +38,7 @@ export class CreateHotelComponent implements OnInit {
     photo1:'',
     photo2:'',
     photo3:'',
-    active: true,
-    rooms: [
-      /* {name: '', photo: ' ', price: 0, description: ''} */
-    ]
+    active: true
    
     }
   }

@@ -17,14 +17,5 @@ export class Hotels{
     stars: number;
     state: string;
     active: boolean;
-    services: boolean[];
-    rooms: Room[];
 }
 
-export class Room{
-    name: string;
-    photo:string;
-    price: number;
-    description: string;
-    
-}
