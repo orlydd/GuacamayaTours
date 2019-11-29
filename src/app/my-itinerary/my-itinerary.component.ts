@@ -5,6 +5,7 @@ import { Itinerary } from '../models/itinerary';
 import { Observable } from 'rxjs';
 import { firestore } from 'firebase';
 import {FormsModule, NgForm} from '@angular/forms';
+
 export class HttpComponent {
   code:string;
 }
@@ -38,12 +39,12 @@ export class MyItineraryComponent implements OnInit {
     this.show = false;
   }
 
-/* 
+
   onSubmit(form: NgForm){
     console.log(form);
     //this.itineraryCollection = this.checkCode(form);
   
-  } */
+  } 
 
   checkCode(codeEntered: string) {
     this.show= true;

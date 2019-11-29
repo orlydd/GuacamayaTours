@@ -1,7 +1,7 @@
 <button type="button" class="btn btn-primary" (click)="(openModal(template))">Explorar!</button>
 <ng-template #template>
     <div class="modal-header">
-    <h4 class="modal-title pull-left">Información</h4>
+    <h4 class="modal-title pull-left">Información{{i2}}</h4>
     <button id="closethemodal" type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
       <span aria-hidden="false">&times;</span>
     </button>
