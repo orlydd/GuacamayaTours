@@ -25,8 +25,8 @@ const routes: Routes = [
  component: HomeComponent
 }, 
 {
-path :'seeItinerary',
-component: MyItineraryComponent
+  path :'seeItinerary',
+  component: MyItineraryComponent
 },
 {
   path :'createItinerary',

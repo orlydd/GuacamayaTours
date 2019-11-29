@@ -4,7 +4,7 @@
     </app-hero>
 </section>
 <section>
-    <div class="row askCode" *ngIf="show == false">
+    <div class="row askCode" *ngIf="show1 == false">
         <div class="white">
             <div class="row title">
                 <div class="col-md-12">
@@ -18,13 +18,13 @@
                                 <div class="form-group">
                                    <!-- <input class="form-control" name="code" #codeEntered="ngModel" [(ngModel)]="code"  placeholder="Ingresa tu código"> -->
                                 </div>
-                                <button type="submit" class="btn btn-primary" onSumbit()="ngForm" >CONTINUAR</button>
+                                <button type="submit" class="btn btn-primary" ngForm="onSubmit()" >CONTINUAR</button>
                             </form>
                     </div>
                 </div>
         </div>
     </div>
-    <div class="row itineraryForm" style="margin-top:10vw" *ngIf="show==true">
+    <div class="row itineraryForm" style="margin-top:10vw" *ngIf="show1==true">
             <div class="col-md-4 information" >
                 <img class="image" style="margin-left:35%"src="../../assets/Images/calendario.png">
                     <p class="especialText" style="text-align: center;">Su reserva es la siguiente:</p>
