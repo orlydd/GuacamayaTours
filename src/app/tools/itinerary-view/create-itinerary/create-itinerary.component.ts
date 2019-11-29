@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, } from '@angular/core';
-import {ItineraryService} from 'src/app/services/itinerary/itinerary.service';
+import { ItineraryService } from '../../../services/itinerary/itinerary.service'
 import {Itinerary} from 'src/app/models/itinerary';
 import {FormsModule, NgForm} from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';

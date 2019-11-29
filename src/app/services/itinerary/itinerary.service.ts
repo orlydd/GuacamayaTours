@@ -18,7 +18,7 @@ export class ItineraryService {
   itineraryCollection: AngularFirestoreCollection<Itinerary>;
   itineraryDoc: AngularFirestoreDocument<Itinerary>;
   itinerary: Observable<Itinerary[]>;
-  itineraryData: Itinerary;
+  public itineraryData: Itinerary;
   /* private dbPath = '/Destiny';
   destinyRef: AngularFirestoreCollection<Destiny>= null; */
 
